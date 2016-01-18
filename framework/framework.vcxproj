@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="buffer.hpp" />
+    <ClInclude Include="caps.hpp" />
+    <ClInclude Include="common.hpp" />
+    <ClInclude Include="compiler.hpp" />
+    <ClInclude Include="csv.hpp" />
+    <ClInclude Include="error.hpp" />
+    <ClInclude Include="png.hpp" />
+    <ClInclude Include="sementics.hpp" />
+    <ClInclude Include="test.hpp" />
+    <ClInclude Include="tinyxml2.h" />
+    <ClInclude Include="util.hpp" />
+    <ClInclude Include="vertex.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="buffer.cpp" />
+    <ClCompile Include="caps.cpp" />
+    <ClCompile Include="compiler.cpp" />
+    <ClCompile Include="csv.cpp" />
+    <ClCompile Include="error.cpp" />
+    <ClCompile Include="glew.c" />
+    <ClCompile Include="png.cpp" />
+    <ClCompile Include="test.cpp" />
+    <ClCompile Include="tinyxml2.cpp" />
+    <ClCompile Include="util.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGUID>{78FF0B33-195B-4AF3-BDB6-D2976A60CC7F}</ProjectGUID>
+    <Keyword>Win32Proj</Keyword>
+    <Platform>x64</Platform>
+    <ProjectName>framework</ProjectName>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectDir)build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">intermediates\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">framework</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(ProjectDir)build\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">intermediates\$(Platform)\$(Configuration)\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">framework</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\external;..\external\glfw-3.1.1\include;..\external\glm;..\external\gli;..\external\glo-0.1.0.0;..\external\glu-0.1.0.0;..\external\gles-2.0;..\external\egl-1.4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Debug/</AssemblerListingLocation>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;OGL_SAMPLES_SOURCE_DIR="E:/develop/libs/ogl-samples";OGL_SAMPLES_BINARY_DIR="E:/develop/libs/ogl-samples";GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;OGL_SAMPLES_SOURCE_DIR=\"E:/develop/libs/ogl-samples\";OGL_SAMPLES_BINARY_DIR=\"E:/develop/libs/ogl-samples\";GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\develop\libs\ogl-samples\external;E:\develop\libs\ogl-samples\external\glfw-3.1.1\include;E:\develop\libs\ogl-samples\external\FreeImage-3.15.4;E:\develop\libs\ogl-samples\external\glm;E:\develop\libs\ogl-samples\external\gli;E:\develop\libs\ogl-samples\external\glo-0.1.0.0;E:\develop\libs\ogl-samples\external\glu-0.1.0.0;E:\develop\libs\ogl-samples\external\gles-2.0;E:\develop\libs\ogl-samples\external\egl-1.4;E:\develop\libs\ogl-samples\framework;E:\develop\libs\ogl-samples\framework\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\develop\libs\ogl-samples\external;E:\develop\libs\ogl-samples\external\glfw-3.1.1\include;E:\develop\libs\ogl-samples\external\FreeImage-3.15.4;E:\develop\libs\ogl-samples\external\glm;E:\develop\libs\ogl-samples\external\gli;E:\develop\libs\ogl-samples\external\glo-0.1.0.0;E:\develop\libs\ogl-samples\external\glu-0.1.0.0;E:\develop\libs\ogl-samples\external\gles-2.0;E:\develop\libs\ogl-samples\external\egl-1.4;E:\develop\libs\ogl-samples\framework;E:\develop\libs\ogl-samples\framework\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\external;..\external\glfw-3.1.1\include;..\external\glm;..\external\gli;..\external\glo-0.1.0.0;..\external\glu-0.1.0.0;..\external\gles-2.0;..\external\egl-1.4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AssemblerListingLocation>Release/</AssemblerListingLocation>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;OGL_SAMPLES_SOURCE_DIR="E:/develop/libs/ogl-samples";OGL_SAMPLES_BINARY_DIR="E:/develop/libs/ogl-samples";GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;OGL_SAMPLES_SOURCE_DIR=\"E:/develop/libs/ogl-samples\";OGL_SAMPLES_BINARY_DIR=\"E:/develop/libs/ogl-samples\";GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>E:\develop\libs\ogl-samples\external;E:\develop\libs\ogl-samples\external\glfw-3.1.1\include;E:\develop\libs\ogl-samples\external\FreeImage-3.15.4;E:\develop\libs\ogl-samples\external\glm;E:\develop\libs\ogl-samples\external\gli;E:\develop\libs\ogl-samples\external\glo-0.1.0.0;E:\develop\libs\ogl-samples\external\glu-0.1.0.0;E:\develop\libs\ogl-samples\external\gles-2.0;E:\develop\libs\ogl-samples\external\egl-1.4;E:\develop\libs\ogl-samples\framework;E:\develop\libs\ogl-samples\framework\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>E:\develop\libs\ogl-samples\external;E:\develop\libs\ogl-samples\external\glfw-3.1.1\include;E:\develop\libs\ogl-samples\external\FreeImage-3.15.4;E:\develop\libs\ogl-samples\external\glm;E:\develop\libs\ogl-samples\external\gli;E:\develop\libs\ogl-samples\external\glo-0.1.0.0;E:\develop\libs\ogl-samples\external\glu-0.1.0.0;E:\develop\libs\ogl-samples\external\gles-2.0;E:\develop\libs\ogl-samples\external\egl-1.4;E:\develop\libs\ogl-samples\framework;E:\develop\libs\ogl-samples\framework\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
