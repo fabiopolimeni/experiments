@@ -30,8 +30,6 @@ vec3 ads(vec3 Normal, vec3 LightDir, vec3 Position)
 	vec3 c = vec3(0.5, 0.7, 0.1);
 	
 	return (c * max( dot(s, n), 0.0 ) + vec3(0.9) * pow( max( dot(r,v), 0.0 ), 64 ) );
-	//return vec3(1.0) * max( dot(s, n), 0.0 );
-	//return n;
 }
 
 void main()
