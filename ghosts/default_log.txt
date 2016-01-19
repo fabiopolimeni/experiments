@@ -1,0 +1,406 @@
+2016-01-18 23:44:27,219 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-18 23:44:27,427 INFO  [default] # of shapes    : 1
+2016-01-18 23:44:27,432 INFO  [default] # of materials : 1
+2016-01-18 23:44:27,436 INFO  [default] shape[0].name = 
+2016-01-18 23:44:27,440 INFO  [default] Size of shape[0].indices: 1011
+2016-01-18 23:44:27,445 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-18 23:44:27,449 INFO  [default] shape[0].vertices: 3025
+2016-01-18 23:48:04,162 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-18 23:48:04,378 INFO  [default] # of shapes    : 1
+2016-01-18 23:48:04,382 INFO  [default] # of materials : 1
+2016-01-18 23:48:04,386 INFO  [default] shape[0].name = 
+2016-01-18 23:48:04,390 INFO  [default] Size of shape[0].indices: 1011
+2016-01-18 23:48:04,395 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-18 23:48:04,401 INFO  [default] shape[0].vertices: 3025
+2016-01-19 00:07:55,241 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 00:07:55,471 INFO  [default] # of shapes    : 1
+2016-01-19 00:07:55,475 INFO  [default] # of materials : 1
+2016-01-19 00:07:55,480 INFO  [default] shape[0].name = 
+2016-01-19 00:07:55,483 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 00:07:55,488 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 00:07:55,493 INFO  [default] shape[0].vertices: 3025
+2016-01-19 00:09:03,620 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 00:09:03,855 INFO  [default] # of shapes    : 1
+2016-01-19 00:09:03,859 INFO  [default] # of materials : 1
+2016-01-19 00:09:03,862 INFO  [default] shape[0].name = 
+2016-01-19 00:09:03,865 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 00:09:03,870 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 00:09:03,876 INFO  [default] shape[0].vertices: 3025
+2016-01-19 00:10:23,235 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 00:10:23,471 INFO  [default] # of shapes    : 1
+2016-01-19 00:10:23,476 INFO  [default] # of materials : 1
+2016-01-19 00:10:23,479 INFO  [default] shape[0].name = 
+2016-01-19 00:10:23,483 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 00:10:23,488 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 00:10:23,493 INFO  [default] shape[0].vertices: 3025
+2016-01-19 00:10:44,557 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 00:10:44,778 INFO  [default] # of shapes    : 1
+2016-01-19 00:10:44,781 INFO  [default] # of materials : 1
+2016-01-19 00:10:44,785 INFO  [default] shape[0].name = 
+2016-01-19 00:10:44,789 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 00:10:44,794 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 00:10:44,799 INFO  [default] shape[0].vertices: 3025
+2016-01-19 00:11:18,381 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 00:11:18,619 INFO  [default] # of shapes    : 1
+2016-01-19 00:11:18,624 INFO  [default] # of materials : 1
+2016-01-19 00:11:18,628 INFO  [default] shape[0].name = 
+2016-01-19 00:11:18,633 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 00:11:18,642 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 00:11:18,649 INFO  [default] shape[0].vertices: 3025
+2016-01-19 00:12:31,245 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 00:12:31,261 INFO  [default] # of shapes    : 1
+2016-01-19 00:12:31,265 INFO  [default] # of materials : 1
+2016-01-19 00:12:31,272 INFO  [default] shape[0].name = 
+2016-01-19 00:12:31,276 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 00:12:31,280 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 00:12:31,287 INFO  [default] shape[0].vertices: 3025
+2016-01-19 00:17:37,452 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 00:17:37,465 INFO  [default] # of shapes    : 1
+2016-01-19 00:17:37,468 INFO  [default] # of materials : 1
+2016-01-19 00:17:37,473 INFO  [default] shape[0].name = 
+2016-01-19 00:17:37,477 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 00:17:37,482 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 00:17:37,486 INFO  [default] shape[0].vertices: 3025
+2016-01-19 00:18:15,113 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 00:18:15,128 INFO  [default] # of shapes    : 1
+2016-01-19 00:18:15,131 INFO  [default] # of materials : 1
+2016-01-19 00:18:15,135 INFO  [default] shape[0].name = 
+2016-01-19 00:18:15,139 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 00:18:15,142 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 00:18:15,149 INFO  [default] shape[0].vertices: 3025
+2016-01-19 00:20:08,294 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 00:20:08,312 INFO  [default] # of shapes    : 1
+2016-01-19 00:20:08,317 INFO  [default] # of materials : 1
+2016-01-19 00:20:08,320 INFO  [default] shape[0].name = 
+2016-01-19 00:20:08,326 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 00:20:08,331 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 00:20:08,336 INFO  [default] shape[0].vertices: 3025
+2016-01-19 00:20:55,060 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 00:20:55,074 INFO  [default] # of shapes    : 1
+2016-01-19 00:20:55,078 INFO  [default] # of materials : 1
+2016-01-19 00:20:55,081 INFO  [default] shape[0].name = 
+2016-01-19 00:20:55,083 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 00:20:55,088 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 00:20:55,092 INFO  [default] shape[0].vertices: 3025
+2016-01-19 00:22:46,132 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 00:22:46,144 INFO  [default] # of shapes    : 1
+2016-01-19 00:22:46,148 INFO  [default] # of materials : 1
+2016-01-19 00:22:46,153 INFO  [default] shape[0].name = 
+2016-01-19 00:22:46,157 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 00:22:46,162 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 00:22:46,169 INFO  [default] shape[0].vertices: 3025
+2016-01-19 00:23:23,342 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 00:23:23,357 INFO  [default] # of shapes    : 1
+2016-01-19 00:23:23,360 INFO  [default] # of materials : 1
+2016-01-19 00:23:23,362 INFO  [default] shape[0].name = 
+2016-01-19 00:23:23,365 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 00:23:23,370 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 00:23:23,375 INFO  [default] shape[0].vertices: 3025
+2016-01-19 00:26:39,487 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 00:26:39,499 INFO  [default] # of shapes    : 1
+2016-01-19 00:26:39,503 INFO  [default] # of materials : 1
+2016-01-19 00:26:39,506 INFO  [default] shape[0].name = 
+2016-01-19 00:26:39,508 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 00:26:39,512 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 00:26:39,516 INFO  [default] shape[0].vertices: 3025
+2016-01-19 00:26:52,647 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 00:26:52,659 INFO  [default] # of shapes    : 1
+2016-01-19 00:26:52,662 INFO  [default] # of materials : 1
+2016-01-19 00:26:52,665 INFO  [default] shape[0].name = 
+2016-01-19 00:26:52,670 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 00:26:52,674 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 00:26:52,678 INFO  [default] shape[0].vertices: 3025
+2016-01-19 00:45:31,345 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 00:45:31,359 INFO  [default] # of shapes    : 1
+2016-01-19 00:45:31,362 INFO  [default] # of materials : 1
+2016-01-19 00:45:31,365 INFO  [default] shape[0].name = 
+2016-01-19 00:45:31,368 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 00:45:31,374 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 00:45:31,378 INFO  [default] shape[0].vertices: 3025
+2016-01-19 00:45:42,108 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 00:45:42,124 INFO  [default] # of shapes    : 1
+2016-01-19 00:45:42,129 INFO  [default] # of materials : 1
+2016-01-19 00:45:42,133 INFO  [default] shape[0].name = 
+2016-01-19 00:45:42,139 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 00:45:42,143 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 00:45:42,146 INFO  [default] shape[0].vertices: 3025
+2016-01-19 00:47:19,973 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 00:47:19,984 INFO  [default] # of shapes    : 1
+2016-01-19 00:47:19,987 INFO  [default] # of materials : 1
+2016-01-19 00:47:19,990 INFO  [default] shape[0].name = 
+2016-01-19 00:47:19,993 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 00:47:19,997 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 00:47:20,001 INFO  [default] shape[0].vertices: 3025
+2016-01-19 00:47:33,287 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 00:47:33,299 INFO  [default] # of shapes    : 1
+2016-01-19 00:47:33,302 INFO  [default] # of materials : 1
+2016-01-19 00:47:33,305 INFO  [default] shape[0].name = 
+2016-01-19 00:47:33,308 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 00:47:33,312 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 00:47:33,317 INFO  [default] shape[0].vertices: 3025
+2016-01-19 00:48:01,083 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 00:48:01,094 INFO  [default] # of shapes    : 1
+2016-01-19 00:48:01,098 INFO  [default] # of materials : 1
+2016-01-19 00:48:01,101 INFO  [default] shape[0].name = 
+2016-01-19 00:48:01,106 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 00:48:01,110 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 00:48:01,117 INFO  [default] shape[0].vertices: 3025
+2016-01-19 00:48:13,242 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 00:48:13,258 INFO  [default] # of shapes    : 1
+2016-01-19 00:48:13,262 INFO  [default] # of materials : 1
+2016-01-19 00:48:13,265 INFO  [default] shape[0].name = 
+2016-01-19 00:48:13,268 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 00:48:13,272 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 00:48:13,276 INFO  [default] shape[0].vertices: 3025
+2016-01-19 00:49:49,016 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 00:49:49,027 INFO  [default] # of shapes    : 1
+2016-01-19 00:49:49,030 INFO  [default] # of materials : 1
+2016-01-19 00:49:49,033 INFO  [default] shape[0].name = 
+2016-01-19 00:49:49,036 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 00:49:49,040 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 00:49:49,044 INFO  [default] shape[0].vertices: 3025
+2016-01-19 00:54:06,851 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 00:54:07,050 INFO  [default] # of shapes    : 1
+2016-01-19 00:54:07,054 INFO  [default] # of materials : 1
+2016-01-19 00:54:07,057 INFO  [default] shape[0].name = 
+2016-01-19 00:54:07,061 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 00:54:07,065 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 00:54:07,070 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:04:05,667 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:04:05,869 INFO  [default] # of shapes    : 1
+2016-01-19 01:04:05,873 INFO  [default] # of materials : 1
+2016-01-19 01:04:05,877 INFO  [default] shape[0].name = 
+2016-01-19 01:04:05,880 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:04:05,885 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:04:05,890 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:04:31,569 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:04:31,774 INFO  [default] # of shapes    : 1
+2016-01-19 01:04:31,777 INFO  [default] # of materials : 1
+2016-01-19 01:04:31,781 INFO  [default] shape[0].name = 
+2016-01-19 01:04:31,784 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:04:31,788 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:04:31,793 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:06:21,860 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:06:22,060 INFO  [default] # of shapes    : 1
+2016-01-19 01:06:22,064 INFO  [default] # of materials : 1
+2016-01-19 01:06:22,068 INFO  [default] shape[0].name = 
+2016-01-19 01:06:22,071 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:06:22,075 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:06:22,079 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:06:48,459 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:06:48,660 INFO  [default] # of shapes    : 1
+2016-01-19 01:06:48,663 INFO  [default] # of materials : 1
+2016-01-19 01:06:48,667 INFO  [default] shape[0].name = 
+2016-01-19 01:06:48,671 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:06:48,675 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:06:48,679 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:07:17,414 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:07:17,607 INFO  [default] # of shapes    : 1
+2016-01-19 01:07:17,610 INFO  [default] # of materials : 1
+2016-01-19 01:07:17,613 INFO  [default] shape[0].name = 
+2016-01-19 01:07:17,617 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:07:17,621 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:07:17,625 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:07:48,764 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:07:48,968 INFO  [default] # of shapes    : 1
+2016-01-19 01:07:48,972 INFO  [default] # of materials : 1
+2016-01-19 01:07:48,975 INFO  [default] shape[0].name = 
+2016-01-19 01:07:48,978 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:07:48,982 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:07:48,988 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:09:32,558 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:09:32,767 INFO  [default] # of shapes    : 1
+2016-01-19 01:09:32,771 INFO  [default] # of materials : 1
+2016-01-19 01:09:32,774 INFO  [default] shape[0].name = 
+2016-01-19 01:09:32,781 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:09:32,788 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:09:32,795 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:10:11,311 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:10:11,504 INFO  [default] # of shapes    : 1
+2016-01-19 01:10:11,507 INFO  [default] # of materials : 1
+2016-01-19 01:10:11,510 INFO  [default] shape[0].name = 
+2016-01-19 01:10:11,513 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:10:11,517 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:10:11,522 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:13:13,175 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:13:13,377 INFO  [default] # of shapes    : 1
+2016-01-19 01:13:13,382 INFO  [default] # of materials : 1
+2016-01-19 01:13:13,386 INFO  [default] shape[0].name = 
+2016-01-19 01:13:13,389 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:13:13,393 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:13:13,399 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:17:31,834 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:17:32,046 INFO  [default] # of shapes    : 1
+2016-01-19 01:17:32,050 INFO  [default] # of materials : 1
+2016-01-19 01:17:32,053 INFO  [default] shape[0].name = 
+2016-01-19 01:17:32,057 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:17:32,062 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:17:32,069 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:17:57,966 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:17:58,178 INFO  [default] # of shapes    : 1
+2016-01-19 01:17:58,181 INFO  [default] # of materials : 1
+2016-01-19 01:17:58,184 INFO  [default] shape[0].name = 
+2016-01-19 01:17:58,188 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:17:58,192 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:17:58,196 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:18:26,803 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:18:27,010 INFO  [default] # of shapes    : 1
+2016-01-19 01:18:27,014 INFO  [default] # of materials : 1
+2016-01-19 01:18:27,017 INFO  [default] shape[0].name = 
+2016-01-19 01:18:27,023 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:18:27,028 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:18:27,033 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:27:35,859 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:27:36,064 INFO  [default] # of shapes    : 1
+2016-01-19 01:27:36,067 INFO  [default] # of materials : 1
+2016-01-19 01:27:36,070 INFO  [default] shape[0].name = 
+2016-01-19 01:27:36,074 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:27:36,079 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:27:36,083 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:32:29,296 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:32:29,497 INFO  [default] # of shapes    : 1
+2016-01-19 01:32:29,501 INFO  [default] # of materials : 1
+2016-01-19 01:32:29,505 INFO  [default] shape[0].name = 
+2016-01-19 01:32:29,508 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:32:29,514 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:32:29,518 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:34:25,671 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:34:25,885 INFO  [default] # of shapes    : 1
+2016-01-19 01:34:25,889 INFO  [default] # of materials : 1
+2016-01-19 01:34:25,893 INFO  [default] shape[0].name = 
+2016-01-19 01:34:25,897 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:34:25,901 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:34:25,906 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:40:06,399 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:40:06,597 INFO  [default] # of shapes    : 1
+2016-01-19 01:40:06,601 INFO  [default] # of materials : 1
+2016-01-19 01:40:06,604 INFO  [default] shape[0].name = 
+2016-01-19 01:40:06,607 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:40:06,611 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:40:06,615 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:40:43,984 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:40:44,196 INFO  [default] # of shapes    : 1
+2016-01-19 01:40:44,199 INFO  [default] # of materials : 1
+2016-01-19 01:40:44,203 INFO  [default] shape[0].name = 
+2016-01-19 01:40:44,207 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:40:44,210 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:40:44,215 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:41:30,991 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:41:31,216 INFO  [default] # of shapes    : 1
+2016-01-19 01:41:31,219 INFO  [default] # of materials : 1
+2016-01-19 01:41:31,222 INFO  [default] shape[0].name = 
+2016-01-19 01:41:31,225 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:41:31,228 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:41:31,232 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:42:07,473 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:42:07,676 INFO  [default] # of shapes    : 1
+2016-01-19 01:42:07,680 INFO  [default] # of materials : 1
+2016-01-19 01:42:07,683 INFO  [default] shape[0].name = 
+2016-01-19 01:42:07,687 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:42:07,692 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:42:07,697 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:42:46,882 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:42:47,084 INFO  [default] # of shapes    : 1
+2016-01-19 01:42:47,087 INFO  [default] # of materials : 1
+2016-01-19 01:42:47,091 INFO  [default] shape[0].name = 
+2016-01-19 01:42:47,094 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:42:47,098 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:42:47,103 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:42:59,470 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:42:59,686 INFO  [default] # of shapes    : 1
+2016-01-19 01:42:59,689 INFO  [default] # of materials : 1
+2016-01-19 01:42:59,693 INFO  [default] shape[0].name = 
+2016-01-19 01:42:59,696 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:42:59,701 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:42:59,706 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:43:16,237 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:43:16,446 INFO  [default] # of shapes    : 1
+2016-01-19 01:43:16,450 INFO  [default] # of materials : 1
+2016-01-19 01:43:16,457 INFO  [default] shape[0].name = 
+2016-01-19 01:43:16,462 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:43:16,467 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:43:16,471 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:45:26,593 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:45:26,814 INFO  [default] # of shapes    : 1
+2016-01-19 01:45:26,817 INFO  [default] # of materials : 1
+2016-01-19 01:45:26,820 INFO  [default] shape[0].name = 
+2016-01-19 01:45:26,823 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:45:26,826 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:45:26,830 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:45:54,030 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:45:54,230 INFO  [default] # of shapes    : 1
+2016-01-19 01:45:54,235 INFO  [default] # of materials : 1
+2016-01-19 01:45:54,238 INFO  [default] shape[0].name = 
+2016-01-19 01:45:54,242 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:45:54,247 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:45:54,252 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:46:53,836 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:46:54,049 INFO  [default] # of shapes    : 1
+2016-01-19 01:46:54,053 INFO  [default] # of materials : 1
+2016-01-19 01:46:54,056 INFO  [default] shape[0].name = 
+2016-01-19 01:46:54,060 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:46:54,066 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:46:54,073 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:47:57,161 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:47:57,376 INFO  [default] # of shapes    : 1
+2016-01-19 01:47:57,380 INFO  [default] # of materials : 1
+2016-01-19 01:47:57,383 INFO  [default] shape[0].name = 
+2016-01-19 01:47:57,387 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:47:57,391 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:47:57,395 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:48:42,245 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:48:42,462 INFO  [default] # of shapes    : 1
+2016-01-19 01:48:42,466 INFO  [default] # of materials : 1
+2016-01-19 01:48:42,469 INFO  [default] shape[0].name = 
+2016-01-19 01:48:42,472 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:48:42,479 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:48:42,484 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:49:05,937 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:49:06,145 INFO  [default] # of shapes    : 1
+2016-01-19 01:49:06,149 INFO  [default] # of materials : 1
+2016-01-19 01:49:06,153 INFO  [default] shape[0].name = 
+2016-01-19 01:49:06,157 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:49:06,161 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:49:06,166 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:50:45,724 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:50:45,936 INFO  [default] # of shapes    : 1
+2016-01-19 01:50:45,939 INFO  [default] # of materials : 1
+2016-01-19 01:50:45,943 INFO  [default] shape[0].name = 
+2016-01-19 01:50:45,945 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:50:45,949 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:50:45,954 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:51:39,387 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:51:39,594 INFO  [default] # of shapes    : 1
+2016-01-19 01:51:39,598 INFO  [default] # of materials : 1
+2016-01-19 01:51:39,601 INFO  [default] shape[0].name = 
+2016-01-19 01:51:39,604 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:51:39,622 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:51:39,630 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:52:14,501 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:52:14,700 INFO  [default] # of shapes    : 1
+2016-01-19 01:52:14,705 INFO  [default] # of materials : 1
+2016-01-19 01:52:14,709 INFO  [default] shape[0].name = 
+2016-01-19 01:52:14,713 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:52:14,717 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:52:14,721 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:52:43,275 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:52:43,477 INFO  [default] # of shapes    : 1
+2016-01-19 01:52:43,480 INFO  [default] # of materials : 1
+2016-01-19 01:52:43,483 INFO  [default] shape[0].name = 
+2016-01-19 01:52:43,486 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:52:43,490 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:52:43,496 INFO  [default] shape[0].vertices: 3025
+2016-01-19 01:52:55,357 INFO  [default] Loading file: data/models/yoda/yoda-head.obj
+2016-01-19 01:52:55,567 INFO  [default] # of shapes    : 1
+2016-01-19 01:52:55,571 INFO  [default] # of materials : 1
+2016-01-19 01:52:55,575 INFO  [default] shape[0].name = 
+2016-01-19 01:52:55,579 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 01:52:55,583 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 01:52:55,588 INFO  [default] shape[0].vertices: 3025
+2016-01-19 02:04:59,479 INFO  [default] Loading file: data/models/yoda/yoda-head.awf
+2016-01-19 02:04:59,687 INFO  [default] # of shapes    : 1
+2016-01-19 02:04:59,690 INFO  [default] # of materials : 1
+2016-01-19 02:04:59,694 INFO  [default] shape[0].name = 
+2016-01-19 02:04:59,697 INFO  [default] Size of shape[0].indices: 1011
+2016-01-19 02:04:59,701 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-19 02:04:59,706 INFO  [default] shape[0].vertices: 3025

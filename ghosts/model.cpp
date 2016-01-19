@@ -220,13 +220,17 @@ namespace framework
 		glm::mat4 model_mat = glm::translate(glm::mat4::IDENTITY, m_ModelToWorld.p_Position.xyz());
 		model_mat *= glm::mat4_cast(m_ModelToWorld.p_Rotation);
 
-		const glm::mat4 model_view = view * model_mat;
+		auto model_view = view * model_mat;
+
+		// calculate light direction in view space
+		auto light_intensity = light.w;
+		auto light_view = view * glm::vec4(light.xyz(), 0.f);
 
 		for (size_t m_id = 0; m_id < m_Meshes.size(); ++m_id)
 		{
 			assert(m_id < m_MeshMaterialMap.size());
 			auto material = m_Materials[m_MeshMaterialMap[m_id]];
-			material->update(projection, model_view, light);
+			material->update(projection, model_view, glm::vec4(glm::vec3(light_view), light_intensity));
 			material->use();
 
 			m_Meshes[m_id]->draw();

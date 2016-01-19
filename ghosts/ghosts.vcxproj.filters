@@ -81,4 +81,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="data\shaders\pbr.frag">
+      <Filter>Shader Filers</Filter>
+    </None>
+    <None Include="data\shaders\pbr.vert">
+      <Filter>Shader Filers</Filter>
+    </None>
+  </ItemGroup>
 </Project>

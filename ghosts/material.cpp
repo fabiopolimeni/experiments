@@ -156,7 +156,7 @@ bool graphics::material::create()
 
 	// create the uniform transform buffer
 	{
-		auto uniform_buffer_size = glm::max(gl::int32((sizeof(glm::mat4) * 2) + sizeof(glm::mat3)), uniform_buffer_offeset);
+		auto uniform_buffer_size = glm::max(gl::int32((sizeof(glm::mat4) * 3)), uniform_buffer_offeset);
 
 		glGenBuffers(1, &m_UniformBufferNames[enum_to_t(uniform::TRANSFORM)]);
 		glBindBuffer(GL_UNIFORM_BUFFER, m_UniformBufferNames[enum_to_t(uniform::TRANSFORM)]);
@@ -220,19 +220,15 @@ void graphics::material::update(glm::mat4 prj_matrix, glm::mat4 mv_matrix, glm::
 		// uniform buffer object needs to be bound with std140 layout attribute
 		glBindBuffer(GL_UNIFORM_BUFFER, m_UniformBufferNames[enum_to_t(uniform::TRANSFORM)]);
 		uint8_t* tranform_buffer_ptr = (uint8_t*)glMapBufferRange(GL_UNIFORM_BUFFER, 0,
-			(sizeof(glm::mat4) * 2) + sizeof(glm::mat3),
-			GL_MAP_WRITE_BIT | GL_MAP_INVALIDATE_BUFFER_BIT);
+			sizeof(glm::mat4) * 3, GL_MAP_WRITE_BIT | GL_MAP_INVALIDATE_BUFFER_BIT);
 
 		auto mvp_matrix = prj_matrix * mv_matrix;
-		auto norm_matrix = glm::mat3(
-			glm::vec3(mv_matrix[0]),
-			glm::vec3(mv_matrix[1]),
-			glm::vec3(mv_matrix[2]));
+		auto norm_matrix = glm::transpose(glm::inverse(mv_matrix));
 
 		// copy transform matrices
 		memcpy(tranform_buffer_ptr, &mvp_matrix[0], sizeof(glm::mat4));
 		memcpy(tranform_buffer_ptr + sizeof(glm::mat4), &mv_matrix[0], sizeof(glm::mat4));
-		memcpy(tranform_buffer_ptr + sizeof(glm::mat4) + sizeof(glm::mat4), &norm_matrix[0], sizeof(glm::mat4));
+		memcpy(tranform_buffer_ptr + sizeof(glm::mat4) * 2, &norm_matrix[0], sizeof(glm::mat4));
 
 		// make sure the uniform buffer is uploaded
 		glUnmapBuffer(GL_UNIFORM_BUFFER);

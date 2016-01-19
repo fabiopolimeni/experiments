@@ -8,7 +8,7 @@ bool ghosts::begin()
 {
 	if (graphics::renderer::init() && compute::clothing::init())
 	{
-		if (auto m = framework::model::load("data/models/yoda/yoda-head.obj", framework::model::ASCII))
+		if (auto m = framework::model::load("data/models/yoda/yoda-head.awf", framework::model::ASCII))
 		{
 			if (m->activate())
 			{
@@ -36,12 +36,12 @@ bool ghosts::render()
 
 	graphics::renderer::clear(window_size, glm::vec4(.95f));
 
+	// light: direction light.xyz, intensity light.w
+	glm::vec4 light_vec(-1.f, -2.f, 0.f, 100.f);
+
 	// simulate
 	for (auto model : m_Models)
 		model->simulate(0.016f);
-
-	// light: direction light.xyz, intensity light.w
-	glm::vec4 light_vec(-1.f, -2.f, 10.f, 100.f);
 
 	// render
 	for (auto model : m_Models)

@@ -120,6 +120,10 @@
     <ClInclude Include="ogl.hpp" />
     <ClInclude Include="transform.hpp" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="data\shaders\pbr.frag" />
+    <None Include="data\shaders\pbr.vert" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -16,8 +16,8 @@ layout(std430, column_major) buffer;
 layout(binding = TRANSFORM) uniform transform
 {
 	mat4 MVP;
-	mat4 ModelView;
-	mat3 NormalMatrix;
+	mat4 ModelViewMatrix;
+	mat4 NormalMatrix;
 } Transform;
 
 layout(binding = POSITION) buffer position
@@ -50,10 +50,10 @@ out block
 void main()
 {	
 	Out.TexCoords = TexCoords.value[gl_VertexID];
-	Out.Normal = normalize(Transform.NormalMatrix * Normal.value[gl_VertexID].xyz);
+	Out.Normal = normalize(Transform.NormalMatrix * vec4(Normal.value[gl_VertexID].xyz, 0.0)).xyz;
 	
 	vec4 VertPos = vec4(Position.value[gl_VertexID].xyz, 1.0f);
-	Out.Position = vec3(Transform.ModelView * VertPos);
+	Out.Position = vec3(Transform.ModelViewMatrix * VertPos);
 	
 	gl_Position = Transform.MVP * VertPos;
 }
