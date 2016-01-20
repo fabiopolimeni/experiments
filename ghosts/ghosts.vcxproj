@@ -107,6 +107,7 @@
     <ClCompile Include="mesh.cpp" />
     <ClCompile Include="model.cpp" />
     <ClCompile Include="graphics.cpp" />
+    <ClCompile Include="texture.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="compute.hpp" />
@@ -118,6 +119,8 @@
     <ClInclude Include="model.hpp" />
     <ClInclude Include="graphics.hpp" />
     <ClInclude Include="ogl.hpp" />
+    <ClInclude Include="resource.hpp" />
+    <ClInclude Include="texture.hpp" />
     <ClInclude Include="transform.hpp" />
   </ItemGroup>
   <ItemGroup>

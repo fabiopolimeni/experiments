@@ -2,7 +2,7 @@
 #include "ogl.hpp"
 #include "util.hpp"
 
-bool framework::mesh::create()
+bool graphics::mesh::create()
 {
 	assert(m_VAO == 0);
 
@@ -53,7 +53,7 @@ bool framework::mesh::create()
 	return valid_buffers;
 }
 
-void framework::mesh::draw()
+void graphics::mesh::use()
 {
 	assert(glIsVertexArray(m_VAO));
 
@@ -64,7 +64,7 @@ void framework::mesh::draw()
 	glDrawElements(GL_TRIANGLES, (gl::sizei)p_FaceIndices.size(), GL_UNSIGNED_INT, gl::bufferOffset(0));
 }
 
-void framework::mesh::destroy()
+void graphics::mesh::destroy()
 {
 	glDeleteBuffers(enum_to_t(buffer::MAX), m_IBO);
 	glDeleteBuffers(1, &m_VAO);

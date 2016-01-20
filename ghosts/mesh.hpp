@@ -1,15 +1,16 @@
 #pragma once
 
 #include "transform.hpp"
+#include "resource.hpp"
 
 #include <glm/vec2.hpp>
 #include <glm/vec4.hpp>
 
 #include <vector>
 
-namespace framework
+namespace graphics
 {
-	class mesh
+	class mesh : public resource<mesh>
 	{
 
 	public:
@@ -40,7 +41,7 @@ namespace framework
 		std::vector<uint32_t>	p_FaceIndices;
 
 		bool create();
-		void draw();
+		void use();
 		void destroy();
 	};
 }

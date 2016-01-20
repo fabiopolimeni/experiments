@@ -7,15 +7,15 @@
 namespace graphics
 {
 	class material;
+	class mesh;
 }
 
 namespace framework
 {
-	class mesh;
 	class model
 	{
 		math::transform m_ModelToWorld;
-		std::vector<framework::mesh*> m_Meshes;
+		std::vector<graphics::mesh*> m_Meshes;
 		std::vector<graphics::material*> m_Materials;
 
 		// position in the vector refers to the mesh index inside m_Meshes,

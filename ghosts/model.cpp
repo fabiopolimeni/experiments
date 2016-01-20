@@ -4,6 +4,7 @@
 #include "mesh.hpp"
 #include "material.hpp"
 #include "util.hpp"
+#include "texture.hpp"
 
 #include "tiny_obj_loader.h"
 
@@ -42,7 +43,7 @@ namespace framework
 
 		for (size_t i = 0; i < shapes.size(); ++i)
 		{
-			framework::mesh* mesh = new framework::mesh();
+			graphics::mesh* mesh = new graphics::mesh();
 
 			LOG(INFO) << fmt::format("shape[{}].name = {}", i, shapes[i].name.c_str());
 			LOG(INFO) << fmt::format("Size of shape[{}].indices: {}", i, shapes[i].mesh.indices.size() / 3);
@@ -159,6 +160,10 @@ namespace framework
 
 	model* model::load(const std::string & filename, file_type f_type)
 	{
+		graphics::texture tex;
+		if (!tex.initialise(filename))
+			return nullptr;
+
 		switch (f_type)
 		{
 		case ASCII:
@@ -233,7 +238,7 @@ namespace framework
 			material->update(projection, model_view, glm::vec4(glm::vec3(light_view), light_intensity));
 			material->use();
 
-			m_Meshes[m_id]->draw();
+			m_Meshes[m_id]->use();
 		}
 	}
 }
