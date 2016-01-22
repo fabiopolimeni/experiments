@@ -124,8 +124,22 @@
     <ClInclude Include="transform.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="data\models\yoda\yoda-head.awf" />
+    <None Include="data\models\yoda\yoda-head.mtl" />
     <None Include="data\shaders\pbr.frag" />
     <None Include="data\shaders\pbr.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="data\models\yoda\body.dds" />
+    <Image Include="data\models\yoda\body_b.dds" />
+    <Image Include="data\models\yoda\body_s.dds" />
+    <Image Include="data\models\yoda\Eye.dds" />
+    <Image Include="data\models\yoda\Head.dds" />
+    <Image Include="data\models\yoda\Head_b.dds" />
+    <Image Include="data\models\yoda\Head_s.dds" />
+    <Image Include="data\models\yoda\Limbs.dds" />
+    <Image Include="data\models\yoda\Limbs_b.dds" />
+    <Image Include="data\models\yoda\Stick.dds" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

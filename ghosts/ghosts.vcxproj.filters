@@ -97,5 +97,43 @@
     <None Include="data\shaders\pbr.vert">
       <Filter>Shader Filers</Filter>
     </None>
+    <None Include="data\models\yoda\yoda-head.awf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="data\models\yoda\yoda-head.mtl">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="data\models\yoda\body.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="data\models\yoda\body_b.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="data\models\yoda\body_s.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="data\models\yoda\Eye.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="data\models\yoda\Head.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="data\models\yoda\Head_b.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="data\models\yoda\Head_s.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="data\models\yoda\Limbs.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="data\models\yoda\Limbs_b.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="data\models\yoda\Stick.dds">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

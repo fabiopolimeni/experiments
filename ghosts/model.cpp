@@ -134,9 +134,9 @@ namespace framework
 			}
 
 			// create graphics material
-			std::string texture_files[graphics::material::texture::MAX];
-			texture_files[enum_to_t(graphics::material::texture::DIFFUSE)] = materials[i].diffuse_texname;
-			texture_files[enum_to_t(graphics::material::texture::SPECULAR)] = materials[i].specular_texname;
+			graphics::texture texture_files[graphics::material::sampler::MAX] = {};
+			texture_files[enum_to_t(graphics::material::sampler::DIFFUSE)].create(file_basepath + materials[i].diffuse_texname);
+			texture_files[enum_to_t(graphics::material::sampler::SPECULAR)].create(materials[i].specular_texname);
 
 			graphics::material* material = new graphics::material(texture_files);
 			loaded_model->m_Materials.push_back(material);
@@ -160,10 +160,6 @@ namespace framework
 
 	model* model::load(const std::string & filename, file_type f_type)
 	{
-		graphics::texture tex;
-		if (!tex.initialise(filename))
-			return nullptr;
-
 		switch (f_type)
 		{
 		case ASCII:

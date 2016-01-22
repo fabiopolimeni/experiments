@@ -10,6 +10,10 @@ namespace graphics
 
 	public:
 
+		typedef unsigned int handle;
+		
+		static const handle invalid = 0;
+
 		template<typename... R>
 		inline auto initialise(R&&... args)
 		{

@@ -1,6 +1,7 @@
 #pragma  once
 
 #include "resource.hpp"
+#include "texture.hpp"
 
 #include <glm/vec2.hpp>
 #include <glm/vec4.hpp>
@@ -23,7 +24,7 @@ namespace graphics
 			MAX
 		};
 
-		enum class texture : uint32_t
+		enum class sampler : uint32_t
 		{
 			DIFFUSE,
 			SPECULAR,
@@ -39,12 +40,12 @@ namespace graphics
 
 		uint32_t m_UniformBufferNames[uniform::MAX];
 
-		uint32_t m_TextureNames[texture::MAX];
-		uint32_t m_SamplerNames[texture::MAX];
+		uint32_t m_TextureNames[sampler::MAX];
+		uint32_t m_SamplerNames[sampler::MAX];
 
 	public:
 
-		material(const std::string texture_files[texture::MAX]);
+		material(texture textures[sampler::MAX]);
 
 		bool create();
 		void use();
