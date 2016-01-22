@@ -50,6 +50,8 @@ out block
 void main()
 {	
 	Out.TexCoords = TexCoords.value[gl_VertexID];
+	Out.TexCoords.y = 1.0 - Out.TexCoords.y;
+
 	Out.Normal = normalize(Transform.NormalMatrix * vec4(Normal.value[gl_VertexID].xyz, 0.0)).xyz;
 	
 	vec4 VertPos = vec4(Position.value[gl_VertexID].xyz, 1.0f);

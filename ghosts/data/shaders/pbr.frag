@@ -3,6 +3,11 @@
 #define LIGHT		1
 #define FRAG_COLOR	0
 
+#define DIFFUSE		0
+#define SPECULAR	1
+#define NORMAL		2
+#define ENVIRONMENT	3
+
 precision highp float;
 precision highp int;
 layout(std140, column_major) uniform;
@@ -19,6 +24,8 @@ in block
 	vec2 TexCoords;
 } In;
 
+layout(binding = DIFFUSE) uniform sampler2D Diffuse;
+
 layout(location = FRAG_COLOR, index = 0) out vec4 Color;
 
 vec3 ads(vec3 Normal, vec3 LightDir, vec3 Position)
@@ -27,9 +34,13 @@ vec3 ads(vec3 Normal, vec3 LightDir, vec3 Position)
 	vec3 s = normalize( -LightDir );
 	vec3 v = normalize( -Position );
 	vec3 r = reflect( -s, n );
-	vec3 c = vec3(0.5, 0.7, 0.1);
-	
-	return (c * max( dot(s, n), 0.0 ) + vec3(0.9) * pow( max( dot(r,v), 0.0 ), 64 ) );
+
+	vec3 albeldo = texture2D(Diffuse, In.TexCoords).xyz;
+	vec3 diffuse = albeldo * max( dot(s, n), 0.0 );
+	vec3 shiness = vec3(0.9);
+	vec3 specular = shiness * pow( max( dot(r,v), 0.0 ), 64 );
+
+	return ( diffuse + specular );
 }
 
 void main()

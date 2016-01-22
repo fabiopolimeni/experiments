@@ -453,3 +453,31 @@
 2016-01-22 17:34:08,085 INFO  [default] Size of shape[0].indices: 1011
 2016-01-22 17:34:08,088 INFO  [default] Size of shape[0].material_ids: 1011
 2016-01-22 17:34:08,093 INFO  [default] shape[0].vertices: 3025
+2016-01-22 18:10:12,354 INFO  [default] Loading file: data/models/yoda/yoda-head.awf
+2016-01-22 18:10:12,568 INFO  [default] # of shapes    : 1
+2016-01-22 18:10:12,571 INFO  [default] # of materials : 1
+2016-01-22 18:10:12,575 INFO  [default] shape[0].name = 
+2016-01-22 18:10:12,579 INFO  [default] Size of shape[0].indices: 1011
+2016-01-22 18:10:12,583 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-22 18:10:12,587 INFO  [default] shape[0].vertices: 3025
+2016-01-22 18:13:27,123 INFO  [default] Loading file: data/models/yoda/yoda-head.awf
+2016-01-22 18:13:27,338 INFO  [default] # of shapes    : 1
+2016-01-22 18:13:27,341 INFO  [default] # of materials : 1
+2016-01-22 18:13:27,344 INFO  [default] shape[0].name = 
+2016-01-22 18:13:27,348 INFO  [default] Size of shape[0].indices: 1011
+2016-01-22 18:13:27,352 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-22 18:13:27,356 INFO  [default] shape[0].vertices: 3025
+2016-01-22 18:15:57,728 INFO  [default] Loading file: data/models/yoda/yoda-head.awf
+2016-01-22 18:15:57,944 INFO  [default] # of shapes    : 1
+2016-01-22 18:15:57,947 INFO  [default] # of materials : 1
+2016-01-22 18:15:57,951 INFO  [default] shape[0].name = 
+2016-01-22 18:15:57,954 INFO  [default] Size of shape[0].indices: 1011
+2016-01-22 18:15:57,959 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-22 18:15:57,964 INFO  [default] shape[0].vertices: 3025
+2016-01-22 18:16:32,086 INFO  [default] Loading file: data/models/yoda/yoda-head.awf
+2016-01-22 18:16:32,303 INFO  [default] # of shapes    : 1
+2016-01-22 18:16:32,309 INFO  [default] # of materials : 1
+2016-01-22 18:16:32,312 INFO  [default] shape[0].name = 
+2016-01-22 18:16:32,316 INFO  [default] Size of shape[0].indices: 1011
+2016-01-22 18:16:32,330 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-22 18:16:32,335 INFO  [default] shape[0].vertices: 3025
