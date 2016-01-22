@@ -8,6 +8,7 @@ namespace graphics
 {
 	class material;
 	class mesh;
+	class texture;
 }
 
 namespace framework
@@ -15,8 +16,10 @@ namespace framework
 	class model
 	{
 		math::transform m_ModelToWorld;
+		
 		std::vector<graphics::mesh*> m_Meshes;
 		std::vector<graphics::material*> m_Materials;
+		std::vector<graphics::texture*> m_Textures;
 
 		// position in the vector refers to the mesh index inside m_Meshes,
 		// while the element refers to the material index inside m_Materials.

@@ -446,3 +446,10 @@
 2016-01-22 10:03:11,392 INFO  [default] Size of shape[0].indices: 1011
 2016-01-22 10:03:11,396 INFO  [default] Size of shape[0].material_ids: 1011
 2016-01-22 10:03:11,400 INFO  [default] shape[0].vertices: 3025
+2016-01-22 17:34:07,855 INFO  [default] Loading file: data/models/yoda/yoda-head.awf
+2016-01-22 17:34:08,073 INFO  [default] # of shapes    : 1
+2016-01-22 17:34:08,077 INFO  [default] # of materials : 1
+2016-01-22 17:34:08,082 INFO  [default] shape[0].name = 
+2016-01-22 17:34:08,085 INFO  [default] Size of shape[0].indices: 1011
+2016-01-22 17:34:08,088 INFO  [default] Size of shape[0].material_ids: 1011
+2016-01-22 17:34:08,093 INFO  [default] shape[0].vertices: 3025

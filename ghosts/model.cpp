@@ -8,8 +8,31 @@
 
 #include "tiny_obj_loader.h"
 
+#include <map>
+
 namespace framework
 {
+	graphics::texture* generateTexture(const std::string& tex_filename)
+	{
+		static	std::map<std::string, graphics::texture*> texture_names;
+
+		graphics::texture* new_texture = nullptr;
+		if (texture_names.find(tex_filename) == texture_names.end())
+		{
+			new_texture = new graphics::texture();
+			if (!new_texture->create(tex_filename))
+			{
+				new_texture->destory();
+				delete new_texture;
+				new_texture = nullptr;
+			}
+
+			texture_names.emplace(tex_filename, new_texture);
+		}
+
+		return new_texture;
+	}
+
 	model* model::loadObj(const std::string& in_file)
 	{
 		std::vector<tinyobj::shape_t> shapes;
@@ -134,9 +157,9 @@ namespace framework
 			}
 
 			// create graphics material
-			graphics::texture texture_files[graphics::material::sampler::MAX] = {};
-			texture_files[enum_to_t(graphics::material::sampler::DIFFUSE)].create(file_basepath + materials[i].diffuse_texname);
-			texture_files[enum_to_t(graphics::material::sampler::SPECULAR)].create(materials[i].specular_texname);
+			graphics::texture* texture_files[graphics::material::sampler::MAX] = { nullptr };
+			texture_files[enum_to_t(graphics::material::sampler::DIFFUSE)] = generateTexture(file_basepath + materials[i].diffuse_texname);
+			texture_files[enum_to_t(graphics::material::sampler::SPECULAR)] = generateTexture(file_basepath + materials[i].specular_texname);
 
 			graphics::material* material = new graphics::material(texture_files);
 			loaded_model->m_Materials.push_back(material);
@@ -153,6 +176,10 @@ namespace framework
 		for (auto material : m_Materials)
 			delete material;
 
+		for (auto texture : m_Textures)
+			delete texture;
+
+		m_Textures.clear();
 		m_Materials.clear();
 		m_Meshes.clear();
 		m_MeshMaterialMap.clear();
@@ -181,6 +208,9 @@ namespace framework
 
 			for (auto material : in_model->m_Materials)
 				material->destory();
+
+			for (auto texture : in_model->m_Textures)
+				texture->destory();
 
 			in_model->clear();
 		}

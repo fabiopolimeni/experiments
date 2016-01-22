@@ -45,7 +45,7 @@ namespace graphics
 
 	public:
 
-		material(texture textures[sampler::MAX]);
+		material(texture* textures[sampler::MAX]);
 
 		bool create();
 		void use();

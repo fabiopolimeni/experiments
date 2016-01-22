@@ -33,7 +33,7 @@ namespace
 char const * VS_SOURCE = "data/shaders/pbr.vert";
 char const * FS_SOURCE = "data/shaders/pbr.frag";
 
-graphics::material::material(texture textures[sampler::MAX])
+graphics::material::material(texture* textures[sampler::MAX])
 	: m_PipelineName(0), m_ProgramName(0)
 {
 	// clear texture unit names
@@ -42,13 +42,29 @@ graphics::material::material(texture textures[sampler::MAX])
 	memset(m_UniformBufferNames, 0, sizeof(m_UniformBufferNames));
 
 	for (uint32_t ti = 0; ti < enum_to_t(sampler::MAX); ++ti)
-		m_TextureNames[ti] = textures[ti].getHandle();
+		if (textures[ti]) m_TextureNames[ti] = textures[ti]->getHandle();
 }
 
 bool graphics::material::create()
 {
 	assert(m_ProgramName == 0);
 	assert(m_PipelineName == 0);
+
+	// generate and populate samplers
+	glGenSamplers(enum_to_t(sampler::MAX), &m_SamplerNames[0]);
+
+	for (std::size_t i = 0; i < enum_to_t(sampler::MAX); ++i)
+	{
+		glSamplerParameteri(m_SamplerNames[i], GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+		glSamplerParameteri(m_SamplerNames[i], GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+		glSamplerParameteri(m_SamplerNames[i], GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+		glSamplerParameteri(m_SamplerNames[i], GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+
+		// we want seamless cubemaps
+		if (i == enum_to_t(sampler::ENVIRONMENT))
+			glSamplerParameteri(m_SamplerNames[i], GL_TEXTURE_CUBE_MAP_SEAMLESS, GL_TRUE);
+	}
 
 	gl::int32 uniform_buffer_offeset(0);
 	glGetIntegerv(GL_UNIFORM_BUFFER_OFFSET_ALIGNMENT, &uniform_buffer_offeset);
@@ -92,9 +108,8 @@ void graphics::material::use()
 	glBindProgramPipeline(m_PipelineName);
 
 	// bind texture units
-	/*for (uint32_t tu_id = 0; tu_id < enum_to_t(texture::MAX); ++tu_id)
-		if (auto tex_name = m_TextureNames[tu_id])
-			glBindTextureUnit(tu_id, tex_name);*/
+	glBindTextures(0, enum_to_t(sampler::MAX), m_TextureNames);
+	glBindSamplers(0, enum_to_t(sampler::MAX), m_SamplerNames);
 	
 	// bind uniform buffers
 	glBindBufferBase(GL_UNIFORM_BUFFER, enum_to_t(uniform::TRANSFORM), m_UniformBufferNames[enum_to_t(uniform::TRANSFORM)]);
