@@ -13,7 +13,7 @@ namespace graphics
 	public:
 
 		bool create(const std::string& filename);
-		void destory();
+		void destroy();
 		void use(uint32_t texture_unit);
 
 		inline handle getHandle() const { return m_TextureName; }

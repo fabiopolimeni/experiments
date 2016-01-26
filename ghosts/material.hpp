@@ -7,8 +7,6 @@
 #include <glm/vec4.hpp>
 #include <glm/mat4x4.hpp>
 
-#include <gli/texture2d.hpp>
-
 namespace graphics
 {
 	// physical based render lighting model
@@ -45,11 +43,11 @@ namespace graphics
 
 	public:
 
-		material(texture* textures[sampler::MAX]);
+		material();
 
-		bool create();
+		bool create(texture* textures[sampler::MAX]);
 		void use();
-		void destory();
+		void destroy();
 
 		void update(
 			glm::mat4 prj_matrix,			// projection matrix

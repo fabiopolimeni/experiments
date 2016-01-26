@@ -33,22 +33,23 @@ namespace
 char const * VS_SOURCE = "data/shaders/pbr.vert";
 char const * FS_SOURCE = "data/shaders/pbr.frag";
 
-graphics::material::material(texture* textures[sampler::MAX])
+graphics::material::material()
 	: m_PipelineName(0), m_ProgramName(0)
 {
 	// clear texture unit names
 	memset(m_TextureNames, 0, sizeof(m_TextureNames));
 	memset(m_SamplerNames, 0, sizeof(m_SamplerNames));
 	memset(m_UniformBufferNames, 0, sizeof(m_UniformBufferNames));
-
-	for (uint32_t ti = 0; ti < enum_to_t(sampler::MAX); ++ti)
-		if (textures[ti]) m_TextureNames[ti] = textures[ti]->getHandle();
 }
 
-bool graphics::material::create()
+bool graphics::material::create(texture* textures[sampler::MAX])
 {
 	assert(m_ProgramName == 0);
 	assert(m_PipelineName == 0);
+
+	// associate textures to material
+	for (uint32_t ti = 0; ti < enum_to_t(sampler::MAX); ++ti)
+		if (textures[ti]) m_TextureNames[ti] = textures[ti]->getHandle();
 
 	// generate and populate samplers
 	glGenSamplers(enum_to_t(sampler::MAX), &m_SamplerNames[0]);
@@ -116,7 +117,7 @@ void graphics::material::use()
 	glBindBufferBase(GL_UNIFORM_BUFFER, enum_to_t(uniform::LIGHT), m_UniformBufferNames[enum_to_t(uniform::LIGHT)]);
 }
 
-void graphics::material::destory()
+void graphics::material::destroy()
 {	
 	glDeleteBuffers(enum_to_t(uniform::MAX), m_UniformBufferNames);
 	glDeleteProgramPipelines(1, &m_PipelineName);
@@ -125,6 +126,9 @@ void graphics::material::destory()
 	m_PipelineName = 0;
 	m_ProgramName = 0;
 	memset(m_UniformBufferNames, 0, sizeof(m_UniformBufferNames));
+
+	memset(m_TextureNames, 0, sizeof(m_TextureNames));
+	memset(m_SamplerNames, 0, sizeof(m_SamplerNames));
 }
 
 void graphics::material::update(glm::mat4 prj_matrix, glm::mat4 mv_matrix, glm::vec4 light_dir_intensity)

@@ -10,21 +10,18 @@ bool ghosts::begin()
 	{
 		if (auto m = framework::model::load("data/models/yoda/yoda-head.awf", framework::model::ASCII))
 		{
-			if (m->activate())
-			{
+			if (m->initialise())
 				m_Models.push_back(m);
-				return true;
-			}
 		}
 	}
 
-	return false;
+	return true;
 }
 
 bool ghosts::end()
 {
 	for (auto model : m_Models)
-		framework::model::destroy(model);
+		framework::model::release(model);
 
 	return graphics::renderer::shutdown() && compute::clothing::shutdown();
 }

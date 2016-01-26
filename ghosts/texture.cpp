@@ -125,7 +125,7 @@ void graphics::texture::use(uint32_t texture_unit)
 	glBindTextures(texture_unit, 1, &m_TextureName);
 }
 
-void graphics::texture::destory()
+void graphics::texture::destroy()
 {
 	if (m_TextureName)
 	{

@@ -12,25 +12,18 @@
 
 namespace framework
 {
+	static	std::map<std::string, graphics::texture*> s_texture_names;
 	graphics::texture* generateTexture(const std::string& tex_filename)
 	{
-		static	std::map<std::string, graphics::texture*> texture_names;
-
-		graphics::texture* new_texture = nullptr;
-		if (texture_names.find(tex_filename) == texture_names.end())
+		auto texture_pair = s_texture_names.find(tex_filename);
+		if (texture_pair == s_texture_names.end())
 		{
-			new_texture = new graphics::texture();
-			if (!new_texture->create(tex_filename))
-			{
-				new_texture->destory();
-				delete new_texture;
-				new_texture = nullptr;
-			}
-
-			texture_names.emplace(tex_filename, new_texture);
+			graphics::texture* new_texture = new graphics::texture();
+			s_texture_names.emplace(tex_filename, new_texture);
+			return new_texture;
 		}
 
-		return new_texture;
+		return texture_pair->second;
 	}
 
 	model* model::loadObj(const std::string& in_file)
@@ -129,7 +122,7 @@ namespace framework
 			loaded_model->m_Meshes.push_back(mesh);
 
 			// map material to mesh
-			// NOTE: multiple material per mesh is not supported yet
+			// NOTE: multiple materials per mesh is not supported yet
 			loaded_model->m_MeshMaterialMap.push_back(shapes[i].mesh.material_ids[0]);
 		}
 
@@ -156,12 +149,15 @@ namespace framework
 				LOG(INFO) << fmt::format("  material.{} = {}", it->first.c_str(), it->second.c_str());
 			}
 
-			// create graphics material
-			graphics::texture* texture_files[graphics::material::sampler::MAX] = { nullptr };
-			texture_files[enum_to_t(graphics::material::sampler::DIFFUSE)] = generateTexture(file_basepath + materials[i].diffuse_texname);
-			texture_files[enum_to_t(graphics::material::sampler::SPECULAR)] = generateTexture(file_basepath + materials[i].specular_texname);
+			// populate textures
+			if (!materials[i].diffuse_texname.empty())
+				loaded_model->m_Textures[enum_to_t(graphics::material::sampler::DIFFUSE)] = generateTexture(file_basepath + materials[i].diffuse_texname);
+			
+			if(!materials[i].specular_texname.empty())
+				loaded_model->m_Textures[enum_to_t(graphics::material::sampler::SPECULAR)] = generateTexture(file_basepath + materials[i].specular_texname);
 
-			graphics::material* material = new graphics::material(texture_files);
+			// create graphics material
+			graphics::material* material = new graphics::material();
 			loaded_model->m_Materials.push_back(material);
 		}
 
@@ -179,7 +175,6 @@ namespace framework
 		for (auto texture : m_Textures)
 			delete texture;
 
-		m_Textures.clear();
 		m_Materials.clear();
 		m_Meshes.clear();
 		m_MeshMaterialMap.clear();
@@ -199,7 +194,7 @@ namespace framework
 		}
 	}
 
-	void model::destroy(model * in_model)
+	void model::release(model * in_model)
 	{
 		if (in_model)
 		{
@@ -207,10 +202,10 @@ namespace framework
 				mesh->destroy();
 
 			for (auto material : in_model->m_Materials)
-				material->destory();
+				material->destroy();
 
 			for (auto texture : in_model->m_Textures)
-				texture->destory();
+				texture->destroy();
 
 			in_model->clear();
 		}
@@ -218,22 +213,26 @@ namespace framework
 		delete in_model;
 	}
 
-	bool model::activate()
+	bool model::initialise()
 	{
 		bool valid_model = true;
 		
 		for (auto mesh : m_Meshes)
 			valid_model &= mesh->create();
 
+		for (auto texture : m_Textures) {
+			for (auto tex_file : s_texture_names) {
+				if (texture && tex_file.second == texture) {
+					valid_model &= texture->create(tex_file.first);
+					break;
+				}
+			}
+		}
+
 		for (auto material : m_Materials)
-			valid_model &= material->create();
+			valid_model &= material->create(m_Textures);
 
 		return valid_model;
-	}
-
-	bool model::isActive() const
-	{
-		return false;
 	}
 
 	void model::update(glm::vec4 position, glm::quat rotation)
@@ -259,11 +258,13 @@ namespace framework
 
 		for (size_t m_id = 0; m_id < m_Meshes.size(); ++m_id)
 		{
+			// set the material
 			assert(m_id < m_MeshMaterialMap.size());
 			auto material = m_Materials[m_MeshMaterialMap[m_id]];
 			material->update(projection, model_view, glm::vec4(glm::vec3(light_view), light_intensity));
 			material->use();
 
+			// draw the mesh
 			m_Meshes[m_id]->use();
 		}
 	}
