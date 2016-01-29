@@ -231,5 +231,5 @@ _Pvt_Extensions
 
 # FAKE - F# Make
 .fake/
-ghosts/default_log.txt
+ghosts\\default_log.txt
 ghosts/default_log.txt
