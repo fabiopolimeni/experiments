@@ -11,3 +11,7 @@ Ni 1.000000
 d 1.000000
 illum 2
 map_Kd Barrel_01_Color.dds
+map_Ks Barrel_01_Metalness.dds
+map_Ns Barrel_01_Roughness.dds
+disp Barrel_01_Height.dds
+bump Barrel_01_Normal.dds

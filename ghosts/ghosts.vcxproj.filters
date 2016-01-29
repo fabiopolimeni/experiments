@@ -16,6 +16,12 @@
     <Filter Include="Shader Filers">
       <UniqueIdentifier>{6fffca1f-304a-4cb8-be66-38960e2cb258}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\yoda">
+      <UniqueIdentifier>{e887271c-df2f-4fe1-932d-24d406b81fa9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\barrel">
+      <UniqueIdentifier>{69059734-48bc-42f9-ae3e-b7c8e55139d1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -98,42 +104,71 @@
       <Filter>Shader Filers</Filter>
     </None>
     <None Include="data\models\yoda\yoda-head.awf">
-      <Filter>Resource Files</Filter>
+      <Filter>Resource Files\yoda</Filter>
     </None>
     <None Include="data\models\yoda\yoda-head.mtl">
-      <Filter>Resource Files</Filter>
+      <Filter>Resource Files\yoda</Filter>
+    </None>
+    <None Include="data\models\barrel\barrel.awf">
+      <Filter>Resource Files\barrel</Filter>
+    </None>
+    <None Include="data\models\barrel\barrel.mtl">
+      <Filter>Resource Files\barrel</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="data\models\yoda\body.dds">
-      <Filter>Resource Files</Filter>
+      <Filter>Resource Files\yoda</Filter>
     </Image>
     <Image Include="data\models\yoda\body_b.dds">
-      <Filter>Resource Files</Filter>
+      <Filter>Resource Files\yoda</Filter>
     </Image>
     <Image Include="data\models\yoda\body_s.dds">
-      <Filter>Resource Files</Filter>
+      <Filter>Resource Files\yoda</Filter>
     </Image>
     <Image Include="data\models\yoda\Eye.dds">
-      <Filter>Resource Files</Filter>
+      <Filter>Resource Files\yoda</Filter>
     </Image>
     <Image Include="data\models\yoda\Head.dds">
-      <Filter>Resource Files</Filter>
+      <Filter>Resource Files\yoda</Filter>
     </Image>
     <Image Include="data\models\yoda\Head_b.dds">
-      <Filter>Resource Files</Filter>
+      <Filter>Resource Files\yoda</Filter>
     </Image>
     <Image Include="data\models\yoda\Head_s.dds">
-      <Filter>Resource Files</Filter>
+      <Filter>Resource Files\yoda</Filter>
     </Image>
     <Image Include="data\models\yoda\Limbs.dds">
-      <Filter>Resource Files</Filter>
+      <Filter>Resource Files\yoda</Filter>
     </Image>
     <Image Include="data\models\yoda\Limbs_b.dds">
-      <Filter>Resource Files</Filter>
+      <Filter>Resource Files\yoda</Filter>
     </Image>
     <Image Include="data\models\yoda\Stick.dds">
-      <Filter>Resource Files</Filter>
+      <Filter>Resource Files\yoda</Filter>
     </Image>
+    <Image Include="data\models\barrel\Barrel_01_Color.dds">
+      <Filter>Resource Files\barrel</Filter>
+    </Image>
+    <Image Include="data\models\barrel\Barrel_01_Height.dds">
+      <Filter>Resource Files\barrel</Filter>
+    </Image>
+    <Image Include="data\models\barrel\Barrel_01_Normal.dds">
+      <Filter>Resource Files\barrel</Filter>
+    </Image>
+    <Image Include="data\models\barrel\Barrel_01_Roughness.dds">
+      <Filter>Resource Files\barrel</Filter>
+    </Image>
+    <Image Include="data\models\barrel\Barrel_01_Shiness.dds">
+      <Filter>Resource Files\barrel</Filter>
+    </Image>
+    <Image Include="data\models\barrel\Barrel_01_Metallic.dds">
+      <Filter>Resource Files\barrel</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="data\models\barrel\Barrel_01.obj">
+      <Filter>Resource Files\barrel</Filter>
+    </Object>
   </ItemGroup>
 </Project>
