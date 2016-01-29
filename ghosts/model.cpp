@@ -150,11 +150,26 @@ namespace framework
 			}
 
 			// populate textures
+			
+			// albedo
 			if (!materials[i].diffuse_texname.empty())
 				loaded_model->m_Textures[enum_to_t(graphics::material::sampler::DIFFUSE)] = generateTexture(file_basepath + materials[i].diffuse_texname);
 			
+			// metalness
 			if(!materials[i].specular_texname.empty())
 				loaded_model->m_Textures[enum_to_t(graphics::material::sampler::SPECULAR)] = generateTexture(file_basepath + materials[i].specular_texname);
+
+			// roughness
+			if (!materials[i].specular_texname.empty())
+				loaded_model->m_Textures[enum_to_t(graphics::material::sampler::ROUGHNESS)] = generateTexture(file_basepath + materials[i].specular_highlight_texname);
+
+			// displacement
+			if (!materials[i].specular_texname.empty())
+				loaded_model->m_Textures[enum_to_t(graphics::material::sampler::DISPLACEMENT)] = generateTexture(file_basepath + materials[i].displacement_texname);
+
+			// normal
+			if (!materials[i].specular_texname.empty())
+				loaded_model->m_Textures[enum_to_t(graphics::material::sampler::NORMAL)] = generateTexture(file_basepath + materials[i].bump_texname);
 
 			// create graphics material
 			graphics::material* material = new graphics::material();

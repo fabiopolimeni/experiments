@@ -13,14 +13,29 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Shader Filers">
-      <UniqueIdentifier>{6fffca1f-304a-4cb8-be66-38960e2cb258}</UniqueIdentifier>
+    <Filter Include="Resource Files\shaders">
+      <UniqueIdentifier>{dcbcf045-c131-4904-9908-517bef4a57ab}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\yoda">
+    <Filter Include="Resource Files\textures">
+      <UniqueIdentifier>{39fcb604-df9e-4446-8940-48d1cb7d5fa3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\models">
+      <UniqueIdentifier>{96b1f735-4f85-407b-8b1f-579e1a7809f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\models\barrel">
+      <UniqueIdentifier>{69059734-48bc-42f9-ae3e-b7c8e55139d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\models\yoda">
       <UniqueIdentifier>{e887271c-df2f-4fe1-932d-24d406b81fa9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files\barrel">
-      <UniqueIdentifier>{69059734-48bc-42f9-ae3e-b7c8e55139d1}</UniqueIdentifier>
+    <Filter Include="Resource Files\textures\ibl">
+      <UniqueIdentifier>{2237a1b0-23e4-4b47-a5ae-64533caeb2f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\textures\ibl\cubemaps">
+      <UniqueIdentifier>{ffdbbfc1-1c38-4ec1-8b07-a7376dd33cb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\textures\ibl\cubemaps\golden-gate-bridge">
+      <UniqueIdentifier>{2448c9a9-4674-4d08-bda3-6dc06f6c4a0f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -97,78 +112,91 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="data\shaders\pbr.frag">
-      <Filter>Shader Filers</Filter>
-    </None>
-    <None Include="data\shaders\pbr.vert">
-      <Filter>Shader Filers</Filter>
-    </None>
     <None Include="data\models\yoda\yoda-head.awf">
-      <Filter>Resource Files\yoda</Filter>
+      <Filter>Resource Files\models\yoda</Filter>
     </None>
     <None Include="data\models\yoda\yoda-head.mtl">
-      <Filter>Resource Files\yoda</Filter>
+      <Filter>Resource Files\models\yoda</Filter>
     </None>
     <None Include="data\models\barrel\barrel.awf">
-      <Filter>Resource Files\barrel</Filter>
+      <Filter>Resource Files\models\barrel</Filter>
     </None>
     <None Include="data\models\barrel\barrel.mtl">
-      <Filter>Resource Files\barrel</Filter>
+      <Filter>Resource Files\models\barrel</Filter>
+    </None>
+    <None Include="data\shaders\pbr.frag">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="data\shaders\pbr.vert">
+      <Filter>Resource Files\shaders</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="data\models\yoda\body.dds">
-      <Filter>Resource Files\yoda</Filter>
+      <Filter>Resource Files\models\yoda</Filter>
     </Image>
     <Image Include="data\models\yoda\body_b.dds">
-      <Filter>Resource Files\yoda</Filter>
+      <Filter>Resource Files\models\yoda</Filter>
     </Image>
     <Image Include="data\models\yoda\body_s.dds">
-      <Filter>Resource Files\yoda</Filter>
+      <Filter>Resource Files\models\yoda</Filter>
     </Image>
     <Image Include="data\models\yoda\Eye.dds">
-      <Filter>Resource Files\yoda</Filter>
+      <Filter>Resource Files\models\yoda</Filter>
     </Image>
     <Image Include="data\models\yoda\Head.dds">
-      <Filter>Resource Files\yoda</Filter>
+      <Filter>Resource Files\models\yoda</Filter>
     </Image>
     <Image Include="data\models\yoda\Head_b.dds">
-      <Filter>Resource Files\yoda</Filter>
+      <Filter>Resource Files\models\yoda</Filter>
     </Image>
     <Image Include="data\models\yoda\Head_s.dds">
-      <Filter>Resource Files\yoda</Filter>
+      <Filter>Resource Files\models\yoda</Filter>
     </Image>
     <Image Include="data\models\yoda\Limbs.dds">
-      <Filter>Resource Files\yoda</Filter>
+      <Filter>Resource Files\models\yoda</Filter>
     </Image>
     <Image Include="data\models\yoda\Limbs_b.dds">
-      <Filter>Resource Files\yoda</Filter>
+      <Filter>Resource Files\models\yoda</Filter>
     </Image>
     <Image Include="data\models\yoda\Stick.dds">
-      <Filter>Resource Files\yoda</Filter>
+      <Filter>Resource Files\models\yoda</Filter>
     </Image>
     <Image Include="data\models\barrel\Barrel_01_Color.dds">
-      <Filter>Resource Files\barrel</Filter>
+      <Filter>Resource Files\models\barrel</Filter>
     </Image>
     <Image Include="data\models\barrel\Barrel_01_Height.dds">
-      <Filter>Resource Files\barrel</Filter>
+      <Filter>Resource Files\models\barrel</Filter>
     </Image>
     <Image Include="data\models\barrel\Barrel_01_Normal.dds">
-      <Filter>Resource Files\barrel</Filter>
+      <Filter>Resource Files\models\barrel</Filter>
     </Image>
     <Image Include="data\models\barrel\Barrel_01_Roughness.dds">
-      <Filter>Resource Files\barrel</Filter>
+      <Filter>Resource Files\models\barrel</Filter>
     </Image>
     <Image Include="data\models\barrel\Barrel_01_Shiness.dds">
-      <Filter>Resource Files\barrel</Filter>
+      <Filter>Resource Files\models\barrel</Filter>
     </Image>
-    <Image Include="data\models\barrel\Barrel_01_Metallic.dds">
-      <Filter>Resource Files\barrel</Filter>
+    <Image Include="data\textures\ibl\cubemaps\golden-gate-bridge\negx.dds">
+      <Filter>Resource Files\textures\ibl\cubemaps\golden-gate-bridge</Filter>
     </Image>
-  </ItemGroup>
-  <ItemGroup>
-    <Object Include="data\models\barrel\Barrel_01.obj">
-      <Filter>Resource Files\barrel</Filter>
-    </Object>
+    <Image Include="data\textures\ibl\cubemaps\golden-gate-bridge\negy.dds">
+      <Filter>Resource Files\textures\ibl\cubemaps\golden-gate-bridge</Filter>
+    </Image>
+    <Image Include="data\textures\ibl\cubemaps\golden-gate-bridge\negz.dds">
+      <Filter>Resource Files\textures\ibl\cubemaps\golden-gate-bridge</Filter>
+    </Image>
+    <Image Include="data\textures\ibl\cubemaps\golden-gate-bridge\posx.dds">
+      <Filter>Resource Files\textures\ibl\cubemaps\golden-gate-bridge</Filter>
+    </Image>
+    <Image Include="data\textures\ibl\cubemaps\golden-gate-bridge\posy.dds">
+      <Filter>Resource Files\textures\ibl\cubemaps\golden-gate-bridge</Filter>
+    </Image>
+    <Image Include="data\textures\ibl\cubemaps\golden-gate-bridge\posz.dds">
+      <Filter>Resource Files\textures\ibl\cubemaps\golden-gate-bridge</Filter>
+    </Image>
+    <Image Include="data\models\barrel\Barrel_01_Metalness.dds">
+      <Filter>Resource Files\models\barrel</Filter>
+    </Image>
   </ItemGroup>
 </Project>

@@ -3,10 +3,12 @@
 #define LIGHT		1
 #define FRAG_COLOR	0
 
-#define DIFFUSE		0
-#define SPECULAR	1
-#define NORMAL		2
-#define ENVIRONMENT	3
+#define DIFFUSE			0
+#define SPECULAR		1
+#define NORMAL			2
+#define ROUGHNESS		3
+#define DISPLACEMENT	4
+#define ENVIRONMENT		5
 
 precision highp float;
 precision highp int;
@@ -35,8 +37,8 @@ vec3 ads(vec3 Normal, vec3 LightDir, vec3 Position)
 	vec3 v = normalize( -Position );
 	vec3 r = reflect( -s, n );
 
-	vec3 albeldo = texture2D(Diffuse, In.TexCoords).xyz;
-	vec3 diffuse = albeldo * max( dot(s, n), 0.0 );
+	vec3 albedo = texture2D(Diffuse, In.TexCoords).xyz;
+	vec3 diffuse = albedo * max( dot(s, n), 0.0 );
 	vec3 shiness = vec3(0.9);
 	vec3 specular = shiness * pow( max( dot(r,v), 0.0 ), 64 );
 

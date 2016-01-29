@@ -27,6 +27,8 @@ namespace graphics
 			DIFFUSE,
 			SPECULAR,
 			NORMAL,
+			ROUGHNESS,
+			DISPLACEMENT,
 			ENVIRONMENT,
 			MAX
 		};

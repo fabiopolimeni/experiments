@@ -134,7 +134,7 @@
   <ItemGroup>
     <Image Include="data\models\barrel\Barrel_01_Color.dds" />
     <Image Include="data\models\barrel\Barrel_01_Height.dds" />
-    <Image Include="data\models\barrel\Barrel_01_Metallic.dds" />
+    <Image Include="data\models\barrel\Barrel_01_Metalness.dds" />
     <Image Include="data\models\barrel\Barrel_01_Normal.dds" />
     <Image Include="data\models\barrel\Barrel_01_Roughness.dds" />
     <Image Include="data\models\barrel\Barrel_01_Shiness.dds" />
@@ -148,9 +148,12 @@
     <Image Include="data\models\yoda\Limbs.dds" />
     <Image Include="data\models\yoda\Limbs_b.dds" />
     <Image Include="data\models\yoda\Stick.dds" />
-  </ItemGroup>
-  <ItemGroup>
-    <Object Include="data\models\barrel\Barrel_01.obj" />
+    <Image Include="data\textures\ibl\cubemaps\golden-gate-bridge\negx.dds" />
+    <Image Include="data\textures\ibl\cubemaps\golden-gate-bridge\negy.dds" />
+    <Image Include="data\textures\ibl\cubemaps\golden-gate-bridge\negz.dds" />
+    <Image Include="data\textures\ibl\cubemaps\golden-gate-bridge\posx.dds" />
+    <Image Include="data\textures\ibl\cubemaps\golden-gate-bridge\posy.dds" />
+    <Image Include="data\textures\ibl\cubemaps\golden-gate-bridge\posz.dds" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
