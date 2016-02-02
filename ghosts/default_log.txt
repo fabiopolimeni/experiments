@@ -502,3 +502,31 @@
 2016-01-28 14:07:44,996 INFO  [default] Size of shape[0].indices: 2236
 2016-01-28 14:07:45,001 INFO  [default] Size of shape[0].material_ids: 2236
 2016-01-28 14:07:45,005 INFO  [default] shape[0].vertices: 1243
+2016-02-02 09:55:43,373 INFO  [default] Loading file: data/models/barrel/barrel.awf
+2016-02-02 09:55:43,689 INFO  [default] # of shapes    : 1
+2016-02-02 09:55:43,694 INFO  [default] # of materials : 1
+2016-02-02 09:55:43,702 INFO  [default] shape[0].name = cylinder
+2016-02-02 09:55:43,707 INFO  [default] Size of shape[0].indices: 2236
+2016-02-02 09:55:43,711 INFO  [default] Size of shape[0].material_ids: 2236
+2016-02-02 09:55:43,716 INFO  [default] shape[0].vertices: 1243
+2016-02-02 09:58:53,959 INFO  [default] Loading file: data/models/barrel/barrel.awf
+2016-02-02 09:58:54,243 INFO  [default] # of shapes    : 1
+2016-02-02 09:58:54,246 INFO  [default] # of materials : 1
+2016-02-02 09:58:54,249 INFO  [default] shape[0].name = cylinder
+2016-02-02 09:58:54,253 INFO  [default] Size of shape[0].indices: 2236
+2016-02-02 09:58:54,257 INFO  [default] Size of shape[0].material_ids: 2236
+2016-02-02 09:58:54,262 INFO  [default] shape[0].vertices: 1243
+2016-02-02 10:01:28,271 INFO  [default] Loading file: data/models/barrel/barrel.awf
+2016-02-02 10:01:28,602 INFO  [default] # of shapes    : 1
+2016-02-02 10:01:28,606 INFO  [default] # of materials : 1
+2016-02-02 10:01:28,610 INFO  [default] shape[0].name = cylinder
+2016-02-02 10:01:28,614 INFO  [default] Size of shape[0].indices: 2236
+2016-02-02 10:01:28,618 INFO  [default] Size of shape[0].material_ids: 2236
+2016-02-02 10:01:28,624 INFO  [default] shape[0].vertices: 1243
+2016-02-02 10:01:46,834 INFO  [default] Loading file: data/models/barrel/barrel.awf
+2016-02-02 10:01:47,222 INFO  [default] # of shapes    : 1
+2016-02-02 10:01:47,226 INFO  [default] # of materials : 1
+2016-02-02 10:01:47,231 INFO  [default] shape[0].name = cylinder
+2016-02-02 10:01:47,236 INFO  [default] Size of shape[0].indices: 2236
+2016-02-02 10:01:47,242 INFO  [default] Size of shape[0].material_ids: 2236
+2016-02-02 10:01:47,249 INFO  [default] shape[0].vertices: 1243
