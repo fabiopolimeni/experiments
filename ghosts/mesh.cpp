@@ -14,7 +14,7 @@ bool graphics::mesh::create()
 	if (p_PosRadius.size())
 	{
 		glBindBuffer(GL_ARRAY_BUFFER, m_IBO[enum_to_t(buffer::POSITION)]);
-		glBufferData(GL_ARRAY_BUFFER, p_PosRadius.size() * sizeof(glm::vec4), p_PosRadius.data(), GL_STATIC_DRAW);
+		glBufferData(GL_ARRAY_BUFFER, p_PosRadius.size() * sizeof(glm::vec4), p_PosRadius.data(), GL_STATIC_COPY);
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 		valid_buffers = true;
 	}
@@ -22,7 +22,7 @@ bool graphics::mesh::create()
 	if (p_Normals.size() > 0)
 	{
 		glBindBuffer(GL_ARRAY_BUFFER, m_IBO[enum_to_t(buffer::NORMAL)]);
-		glBufferData(GL_ARRAY_BUFFER, p_Normals.size() * sizeof(glm::vec4), p_Normals.data(), GL_STATIC_DRAW);
+		glBufferData(GL_ARRAY_BUFFER, p_Normals.size() * sizeof(glm::vec4), p_Normals.data(), GL_STATIC_COPY);
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 		valid_buffers = true;
 	}
@@ -30,7 +30,7 @@ bool graphics::mesh::create()
 	if (p_TexCoords.size() > 0)
 	{
 		glBindBuffer(GL_ARRAY_BUFFER, m_IBO[enum_to_t(buffer::TEXCOORDS)]);
-		glBufferData(GL_ARRAY_BUFFER, p_TexCoords.size() * sizeof(glm::vec2), p_TexCoords.data(), GL_STATIC_DRAW);
+		glBufferData(GL_ARRAY_BUFFER, p_TexCoords.size() * sizeof(glm::vec2), p_TexCoords.data(), GL_STATIC_COPY);
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 		valid_buffers = true;
 	}
@@ -38,7 +38,7 @@ bool graphics::mesh::create()
 	if (p_FaceIndices.size() > 0)
 	{
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_IBO[enum_to_t(buffer::ELEMENT)]);
-		glBufferData(GL_ELEMENT_ARRAY_BUFFER, p_FaceIndices.size() * sizeof(uint32_t), p_FaceIndices.data(), GL_STATIC_DRAW);
+		glBufferData(GL_ELEMENT_ARRAY_BUFFER, p_FaceIndices.size() * sizeof(uint32_t), p_FaceIndices.data(), GL_STATIC_COPY);
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 	}
 
@@ -57,8 +57,10 @@ void graphics::mesh::use()
 {
 	assert(glIsVertexArray(m_VAO));
 
+	// don't bind element buffer, it is already bound within he vao
 	for (gl::uint32 i = 0; i < enum_to_t(buffer::MAX); ++i)
-		glBindBufferBase(GL_SHADER_STORAGE_BUFFER, i, m_IBO[i]);
+		if (i != enum_to_t(buffer::ELEMENT))
+			glBindBufferBase(GL_SHADER_STORAGE_BUFFER, i, m_IBO[i]);
 	
 	glBindVertexArray(m_VAO);
 	glDrawElements(GL_TRIANGLES, (gl::sizei)p_FaceIndices.size(), GL_UNSIGNED_INT, gl::bufferOffset(0));

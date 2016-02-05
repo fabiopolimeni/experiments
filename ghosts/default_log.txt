@@ -502,3 +502,59 @@
 2016-01-28 14:07:44,996 INFO  [default] Size of shape[0].indices: 2236
 2016-01-28 14:07:45,001 INFO  [default] Size of shape[0].material_ids: 2236
 2016-01-28 14:07:45,005 INFO  [default] shape[0].vertices: 1243
+2016-01-29 22:45:45,204 INFO  [default] Loading file: data/models/barrel/barrel.awf
+2016-01-29 22:45:45,488 INFO  [default] # of shapes    : 1
+2016-01-29 22:45:45,491 INFO  [default] # of materials : 1
+2016-01-29 22:45:45,494 INFO  [default] shape[0].name = cylinder
+2016-01-29 22:45:45,498 INFO  [default] Size of shape[0].indices: 2236
+2016-01-29 22:45:45,502 INFO  [default] Size of shape[0].material_ids: 2236
+2016-01-29 22:45:45,505 INFO  [default] shape[0].vertices: 1243
+2016-01-29 22:47:05,538 INFO  [default] Loading file: data/models/barrel/barrel.awf
+2016-01-29 22:47:05,555 INFO  [default] # of shapes    : 1
+2016-01-29 22:47:05,557 INFO  [default] # of materials : 1
+2016-01-29 22:47:05,560 INFO  [default] shape[0].name = cylinder
+2016-01-29 22:47:05,563 INFO  [default] Size of shape[0].indices: 2236
+2016-01-29 22:47:05,566 INFO  [default] Size of shape[0].material_ids: 2236
+2016-01-29 22:47:05,570 INFO  [default] shape[0].vertices: 1243
+2016-01-29 23:25:14,317 INFO  [default] Loading file: data/models/barrel/barrel.awf
+2016-01-29 23:25:14,588 INFO  [default] # of shapes    : 1
+2016-01-29 23:25:14,592 INFO  [default] # of materials : 1
+2016-01-29 23:25:14,595 INFO  [default] shape[0].name = cylinder
+2016-01-29 23:25:14,599 INFO  [default] Size of shape[0].indices: 2236
+2016-01-29 23:25:14,608 INFO  [default] Size of shape[0].material_ids: 2236
+2016-01-29 23:25:14,614 INFO  [default] shape[0].vertices: 1243
+2016-01-29 23:26:29,833 INFO  [default] Loading file: data/models/barrel/barrel.awf
+2016-01-29 23:26:30,098 INFO  [default] # of shapes    : 1
+2016-01-29 23:26:30,098 INFO  [default] # of materials : 1
+2016-01-29 23:26:30,098 INFO  [default] shape[0].name = cylinder
+2016-01-29 23:26:30,098 INFO  [default] Size of shape[0].indices: 2236
+2016-01-29 23:26:30,098 INFO  [default] Size of shape[0].material_ids: 2236
+2016-01-29 23:26:30,114 INFO  [default] shape[0].vertices: 1243
+2016-01-29 23:43:37,880 INFO  [default] Loading file: data/models/barrel/barrel.awf
+2016-01-29 23:43:38,149 INFO  [default] # of shapes    : 1
+2016-01-29 23:43:38,152 INFO  [default] # of materials : 1
+2016-01-29 23:43:38,156 INFO  [default] shape[0].name = cylinder
+2016-01-29 23:43:38,159 INFO  [default] Size of shape[0].indices: 2236
+2016-01-29 23:43:38,163 INFO  [default] Size of shape[0].material_ids: 2236
+2016-01-29 23:43:38,172 INFO  [default] shape[0].vertices: 1243
+2016-01-30 00:00:18,521 INFO  [default] Loading file: data/models/barrel/barrel.awf
+2016-01-30 00:00:18,777 INFO  [default] # of shapes    : 1
+2016-01-30 00:00:18,780 INFO  [default] # of materials : 1
+2016-01-30 00:00:18,784 INFO  [default] shape[0].name = cylinder
+2016-01-30 00:00:18,788 INFO  [default] Size of shape[0].indices: 2236
+2016-01-30 00:00:18,794 INFO  [default] Size of shape[0].material_ids: 2236
+2016-01-30 00:00:18,798 INFO  [default] shape[0].vertices: 1243
+2016-01-30 00:00:56,307 INFO  [default] Loading file: data/models/barrel/barrel.awf
+2016-01-30 00:00:56,573 INFO  [default] # of shapes    : 1
+2016-01-30 00:00:56,573 INFO  [default] # of materials : 1
+2016-01-30 00:00:56,573 INFO  [default] shape[0].name = cylinder
+2016-01-30 00:00:56,573 INFO  [default] Size of shape[0].indices: 2236
+2016-01-30 00:00:56,573 INFO  [default] Size of shape[0].material_ids: 2236
+2016-01-30 00:00:56,589 INFO  [default] shape[0].vertices: 1243
+2016-01-30 01:01:07,011 INFO  [default] Loading file: data/models/barrel/barrel.awf
+2016-01-30 01:01:07,031 INFO  [default] # of shapes    : 1
+2016-01-30 01:01:07,036 INFO  [default] # of materials : 1
+2016-01-30 01:01:07,038 INFO  [default] shape[0].name = cylinder
+2016-01-30 01:01:07,041 INFO  [default] Size of shape[0].indices: 2236
+2016-01-30 01:01:07,046 INFO  [default] Size of shape[0].material_ids: 2236
+2016-01-30 01:01:07,050 INFO  [default] shape[0].vertices: 1243

@@ -80,8 +80,6 @@ public:
 
 	bool checkProgram(GLuint ProgramName) const;
 	bool validateProgram(GLuint ProgramName) const;
-
-	bool check() const;
 	bool checkShader(GLuint const & Name) const;
 
 	void clear();

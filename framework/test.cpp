@@ -415,7 +415,7 @@ bool test::checkTemplate(GLFWwindow* pWindow, char const * Title)
 
 	if(Success)
 	{
-		gli::texture Template(load_png((getDataDirectory() + "templates/" + Title + ".png").c_str()));
+		gli::texture Template(load_dds((getDataDirectory() + "templates/" + Title + ".dds").c_str()));
 
 		if(Success)
 		{
@@ -430,9 +430,9 @@ bool test::checkTemplate(GLFWwindow* pWindow, char const * Title)
 		if(!Success && !Template.empty())
 		{
 			gli::texture Diff = ::absolute_difference(Template, TextureRGB);
-			save_png(TextureRGB, (getBinaryDirectory() + "/" + Title + "-template.png").c_str());
-			save_png(TextureRGB, (getBinaryDirectory() + "/" + Title + "-generated.png").c_str());
-			save_png(gli::texture2D(Diff), (getBinaryDirectory() + "/" + Title + "-diff.png").c_str());
+			save_dds(TextureRGB, (getBinaryDirectory() + "/" + Title + "-template.dds").c_str());
+			save_dds(TextureRGB, (getBinaryDirectory() + "/" + Title + "-generated.dds").c_str());
+			save_dds(gli::texture2D(Diff), (getBinaryDirectory() + "/" + Title + "-diff.dds").c_str());
 		}
 	}
 
@@ -705,6 +705,7 @@ void test::keyCallback(GLFWwindow* Window, int Key, int Scancode, int Action, in
 		Test->stop();
 }
 
+//#define DEBUG_DRIVER_VERBOSE
 void APIENTRY test::debugOutput
 (
 	GLenum source,
@@ -719,7 +720,9 @@ void APIENTRY test::debugOutput
 	assert(userParam);
 	test* Test = static_cast<test*>(const_cast<GLvoid*>(userParam));
 	
-	char debSource[32], debType[32], debSev[32];
+	char debSource[32] = {};
+	char debType[32] = {};
+	char debSev[32] = {};
 
 	if(source == GL_DEBUG_SOURCE_API_ARB)
 		strcpy(debSource, "OpenGL");
@@ -727,6 +730,7 @@ void APIENTRY test::debugOutput
 		strcpy(debSource, "Windows");
 	else if(source == GL_DEBUG_SOURCE_SHADER_COMPILER_ARB)
 		strcpy(debSource, "Shader Compiler");
+#if defined(DEBUG_DRIVER_VERBOSE)
 	else if(source == GL_DEBUG_SOURCE_THIRD_PARTY_ARB)
 		strcpy(debSource, "Third Party");
 	else if(source == GL_DEBUG_SOURCE_APPLICATION_ARB)
@@ -735,6 +739,7 @@ void APIENTRY test::debugOutput
 		strcpy(debSource, "Other");
 	else
 		assert(0);
+#endif
  
 	if(type == GL_DEBUG_TYPE_ERROR)
 		strcpy(debType, "error");
@@ -746,6 +751,7 @@ void APIENTRY test::debugOutput
 		strcpy(debType, "portability");
 	else if(type == GL_DEBUG_TYPE_PERFORMANCE)
 		strcpy(debType, "performance");
+#if defined(DEBUG_DRIVER_VERBOSE)
 	else if(type == GL_DEBUG_TYPE_OTHER)
 		strcpy(debType, "message");
 	else if(type == GL_DEBUG_TYPE_MARKER)
@@ -756,6 +762,7 @@ void APIENTRY test::debugOutput
 		strcpy(debType, "pop group");
 	else
 		assert(0);
+#endif
  
 	if(severity == GL_DEBUG_SEVERITY_HIGH_ARB)
 	{
@@ -765,16 +772,19 @@ void APIENTRY test::debugOutput
 	}
 	else if(severity == GL_DEBUG_SEVERITY_MEDIUM_ARB)
 		strcpy(debSev, "medium");
+#if defined(DEBUG_DRIVER_VERBOSE)
 	else if(severity == GL_DEBUG_SEVERITY_LOW_ARB)
 		strcpy(debSev, "low");
 	else if (severity == GL_DEBUG_SEVERITY_NOTIFICATION)
 		strcpy(debSev, "notification");
 	else
 		assert(0);
+#endif
 
-	fprintf(stderr,"%s: %s(%s) %d: %s\n", debSource, debType, debSev, id, message);
+	if (debType[0] != 0)
+		fprintf(stderr, "%s: %s(%s) %d: %s\n", debSource, debType, debSev, id, message);
 
-	if(Test->Success != GENERATE_ERROR && source != GL_DEBUG_SOURCE_SHADER_COMPILER_ARB)
+	if (Test->Success != GENERATE_ERROR && source != GL_DEBUG_SOURCE_SHADER_COMPILER_ARB)
 		assert(!Test->Error);
 }
 

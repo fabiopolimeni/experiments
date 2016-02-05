@@ -187,7 +187,9 @@ GLuint compiler::create(GLenum Type, std::string const & Filename, std::string c
 	assert(!PreprocessedSource.empty());
 	char const * PreprocessedSourcePointer = PreprocessedSource.c_str();
 
+#if defined(_DEBUG)
 	fprintf(stdout, "%s\n", PreprocessedSource.c_str());
+#endif
 
 	GLuint Name = glCreateShader(Type);
 	glShaderSource(Name, 1, &PreprocessedSourcePointer, NULL);
@@ -273,39 +275,6 @@ bool compiler::checkProgram(GLuint ProgramName) const
 	return Result == GL_TRUE;
 }
 
-// TODO Interaction with KHR_debug
-bool compiler::check() const
-{
-	bool Success(true);
-
-	for
-	(
-		names_map::const_iterator ShaderIterator = PendingChecks.begin();
-		ShaderIterator != PendingChecks.end();
-		++ShaderIterator
-	)
-	{
-		GLuint ShaderName = ShaderIterator->second;
-		GLint Result = GL_FALSE;
-		glGetShaderiv(ShaderName, GL_COMPILE_STATUS, &Result);
-
-		if(Result == GL_TRUE)
-			continue;
-
-		int InfoLogLength;
-		glGetShaderiv(ShaderName, GL_INFO_LOG_LENGTH, &InfoLogLength);
-		if(InfoLogLength > 0)
-		{
-			std::vector<char> Buffer(InfoLogLength);
-			glGetShaderInfoLog(ShaderName, InfoLogLength, NULL, &Buffer[0]);
-			fprintf(stdout, "Shader %s errors:\n%s\n", ShaderIterator->first.c_str(), &Buffer[0]);
-		}
-
-		Success = Success && Result == GL_TRUE;
-	}
-	
-	return Success; 
-}
 
 bool compiler::checkShader(GLuint const & Name) const
 {
