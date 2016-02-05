@@ -35,6 +35,14 @@ bool graphics::mesh::create()
 		valid_buffers = true;
 	}
 
+	if (p_Tangents.size() > 0)
+	{
+		glBindBuffer(GL_ARRAY_BUFFER, m_IBO[enum_to_t(buffer::TANGENT)]);
+		glBufferData(GL_ARRAY_BUFFER, p_Tangents.size() * sizeof(glm::vec4), p_Tangents.data(), GL_STATIC_DRAW);
+		glBindBuffer(GL_ARRAY_BUFFER, 0);
+		valid_buffers = true;
+	}
+
 	if (p_FaceIndices.size() > 0)
 	{
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_IBO[enum_to_t(buffer::ELEMENT)]);
