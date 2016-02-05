@@ -35,13 +35,13 @@ namespace graphics
 
 	private:
 
-		uint32_t m_PipelineName;
-		uint32_t m_ProgramName;
+		handle m_PipelineName;
+		handle m_ProgramName;
 
-		uint32_t m_UniformBufferNames[uniform::MAX];
+		handle m_UniformBufferNames[uniform::MAX];
 
-		uint32_t m_TextureNames[sampler::MAX];
-		uint32_t m_SamplerNames[sampler::MAX];
+		handle m_TextureNames[sampler::MAX];
+		handle m_SamplerNames[sampler::MAX];
 
 	public:
 

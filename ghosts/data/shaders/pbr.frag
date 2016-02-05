@@ -41,7 +41,7 @@ vec3 ads(vec3 Normal, vec3 LightDir, vec3 Position)
 	vec3 v = normalize( -Position );
 	vec3 r = reflect( -s, n );
 
-	vec3 albedo = texture2D(NormalMap, In.TexCoords).xyz;
+	vec3 albedo = texture2D(DiffuseMap, In.TexCoords).xyz;
 	vec3 diffuse = albedo * max( dot(s, n), 0.0 );
 	vec3 shiness = vec3(0.9);
 	vec3 specular = shiness * pow( max( dot(r,v), 0.0 ), 64 );

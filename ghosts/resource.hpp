@@ -1,5 +1,6 @@
 #pragma once
 
+#include <cstdint>
 #include <utility>
 
 namespace graphics
@@ -10,7 +11,7 @@ namespace graphics
 
 	public:
 
-		typedef unsigned int handle;
+		typedef uint32_t handle;
 		
 		static const handle invalid = 0;
 

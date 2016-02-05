@@ -8,6 +8,7 @@
 
 #include "tiny_obj_loader.h"
 
+#include <algorithm>
 #include <map>
 
 namespace framework
@@ -24,6 +25,62 @@ namespace framework
 		}
 
 		return texture_pair->second;
+	}
+
+	void computeTangents(const std::vector<uint32_t>& in_triangles,
+		const std::vector<glm::vec4>& in_positions, const std::vector<glm::vec4>& in_normals,
+		const std::vector<glm::vec2>& in_uvs, std::vector<glm::vec4>& out_tangents)
+	{
+		// initialise tangents to zero vectors
+		out_tangents.resize(in_positions.size());
+		std::fill(out_tangents.begin(), out_tangents.end(), glm::vec4::ZERO);
+
+		// iterate through the triangles
+		for (int t = 0; t < in_triangles.size(); t += 3)
+		{
+			const uint32_t i0 = in_triangles[t + 0];
+			const uint32_t i1 = in_triangles[t + 1];
+			const uint32_t i2 = in_triangles[t + 2];
+
+			// shortcuts for vertices
+			const glm::vec4 & v0 = in_positions[i0];
+			const glm::vec4 & v1 = in_positions[i1];
+			const glm::vec4 & v2 = in_positions[i2];
+
+			// shortcuts for UVs
+			const glm::vec2 & uv0 = in_uvs[i0];
+			const glm::vec2 & uv1 = in_uvs[i1];
+			const glm::vec2 & uv2 = in_uvs[i2];
+
+			// edges of the triangle : position delta
+			glm::vec4 deltaPos1 = v1 - v0;
+			glm::vec4 deltaPos2 = v2 - v0;
+
+			// uv delta
+			glm::vec2 deltaUV1 = uv1 - uv0;
+			glm::vec2 deltaUV2 = uv2 - uv0;
+
+			float r = 1.0f / (deltaUV1.x * deltaUV2.y - deltaUV1.y * deltaUV2.x);
+			
+			glm::vec4 new_tangent = (deltaPos1 * deltaUV2.y - deltaPos2 * deltaUV1.y) * r;
+
+			// accumulate tangent for all three vertices of the triangle.
+			glm::vec4 & t0 = out_tangents[i0] + new_tangent;
+			glm::vec4 & t1 = out_tangents[i1] + new_tangent;
+			glm::vec4 & t2 = out_tangents[i2] + new_tangent;
+
+			// TODO: same thing for binormals
+			//glm::vec3 new_bitangent = (deltaPos2 * deltaUV1.x - deltaPos1 * deltaUV2.x) * r;
+		}
+
+		// normalize the tangents and bitangent
+		for (int i = 0; i < in_positions.size(); ++i)
+		{
+			out_tangents[i] = glm::normalize(out_tangents[i]);
+		}
+
+		// FIXME: at this point tangents are not necessarily orthogonal 
+		// to normals we should account for that and fix it.
 	}
 
 	model* model::loadObj(const std::string& in_file)
@@ -66,6 +123,7 @@ namespace framework
 			LOG(INFO) << fmt::format("Size of shape[{}].material_ids: {}", i, shapes[i].mesh.material_ids.size());
 			assert((shapes[i].mesh.indices.size() % 3) == 0);
 
+			// copy triangles topology
 			mesh->p_FaceIndices = shapes[i].mesh.indices;
 			
 			//for (size_t f = 0; f < shapes[i].mesh.indices.size() / 3; f++)
@@ -92,6 +150,7 @@ namespace framework
 			mesh->p_PosRadius.reserve(n_vertices);
 			mesh->p_TexCoords.reserve(n_vertices);
 			mesh->p_Normals.reserve(n_vertices);
+			mesh->p_Tangents.reserve(n_vertices);
 			mesh->p_VelInvMass.reserve(n_vertices);
 
 			for (size_t v = 0; v < n_vertices; ++v)
@@ -117,6 +176,9 @@ namespace framework
 
 				mesh->p_VelInvMass.emplace_back(glm::vec4::ZERO);
 			}
+
+			// compute tangents
+			computeTangents(mesh->p_FaceIndices, mesh->p_PosRadius, mesh->p_Normals, mesh->p_TexCoords, mesh->p_Tangents);
 
 			// add the mesh to the model
 			loaded_model->m_Meshes.push_back(mesh);
