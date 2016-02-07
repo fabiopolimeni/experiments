@@ -42,14 +42,10 @@ graphics::material::material()
 	memset(m_UniformBufferNames, 0, sizeof(m_UniformBufferNames));
 }
 
-bool graphics::material::create(texture* textures[sampler::MAX])
+bool graphics::material::create()
 {
 	assert(m_ProgramName == 0);
 	assert(m_PipelineName == 0);
-
-	// associate textures to material
-	for (uint32_t ti = 0; ti < enum_to_t(sampler::MAX); ++ti)
-		if (textures[ti]) m_TextureNames[ti] = textures[ti]->getHandle();
 
 	// generate and populate samplers
 	glGenSamplers(enum_to_t(sampler::MAX), &m_SamplerNames[0]);
@@ -104,6 +100,13 @@ bool graphics::material::create(texture* textures[sampler::MAX])
 	return false;
 }
 
+void graphics::material::associate(texture * textures[sampler::MAX])
+{
+	// associate textures to material
+	for (uint32_t ti = 0; ti < enum_to_t(sampler::MAX); ++ti)
+		if (textures[ti]) m_TextureNames[ti] = textures[ti]->getHandle();
+}
+
 void graphics::material::use()
 {
 	glBindProgramPipeline(m_PipelineName);
@@ -125,8 +128,8 @@ void graphics::material::destroy()
 
 	m_PipelineName = 0;
 	m_ProgramName = 0;
-	memset(m_UniformBufferNames, 0, sizeof(m_UniformBufferNames));
 
+	memset(m_UniformBufferNames, 0, sizeof(m_UniformBufferNames));
 	memset(m_TextureNames, 0, sizeof(m_TextureNames));
 	memset(m_SamplerNames, 0, sizeof(m_SamplerNames));
 }

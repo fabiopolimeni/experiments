@@ -2,9 +2,11 @@
 
 #include "transform.hpp"
 #include "material.hpp"
+#include "util.hpp"
 
 #include <string>
 #include <vector>
+#include <array>
 
 namespace graphics
 {
@@ -22,6 +24,12 @@ namespace framework
 		std::vector<graphics::mesh*> m_Meshes;
 		std::vector<graphics::material*> m_Materials;
 		graphics::texture* m_Textures[graphics::material::sampler::MAX];
+
+		// associate each material to a set of textures
+		// the position in the vector refers to the material,
+		// while the element (texture array) is the set of textures.
+		typedef std::array<graphics::texture*, enum_to_t(graphics::material::sampler::MAX)> texture_set_t;
+		std::vector<texture_set_t> m_MaterialTexturesSet;
 
 		// position in the vector refers to the mesh index inside m_Meshes,
 		// while the element refers to the material index inside m_Materials.

@@ -47,7 +47,8 @@ namespace graphics
 
 		material();
 
-		bool create(texture* textures[sampler::MAX]);
+		bool create();
+		void associate(texture* textures[sampler::MAX]);
 		void use();
 		void destroy();
 

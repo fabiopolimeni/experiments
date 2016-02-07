@@ -23,7 +23,9 @@
 
 #include "test.hpp"
 #include "png.hpp"
+
 #include <glm/gtc/matrix_transform.hpp>
+
 #include <fstream>
 
 namespace
@@ -415,7 +417,7 @@ bool test::checkTemplate(GLFWwindow* pWindow, char const * Title)
 
 	if(Success)
 	{
-		gli::texture Template(load_dds((getDataDirectory() + "templates/" + Title + ".dds").c_str()));
+		gli::texture Template(gli::load_dds((getDataDirectory() + "templates/" + Title + ".dds").c_str()));
 
 		if(Success)
 		{

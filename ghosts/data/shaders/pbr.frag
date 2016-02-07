@@ -14,15 +14,11 @@ precision highp float;
 precision highp int;
 layout(std140, column_major) uniform;
 
-layout(binding = LIGHT) uniform light
-{
-	vec4 value;
-} Light;
-
 in block
 {
-	vec3 Position;
+	vec3 ViewDir;
 	vec3 Normal;
+	vec3 LightDir;
 	vec2 TexCoords;
 } In;
 
@@ -34,23 +30,23 @@ layout(binding = DISPLACEMENT) uniform sampler2D HeightMap;
 
 layout(location = FRAG_COLOR, index = 0) out vec4 Color;
 
-vec3 ads(vec3 Normal, vec3 LightDir, vec3 Position)
+vec3 ads(vec3 Normal, vec3 LightDir, vec3 ViewDir)
 {
 	vec3 n = normalize( Normal );
-	vec3 s = normalize( -LightDir );
-	vec3 v = normalize( -Position );
-	vec3 r = reflect( -s, n );
+	vec3 l = normalize( LightDir );
+	vec3 v = normalize( ViewDir );
+	vec3 r = reflect( -l, n );
 
-	vec3 albedo = texture2D(DiffuseMap, In.TexCoords).xyz;
-	vec3 diffuse = albedo * max( dot(s, n), 0.0 );
-	vec3 shiness = vec3(0.9);
-	vec3 specular = shiness * pow( max( dot(r,v), 0.0 ), 64 );
+	vec3 albedo = vec3(0.9);//texture2D(DiffuseMap, In.TexCoords).xyz;
+	vec3 diffuse = albedo * max( dot(l, n), 0.0 );
+	vec3 shininess = vec3(0.9);
+	vec3 specular = shininess * pow( max( dot(r, v), 0.0 ), 64 );
 
-	//return albedo;
-	return ( diffuse + specular );
+	return diffuse;// + specular;
 }
 
 void main()
 {
-	Color = vec4(ads(In.Normal, Light.value.xyz, In.Position), 1.0);
+	vec4 normal = 2.0 * texture( NormalMap, In.TexCoords ) - 1.0;
+	Color = vec4(ads(normal.xyz, In.LightDir, In.ViewDir), 1.0);
 }

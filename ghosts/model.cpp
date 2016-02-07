@@ -13,7 +13,16 @@
 
 namespace framework
 {
-	static	std::map<std::string, graphics::texture*> s_texture_names;
+	const char* s_default_texture_files[enum_to_t(graphics::material::sampler::MAX)] =
+	{
+		"data/textures/defaults/diffuse.dds",		// DIFFUSE
+		"data/textures/defaults/metalness.dds",		// SPECULAR
+		"data/textures/defaults/normal.dds",		// NORMAL
+		"data/textures/defaults/roughness.dds",		// ROUGHNESS
+		"data/textures/defaults/displacement.dds"	// DISPLACEMENT
+	};
+
+	static std::map<std::string, graphics::texture*> s_texture_names;
 	graphics::texture* generateTexture(const std::string& tex_filename)
 	{
 		auto texture_pair = s_texture_names.find(tex_filename);
@@ -27,13 +36,20 @@ namespace framework
 		return texture_pair->second;
 	}
 
-	void computeTangents(const std::vector<uint32_t>& in_triangles,
-		const std::vector<glm::vec4>& in_positions, const std::vector<glm::vec4>& in_normals,
-		const std::vector<glm::vec2>& in_uvs, std::vector<glm::vec4>& out_tangents)
+	void computeTangents(
+		const std::vector<uint32_t>& in_triangles,
+		const std::vector<glm::vec4>& in_positions,
+		const std::vector<glm::vec4>& in_normals,
+		const std::vector<glm::vec2>& in_uvs,
+		std::vector<glm::vec4>& out_tangents,
+		std::vector<glm::vec4>& out_bitangents)
 	{
-		// initialise tangents to zero vectors
+		// initialise tangents and bitangents to zero vectors
 		out_tangents.resize(in_positions.size());
 		std::fill(out_tangents.begin(), out_tangents.end(), glm::vec4::ZERO);
+
+		out_bitangents.resize(in_positions.size());
+		std::fill(out_bitangents.begin(), out_bitangents.end(), glm::vec4::ZERO);
 
 		// iterate through the triangles
 		for (int t = 0; t < in_triangles.size(); t += 3)
@@ -61,26 +77,48 @@ namespace framework
 			glm::vec2 deltaUV2 = uv2 - uv0;
 
 			float r = 1.0f / (deltaUV1.x * deltaUV2.y - deltaUV1.y * deltaUV2.x);
-			
-			glm::vec4 new_tangent = (deltaPos1 * deltaUV2.y - deltaPos2 * deltaUV1.y) * r;
 
 			// accumulate tangent for all three vertices of the triangle.
-			glm::vec4 & t0 = out_tangents[i0] + new_tangent;
-			glm::vec4 & t1 = out_tangents[i1] + new_tangent;
-			glm::vec4 & t2 = out_tangents[i2] + new_tangent;
+			glm::vec4 new_tangent = (deltaPos1 * deltaUV2.y - deltaPos2 * deltaUV1.y) * r;
 
-			// TODO: same thing for binormals
-			//glm::vec3 new_bitangent = (deltaPos2 * deltaUV1.x - deltaPos1 * deltaUV2.x) * r;
+			out_tangents[i0] = out_tangents[i0] + new_tangent;
+			out_tangents[i1] = out_tangents[i1] + new_tangent;
+			out_tangents[i2] = out_tangents[i2] + new_tangent;
+
+			// same thing for bitangent
+			glm::vec4 new_bitangent = (deltaPos2 * deltaUV1.x - deltaPos1 * deltaUV2.x) * r;
+
+			out_bitangents[i0] = out_bitangents[i0] + new_bitangent;
+			out_bitangents[i1] = out_bitangents[i1] + new_bitangent;
+			out_bitangents[i2] = out_bitangents[i2] + new_bitangent;
 		}
 
-		// normalize the tangents and bitangent
-		for (int i = 0; i < in_positions.size(); ++i)
+		// normalize tangents and bitangent
+		for (int i = 0; i < in_normals.size(); ++i)
 		{
-			out_tangents[i] = glm::normalize(out_tangents[i]);
-		}
+			const auto& normal = in_normals[i];
 
-		// FIXME: at this point tangents are not necessarily orthogonal 
-		// to normals we should account for that and fix it.
+			// at this point tangents are not necessarily orthogonal 
+			// to normals and do not create a space basis, we fix it
+			// with help of Gram-Schmidt process.
+			auto& tangent = out_tangents[i];
+			tangent = glm::normalize(tangent);
+			tangent = tangent - normal * glm::dot(tangent, normal);
+
+			// apply R^3 stage Gram-Schmidt process.
+			// would it be the same just to cross(tangent,normal)?
+			auto& bitangent = out_bitangents[i];
+			bitangent = glm::normalize(bitangent);
+			bitangent = bitangent - normal * glm::dot(bitangent, normal) - tangent * glm::dot(bitangent, tangent);
+
+			// calculate the handedness equal to sign (1 or -1) of determinant of world to tangent matrix
+			glm::mat3 tbn = glm::transpose(glm::mat3(tangent.xyz(), bitangent.xyz(), normal.xyz()));
+			const float handedness = glm::sign(glm::determinant(tbn));
+
+			// write the handedness into element w of the tangent, to reconstruct
+			// the bitangent from tangent and normal B = (N x T) * H
+			tangent.w = handedness;
+		}
 	}
 
 	model* model::loadObj(const std::string& in_file)
@@ -178,7 +216,8 @@ namespace framework
 			}
 
 			// compute tangents
-			computeTangents(mesh->p_FaceIndices, mesh->p_PosRadius, mesh->p_Normals, mesh->p_TexCoords, mesh->p_Tangents);
+			std::vector<glm::vec4> bitangents;
+			computeTangents(mesh->p_FaceIndices, mesh->p_PosRadius, mesh->p_Normals, mesh->p_TexCoords, mesh->p_Tangents, bitangents);
 
 			// add the mesh to the model
 			loaded_model->m_Meshes.push_back(mesh);
@@ -211,27 +250,28 @@ namespace framework
 				LOG(INFO) << fmt::format("  material.{} = {}", it->first.c_str(), it->second.c_str());
 			}
 
-			// populate textures
+			// create the texture set for this material
+			texture_set_t texture_set;
 			
 			// albedo
 			if (!materials[i].diffuse_texname.empty())
-				loaded_model->m_Textures[enum_to_t(graphics::material::sampler::DIFFUSE)] = generateTexture(file_basepath + materials[i].diffuse_texname);
+				texture_set[enum_to_t(graphics::material::sampler::DIFFUSE)] = generateTexture(file_basepath + materials[i].diffuse_texname);
 			
 			// metalness
 			if(!materials[i].specular_texname.empty())
-				loaded_model->m_Textures[enum_to_t(graphics::material::sampler::SPECULAR)] = generateTexture(file_basepath + materials[i].specular_texname);
+				texture_set[enum_to_t(graphics::material::sampler::SPECULAR)] = generateTexture(file_basepath + materials[i].specular_texname);
 
 			// roughness
 			if (!materials[i].specular_texname.empty())
-				loaded_model->m_Textures[enum_to_t(graphics::material::sampler::ROUGHNESS)] = generateTexture(file_basepath + materials[i].specular_highlight_texname);
+				texture_set[enum_to_t(graphics::material::sampler::ROUGHNESS)] = generateTexture(file_basepath + materials[i].specular_highlight_texname);
 
 			// displacement
 			if (!materials[i].specular_texname.empty())
-				loaded_model->m_Textures[enum_to_t(graphics::material::sampler::DISPLACEMENT)] = generateTexture(file_basepath + materials[i].displacement_texname);
+				texture_set[enum_to_t(graphics::material::sampler::DISPLACEMENT)] = generateTexture(file_basepath + materials[i].displacement_texname);
 
 			// normal
 			if (!materials[i].specular_texname.empty())
-				loaded_model->m_Textures[enum_to_t(graphics::material::sampler::NORMAL)] = generateTexture(file_basepath + materials[i].bump_texname);
+				texture_set[enum_to_t(graphics::material::sampler::NORMAL)] = generateTexture(file_basepath + materials[i].bump_texname);
 
 			// create graphics material
 			graphics::material* material = new graphics::material();
@@ -307,7 +347,7 @@ namespace framework
 		}
 
 		for (auto material : m_Materials)
-			valid_model &= material->create(m_Textures);
+			valid_model &= material->create();
 
 		return valid_model;
 	}
@@ -322,16 +362,16 @@ namespace framework
 	{
 	}
 
-	void model::render(glm::mat4 projection, glm::mat4 view, glm::vec4 light)
+	void model::render(glm::mat4 projection, glm::mat4 view_mat, glm::vec4 light)
 	{
 		glm::mat4 model_mat = glm::translate(glm::mat4::IDENTITY, m_ModelToWorld.p_Position.xyz());
 		model_mat *= glm::mat4_cast(m_ModelToWorld.p_Rotation);
 
-		auto model_view = view * model_mat;
+		auto model_view = view_mat * model_mat;
 
 		// calculate light direction in view space
 		auto light_intensity = light.w;
-		auto light_view = view * glm::vec4(light.xyz(), 0.f);
+		auto light_view = view_mat * glm::vec4(light.xyz(), 0.f);
 
 		for (size_t m_id = 0; m_id < m_Meshes.size(); ++m_id)
 		{
