@@ -54,10 +54,11 @@ out gl_PerVertex
 
 out block
 {
-	vec3 ViewDir;
+	vec3 Position;
 	vec3 Normal;
-	vec3 LightDir;
 	vec2 TexCoords;
+	vec3 LightDir;
+	vec3 ViewDir;
 } Out;
 
 void main()
@@ -69,7 +70,7 @@ void main()
 	float handedness = Tangents.value[gl_VertexID].w;
 	vec3 bitangent = normalize(cross(normal, tangent)) * handedness;
 
-	// vertex position in view coordinates
+	// vertex position in view space coordinates
 	vec4 VertPos = vec4(Positions.value[gl_VertexID].xyz, 1.0f);
 	vec3 position = vec3(Transforms.MV * VertPos);
 
@@ -81,7 +82,8 @@ void main()
 	Out.ViewDir = tbn * normalize(-position);
 	
 	// light direction already comes in view space
-	Out.LightDir = tbn * normalize(-Light.direction.xyz);
+	//Out.LightDir = tbn * normalize(-Light.direction.xyz);
+	Out.LightDir = -Light.direction.xyz;
 
 	Out.TexCoords = TexCoords.value[gl_VertexID];
 	Out.TexCoords.y = 1.0 - Out.TexCoords.y;

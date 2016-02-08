@@ -37,6 +37,9 @@
     <Filter Include="Resource Files\textures\ibl\cubemaps\golden-gate-bridge">
       <UniqueIdentifier>{2448c9a9-4674-4d08-bda3-6dc06f6c4a0f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\models\panda">
+      <UniqueIdentifier>{63197cb5-0c5f-4db5-bfa9-7767ddadc39f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -130,6 +133,12 @@
     <None Include="data\shaders\pbr.vert">
       <Filter>Resource Files\shaders</Filter>
     </None>
+    <None Include="data\models\kungfu-panda\kungfu.awf">
+      <Filter>Resource Files\models\panda</Filter>
+    </None>
+    <None Include="data\models\kungfu-panda\kungfu.mtl">
+      <Filter>Resource Files\models\panda</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="data\models\yoda\body.dds">
@@ -197,6 +206,30 @@
     </Image>
     <Image Include="data\models\barrel\Barrel_01_Metalness.dds">
       <Filter>Resource Files\models\barrel</Filter>
+    </Image>
+    <Image Include="data\models\kungfu-panda\0d0194c2.dds">
+      <Filter>Resource Files\models\panda</Filter>
+    </Image>
+    <Image Include="data\models\kungfu-panda\1c72c491.dds">
+      <Filter>Resource Files\models\panda</Filter>
+    </Image>
+    <Image Include="data\models\kungfu-panda\2fa75e05.dds">
+      <Filter>Resource Files\models\panda</Filter>
+    </Image>
+    <Image Include="data\models\kungfu-panda\3fb1a8aa.dds">
+      <Filter>Resource Files\models\panda</Filter>
+    </Image>
+    <Image Include="data\models\kungfu-panda\14cd25fd.dds">
+      <Filter>Resource Files\models\panda</Filter>
+    </Image>
+    <Image Include="data\models\kungfu-panda\58fe017d.dds">
+      <Filter>Resource Files\models\panda</Filter>
+    </Image>
+    <Image Include="data\models\kungfu-panda\70b79c9b.dds">
+      <Filter>Resource Files\models\panda</Filter>
+    </Image>
+    <Image Include="data\models\kungfu-panda\cfd1e509.dds">
+      <Filter>Resource Files\models\panda</Filter>
     </Image>
   </ItemGroup>
 </Project>

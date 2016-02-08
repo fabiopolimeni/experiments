@@ -16,10 +16,11 @@ layout(std140, column_major) uniform;
 
 in block
 {
-	vec3 ViewDir;
+	vec3 Position;
 	vec3 Normal;
-	vec3 LightDir;
 	vec2 TexCoords;
+	vec3 LightDir;
+	vec3 ViewDir;
 } In;
 
 layout(binding = DIFFUSE) uniform sampler2D DiffuseMap;
@@ -47,6 +48,6 @@ vec3 ads(vec3 Normal, vec3 LightDir, vec3 ViewDir)
 
 void main()
 {
-	vec4 normal = 2.0 * texture( NormalMap, In.TexCoords ) - 1.0;
-	Color = vec4(ads(normal.xyz, In.LightDir, In.ViewDir), 1.0);
+	//vec4 normal = 2.0 * texture( NormalMap, In.TexCoords ) - 1.0;
+	Color = vec4(ads(In.Normal.xyz, In.LightDir, -In.Position), 1.0);
 }

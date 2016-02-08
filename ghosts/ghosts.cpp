@@ -8,7 +8,7 @@ bool ghosts::begin()
 {
 	if (graphics::renderer::init() && compute::clothing::init())
 	{
-		if (auto m = framework::model::load("data/models/barrel/barrel.awf", framework::model::ASCII))
+		if (auto m = framework::model::load("data/models/kungfu-panda/kungfu.awf", framework::model::ASCII))
 		{
 			if (m->initialise())
 				m_Models.push_back(m);

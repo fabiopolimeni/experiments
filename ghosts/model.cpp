@@ -254,24 +254,44 @@ namespace framework
 			texture_set_t texture_set;
 			
 			// albedo
-			if (!materials[i].diffuse_texname.empty())
-				texture_set[enum_to_t(graphics::material::sampler::DIFFUSE)] = generateTexture(file_basepath + materials[i].diffuse_texname);
+			{
+				auto texture_type = enum_to_t(graphics::material::sampler::DIFFUSE);
+				texture_set[texture_type] = (!materials[i].diffuse_texname.empty())
+					? generateTexture(file_basepath + materials[i].diffuse_texname)
+					: generateTexture(s_default_texture_files[texture_type]);
+			}
 			
 			// metalness
-			if(!materials[i].specular_texname.empty())
-				texture_set[enum_to_t(graphics::material::sampler::SPECULAR)] = generateTexture(file_basepath + materials[i].specular_texname);
+			{
+				auto texture_type = enum_to_t(graphics::material::sampler::SPECULAR);
+				texture_set[texture_type] = (!materials[i].specular_texname.empty())
+					? generateTexture(file_basepath + materials[i].specular_texname)
+					: generateTexture(s_default_texture_files[texture_type]);
+			}
 
 			// roughness
-			if (!materials[i].specular_texname.empty())
-				texture_set[enum_to_t(graphics::material::sampler::ROUGHNESS)] = generateTexture(file_basepath + materials[i].specular_highlight_texname);
+			{
+				auto texture_type = enum_to_t(graphics::material::sampler::ROUGHNESS);
+				texture_set[texture_type] = (!materials[i].specular_highlight_texname.empty())
+					? generateTexture(file_basepath + materials[i].specular_highlight_texname)
+					: generateTexture(s_default_texture_files[texture_type]);
+			}
 
 			// displacement
-			if (!materials[i].specular_texname.empty())
-				texture_set[enum_to_t(graphics::material::sampler::DISPLACEMENT)] = generateTexture(file_basepath + materials[i].displacement_texname);
+			{
+				auto texture_type = enum_to_t(graphics::material::sampler::DISPLACEMENT);
+				texture_set[texture_type] = (!materials[i].displacement_texname.empty())
+					? generateTexture(file_basepath + materials[i].displacement_texname)
+					: generateTexture(s_default_texture_files[texture_type]);
+			}
 
 			// normal
-			if (!materials[i].specular_texname.empty())
-				texture_set[enum_to_t(graphics::material::sampler::NORMAL)] = generateTexture(file_basepath + materials[i].bump_texname);
+			{
+				auto texture_type = enum_to_t(graphics::material::sampler::NORMAL);
+				texture_set[texture_type] = (!materials[i].bump_texname.empty())
+					? generateTexture(file_basepath + materials[i].bump_texname)
+					: generateTexture(s_default_texture_files[texture_type]);
+			}
 
 			// create graphics material
 			graphics::material* material = new graphics::material();
