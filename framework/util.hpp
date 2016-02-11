@@ -32,3 +32,30 @@ constexpr auto enum_to_t(Enum e) noexcept
 {
 	return static_cast<std::underlying_type_t<Enum>>(e);
 }
+
+namespace path
+{
+	inline std::string left(const std::string& file_path, const char char_to_search)
+	{
+		std::string file_basepath = file_path;
+		auto const dir_pos = file_path.find_last_of(char_to_search);
+		if (dir_pos != std::string::npos)
+		{
+			file_basepath = file_path.substr(0, dir_pos + 1);
+		}
+
+		return file_basepath;
+	}
+
+	inline std::string right(const std::string& file_path, const char char_to_search)
+	{
+		std::string filename = file_path;
+		auto slash_pos = file_path.find_last_of(char_to_search);
+		if (slash_pos != std::string::npos)
+		{
+			filename = file_path.substr(slash_pos + 1, std::string::npos);
+		}
+
+		return filename;
+	}
+}

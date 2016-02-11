@@ -164,7 +164,7 @@ vt 0.5658 0.7734 0.0000
 # 54 texture coords
 
 g DrawCall_0000
-usemtl 874a9543_dds
+usemtl Material__2710
 s 1
 f 1/1/1 2/2/2 3/3/3 
 f 2/2/2 4/4/4 3/3/3 

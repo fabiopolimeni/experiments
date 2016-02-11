@@ -1,7 +1,7 @@
 # 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
 # File Created: 12.04.2012 13:55:20
 
-newmtl 874a9543_dds
+newmtl Material__2710
 	Ns 10.0000
 	Ni 1.5000
 	d 1.0000
@@ -24,7 +24,7 @@ newmtl Material__2719
 	Kd 0.5880 0.5880 0.5880
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Kd .\70b79c9b.dds
+	map_Kd 70b79c9b.dds
 
 newmtl Material__2718
 	Ns 10.0000
@@ -37,7 +37,7 @@ newmtl Material__2718
 	Kd 0.5880 0.5880 0.5880
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Kd .\70b79c9b.dds
+	map_Kd 70b79c9b.dds
 
 newmtl Material__2720
 	Ns 10.0000
@@ -50,7 +50,7 @@ newmtl Material__2720
 	Kd 0.5880 0.5880 0.5880
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Kd .\cfd1e509.dds
+	map_Kd cfd1e509.dds
 
 newmtl Material__2699
 	Ns 10.0000
@@ -63,7 +63,7 @@ newmtl Material__2699
 	Kd 0.5880 0.5880 0.5880
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Kd .\14cd25fd.dds
+	map_Kd 14cd25fd.dds
 
 newmtl Material__2709
 	Ns 10.0000
@@ -76,7 +76,7 @@ newmtl Material__2709
 	Kd 0.5880 0.5880 0.5880
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Kd .\14cd25fd.dds
+	map_Kd 14cd25fd.dds
 
 newmtl Material__2710
 	Ns 10.0000
@@ -89,7 +89,7 @@ newmtl Material__2710
 	Kd 0.5880 0.5880 0.5880
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka .\2fa75e05.dds
+	map_Kd 2fa75e05.dds
 
 newmtl Material__2693
 	Ns 10.0000
@@ -102,7 +102,7 @@ newmtl Material__2693
 	Kd 0.5880 0.5880 0.5880
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka .\1c72c491.dds
+	map_Kd 1c72c491.dds
 
 newmtl Material__2692
 	Ns 10.0000
@@ -115,7 +115,7 @@ newmtl Material__2692
 	Kd 0.5880 0.5880 0.5880
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka .\1c72c491.dds
+	map_Kd 1c72c491.dds
 
 newmtl Material__2691
 	Ns 10.0000
@@ -128,7 +128,7 @@ newmtl Material__2691
 	Kd 0.5880 0.5880 0.5880
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka .\0d0194c2.dds
+	map_Kd 0d0194c2.dds
 
 newmtl Material__2712
 	Ns 10.0000
@@ -141,7 +141,7 @@ newmtl Material__2712
 	Kd 0.5880 0.5880 0.5880
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka .\14cd25fd.dds
+	map_Kd 14cd25fd.dds
 
 newmtl Material__2713
 	Ns 10.0000
@@ -154,7 +154,7 @@ newmtl Material__2713
 	Kd 0.5880 0.5880 0.5880
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka .\14cd25fd.dds
+	map_Kd 14cd25fd.dds
 
 newmtl Material__2697
 	Ns 10.0000
@@ -167,4 +167,4 @@ newmtl Material__2697
 	Kd 0.5880 0.5880 0.5880
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka .\3fb1a8aa.dds
+	map_Kd 3fb1a8aa.dds

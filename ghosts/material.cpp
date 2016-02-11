@@ -103,7 +103,8 @@ bool graphics::material::create()
 void graphics::material::associate(texture * textures[sampler::MAX])
 {
 	// associate textures to material
-	for (uint32_t ti = 0; ti < enum_to_t(sampler::MAX); ++ti)
+	// FIXME: Take into account the environment mapping too
+	for (uint32_t ti = 0; ti < enum_to_t(sampler::ENVIRONMENT); ++ti)
 		if (textures[ti]) m_TextureNames[ti] = textures[ti]->getHandle();
 }
 

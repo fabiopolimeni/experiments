@@ -128,12 +128,7 @@ namespace framework
 
 		LOG(INFO) << "Loading file: " << in_file;
 
-		std::string file_basepath;
-		auto dir_pos = in_file.find_last_of('/');
-		if (dir_pos != std::string::npos)
-		{
-			file_basepath = in_file.substr(0, dir_pos+1);
-		}
+		const auto file_basepath = path::left(in_file, '/');
 
 		std::string error_string;
 		bool valid_obj = tinyobj::LoadObj(shapes, materials, error_string, in_file.c_str(), file_basepath.c_str());
@@ -255,47 +250,53 @@ namespace framework
 			
 			// albedo
 			{
+				const auto tex_filename = path::right(materials[i].diffuse_texname, '/');
 				auto texture_type = enum_to_t(graphics::material::sampler::DIFFUSE);
-				texture_set[texture_type] = (!materials[i].diffuse_texname.empty())
-					? generateTexture(file_basepath + materials[i].diffuse_texname)
+				texture_set[texture_type] = (!tex_filename.empty())
+					? generateTexture(file_basepath + tex_filename)
 					: generateTexture(s_default_texture_files[texture_type]);
 			}
 			
 			// metalness
 			{
+				const auto tex_filename = path::right(materials[i].specular_texname, '/');
 				auto texture_type = enum_to_t(graphics::material::sampler::SPECULAR);
-				texture_set[texture_type] = (!materials[i].specular_texname.empty())
-					? generateTexture(file_basepath + materials[i].specular_texname)
+				texture_set[texture_type] = (!tex_filename.empty())
+					? generateTexture(file_basepath + tex_filename)
 					: generateTexture(s_default_texture_files[texture_type]);
 			}
 
 			// roughness
 			{
+				const auto tex_filename = path::right(materials[i].specular_highlight_texname, '/');
 				auto texture_type = enum_to_t(graphics::material::sampler::ROUGHNESS);
-				texture_set[texture_type] = (!materials[i].specular_highlight_texname.empty())
-					? generateTexture(file_basepath + materials[i].specular_highlight_texname)
+				texture_set[texture_type] = (!tex_filename.empty())
+					? generateTexture(file_basepath + tex_filename)
 					: generateTexture(s_default_texture_files[texture_type]);
 			}
 
 			// displacement
 			{
+				const auto tex_filename = path::right(materials[i].displacement_texname, '/');
 				auto texture_type = enum_to_t(graphics::material::sampler::DISPLACEMENT);
-				texture_set[texture_type] = (!materials[i].displacement_texname.empty())
-					? generateTexture(file_basepath + materials[i].displacement_texname)
+				texture_set[texture_type] = (!tex_filename.empty())
+					? generateTexture(file_basepath + tex_filename)
 					: generateTexture(s_default_texture_files[texture_type]);
 			}
 
 			// normal
 			{
+				const auto tex_filename = path::right(materials[i].bump_texname, '/');
 				auto texture_type = enum_to_t(graphics::material::sampler::NORMAL);
-				texture_set[texture_type] = (!materials[i].bump_texname.empty())
-					? generateTexture(file_basepath + materials[i].bump_texname)
+				texture_set[texture_type] = (!tex_filename.empty())
+					? generateTexture(file_basepath + tex_filename)
 					: generateTexture(s_default_texture_files[texture_type]);
 			}
 
 			// create graphics material
 			graphics::material* material = new graphics::material();
 			loaded_model->m_Materials.push_back(material);
+			loaded_model->m_MaterialTexturesSet.push_back(texture_set);
 		}
 
 		return loaded_model;
@@ -357,11 +358,13 @@ namespace framework
 		for (auto mesh : m_Meshes)
 			valid_model &= mesh->create();
 
-		for (auto texture : m_Textures) {
-			for (auto tex_file : s_texture_names) {
-				if (texture && tex_file.second == texture) {
-					valid_model &= texture->create(tex_file.first);
-					break;
+		for (auto texture_set : m_MaterialTexturesSet) {
+			for (auto texture : texture_set) {
+				for (auto tex_file : s_texture_names) {
+					if (texture && tex_file.second == texture && texture->getHandle() == graphics::texture::invalid) {
+						valid_model &= texture->create(tex_file.first);
+						break;
+					}
 				}
 			}
 		}
@@ -398,6 +401,8 @@ namespace framework
 			// set the material
 			assert(m_id < m_MeshMaterialMap.size());
 			auto material = m_Materials[m_MeshMaterialMap[m_id]];
+
+			material->associate(m_MaterialTexturesSet[m_id].data());
 			material->update(projection, model_view, glm::vec4(glm::vec3(light_view), light_intensity));
 			material->use();
 
