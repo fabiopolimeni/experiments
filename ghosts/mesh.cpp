@@ -65,7 +65,7 @@ void graphics::mesh::use()
 {
 	assert(glIsVertexArray(m_VAO));
 
-	// don't bind element buffer, it is already bound within he vao
+	// don't bind element buffer, it is already bound within the vao
 	for (gl::uint32 i = 0; i < enum_to_t(buffer::MAX); ++i)
 		if (i != enum_to_t(buffer::ELEMENT))
 			glBindBufferBase(GL_SHADER_STORAGE_BUFFER, i, m_IBO[i]);

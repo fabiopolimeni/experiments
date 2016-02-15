@@ -100,6 +100,7 @@
     <ClCompile Include="compute.cpp" />
     <ClCompile Include="format.cpp" />
     <ClCompile Include="ghosts.cpp" />
+    <ClCompile Include="line_batcher.cpp" />
     <ClCompile Include="loader.cpp" />
     <ClCompile Include="logging.cpp" />
     <ClCompile Include="main.cpp" />
@@ -113,6 +114,7 @@
     <ClInclude Include="compute.hpp" />
     <ClInclude Include="format.hpp" />
     <ClInclude Include="ghosts.hpp" />
+    <ClInclude Include="line_batcher.hpp" />
     <ClInclude Include="logging.hpp" />
     <ClInclude Include="material.hpp" />
     <ClInclude Include="mesh.hpp" />
