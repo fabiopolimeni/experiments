@@ -40,7 +40,7 @@ namespace graphics
 
 		handle m_UniformBufferNames[uniform::MAX];
 
-		handle m_TextureNames[sampler::MAX];
+		handle m_TextureRefs[sampler::MAX];
 		handle m_SamplerNames[sampler::MAX];
 
 	public:

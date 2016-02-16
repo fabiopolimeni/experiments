@@ -145,6 +145,12 @@
     <None Include="data\models\kungfu-panda\kungfu.mtl">
       <Filter>Resource Files\models\panda</Filter>
     </None>
+    <None Include="data\shaders\line.frag">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
+    <None Include="data\shaders\line.vert">
+      <Filter>Resource Files\shaders</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Image Include="data\models\yoda\body.dds">

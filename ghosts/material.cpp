@@ -30,14 +30,11 @@ namespace
 	}
 }
 
-char const * VS_SOURCE = "data/shaders/pbr.vert";
-char const * FS_SOURCE = "data/shaders/pbr.frag";
-
 graphics::material::material()
 	: m_PipelineName(0), m_ProgramName(0)
 {
 	// clear texture unit names
-	memset(m_TextureNames, 0, sizeof(m_TextureNames));
+	memset(m_TextureRefs, 0, sizeof(m_TextureRefs));
 	memset(m_SamplerNames, 0, sizeof(m_SamplerNames));
 	memset(m_UniformBufferNames, 0, sizeof(m_UniformBufferNames));
 }
@@ -86,6 +83,9 @@ bool graphics::material::create()
 		glBindBuffer(GL_UNIFORM_BUFFER, 0);
 	}
 
+	char const * VS_SOURCE = "data/shaders/pbr.vert";
+	char const * FS_SOURCE = "data/shaders/pbr.frag";
+
 	m_ProgramName = glCreateProgram();
 
 	compiler compiler_instance;
@@ -103,9 +103,9 @@ bool graphics::material::create()
 void graphics::material::associate(texture * textures[sampler::MAX])
 {
 	// associate textures to material
-	// FIXME: Take into account the environment mapping too
+	// FIXME: Take into account environment map
 	for (uint32_t ti = 0; ti < enum_to_t(sampler::ENVIRONMENT); ++ti)
-		if (textures[ti]) m_TextureNames[ti] = textures[ti]->getHandle();
+		if (textures[ti]) m_TextureRefs[ti] = textures[ti]->getHandle();
 }
 
 void graphics::material::use()
@@ -113,7 +113,7 @@ void graphics::material::use()
 	glBindProgramPipeline(m_PipelineName);
 
 	// bind texture units
-	glBindTextures(0, enum_to_t(sampler::MAX), m_TextureNames);
+	glBindTextures(0, enum_to_t(sampler::MAX), m_TextureRefs);
 	glBindSamplers(0, enum_to_t(sampler::MAX), m_SamplerNames);
 	
 	// bind uniform buffers
@@ -124,15 +124,18 @@ void graphics::material::use()
 void graphics::material::destroy()
 {	
 	glDeleteBuffers(enum_to_t(uniform::MAX), m_UniformBufferNames);
-	glDeleteProgramPipelines(1, &m_PipelineName);
-	glDeleteProgram(m_ProgramName);
+	memset(m_UniformBufferNames, 0, sizeof(m_UniformBufferNames));
 
+	glDeleteProgramPipelines(1, &m_PipelineName);
 	m_PipelineName = 0;
+
+	glDeleteProgram(m_ProgramName);
 	m_ProgramName = 0;
 
-	memset(m_UniformBufferNames, 0, sizeof(m_UniformBufferNames));
-	memset(m_TextureNames, 0, sizeof(m_TextureNames));
+	glDeleteSamplers(enum_to_t(sampler::MAX), m_SamplerNames);
 	memset(m_SamplerNames, 0, sizeof(m_SamplerNames));
+
+	memset(m_TextureRefs, 0, sizeof(m_TextureRefs));
 }
 
 void graphics::material::update(glm::mat4 prj_matrix, glm::mat4 mv_matrix, glm::vec4 light_dir_intensity)

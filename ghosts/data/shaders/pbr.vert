@@ -74,10 +74,13 @@ void main()
 	vec4 VertPos = vec4(Positions.value[gl_VertexID].xyz, 1.0f);
 	vec3 position = vec3(Transforms.MV * VertPos);
 
-	// world to tangent matrix
+	// position in view space
+	Out.Position = position;
+
+	// world to tangent space matrix
 	mat3 tbn = transpose(mat3(tangent, bitangent, normal));
 
-	// outputs are in tangent space
+	// outputs in tangent space
 	Out.Normal = normal;
 	Out.ViewDir = tbn * normalize(-position);
 	

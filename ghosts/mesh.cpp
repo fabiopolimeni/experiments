@@ -77,8 +77,8 @@ void graphics::mesh::use()
 void graphics::mesh::destroy()
 {
 	glDeleteBuffers(enum_to_t(buffer::MAX), m_IBO);
-	glDeleteBuffers(1, &m_VAO);
-
 	memset(m_IBO, 0, sizeof(m_IBO));
+
+	glDeleteBuffers(1, &m_VAO);
 	m_VAO = 0;
 }

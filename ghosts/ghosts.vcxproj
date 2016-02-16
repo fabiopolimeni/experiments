@@ -132,6 +132,8 @@
     <None Include="data\models\kungfu-panda\kungfu.mtl" />
     <None Include="data\models\yoda\yoda-head.awf" />
     <None Include="data\models\yoda\yoda-head.mtl" />
+    <None Include="data\shaders\line.frag" />
+    <None Include="data\shaders\line.vert" />
     <None Include="data\shaders\pbr.frag" />
     <None Include="data\shaders\pbr.vert" />
   </ItemGroup>

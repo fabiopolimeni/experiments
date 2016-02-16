@@ -40,10 +40,10 @@ vec3 ads(vec3 Normal, vec3 LightDir, vec3 ViewDir)
 
 	vec3 albedo = texture2D(DiffuseMap, In.TexCoords).xyz;
 	vec3 diffuse = albedo * max( dot(l, n), 0.0 );
-	vec3 shininess = vec3(0.9);
+	vec3 shininess = vec3(0.8);
 	vec3 specular = shininess * pow( max( dot(r, v), 0.0 ), 64 );
 
-	return diffuse;// + specular;
+	return diffuse + specular;
 }
 
 void main()
