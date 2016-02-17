@@ -15,8 +15,6 @@ private:
 
 	std::vector<framework::model*> m_Models;
 
-	void processInput();
-
 public:
 
 	ghosts(int argc, const char* argv[])
@@ -26,4 +24,6 @@ public:
 	virtual bool begin() override;
 	virtual bool end() override;
 	virtual bool render() override;
+
+	virtual void onKeyStateChange(int Key, key_action old_state, key_action new_state) override;
 };

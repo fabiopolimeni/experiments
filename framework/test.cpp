@@ -157,7 +157,7 @@ test::test
 {
 	assert(WindowSize.x > 0 && WindowSize.y > 0);
 
-	memset(&KeyPressed[0], 0, sizeof(KeyPressed));
+	memset(&KeyCurAction[0], KEY_NOACTION, sizeof(KeyCurAction));
 
 	glfwInit();
 	glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
@@ -346,7 +346,17 @@ glm::uvec2 test::getWindowSize() const
 
 bool test::isKeyPressed(int Key) const
 {
-	return this->KeyPressed[Key];
+	return this->KeyCurAction[Key] == KEY_PRESS;
+}
+
+bool test::isKeyReleased(int Key) const
+{
+	return this->KeyCurAction[Key] == KEY_RELEASE;
+}
+
+bool test::isKeyDown(int Key) const
+{
+	return this->KeyCurAction[Key] == KEY_REPEAT;
 }
 
 glm::mat4 test::view() const
@@ -701,7 +711,13 @@ void test::keyCallback(GLFWwindow* Window, int Key, int Scancode, int Action, in
 	test * Test = static_cast<test*>(glfwGetWindowUserPointer(Window));
 	assert(Test);
 
-	Test->KeyPressed[Key] = Action == KEY_PRESS;
+	const key_action NewAction = (key_action)Action;
+	if (NewAction != Test->KeyCurAction[Key])
+	{
+		const key_action OldAction = Test->KeyCurAction[Key];
+		Test->KeyCurAction[Key] = NewAction;
+		Test->onKeyStateChange(Key, OldAction, NewAction);
+	}
 
 	if(Test->isKeyPressed(GLFW_KEY_ESCAPE))
 		Test->stop();

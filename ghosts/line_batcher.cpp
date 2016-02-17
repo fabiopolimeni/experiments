@@ -133,11 +133,12 @@ void graphics::line_batcher::update(glm::mat4 prj_matrix, glm::mat4 mv_matrix)
 		std::vector<glm::vec4>	colors;
 		for (auto s : m_Strips)
 		{
-			positions.assign(s->p_Points.begin(), s->p_Points.end());
-			colors.assign(positions.size(), s->p_Color);
-
-			m_BufferSize = positions.size() * sizeof(decltype(positions)::value_type);
+			positions.insert(positions.end(), s->p_Points.begin(), s->p_Points.end());
+			colors.insert(colors.end(), positions.size(), s->p_Color);
 		}
+
+		// we are assuming that all the vertex attribute buffers have the same size
+		m_BufferSize = positions.size() * sizeof(decltype(positions)::value_type);
 
 		// copy data into the vertex arrays
 		glBindBuffer(GL_ARRAY_BUFFER, m_VBO[enum_to_t(buffer::POSITION)]);
@@ -156,13 +157,20 @@ void graphics::line_batcher::draw()
 {
 	glBindProgramPipeline(m_Pipe);
 
+	// bind uniform buffers
+	glBindBufferBase(GL_UNIFORM_BUFFER, enum_to_t(uniform::TRANSFORM), m_UBO[enum_to_t(uniform::TRANSFORM)]);
+
+	// bind shader storage buffers
 	glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 0, m_VBO[enum_to_t(buffer::POSITION)]);
 	glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 0, m_VBO[enum_to_t(buffer::COLOR)]);
+
+	// bind the vertex array buffer, which is required
+	glBindVertexArray(m_VAO);
 	
 	// buffer vertex count
 	assert(m_BufferSize < std::numeric_limits<gl::sizei>::max());
 	const gl::sizei buffer_lenght = gl::sizei(m_BufferSize / sizeof(glm::vec4));
-	glDrawArrays(GL_LINES, 0, buffer_lenght);
+	glDrawArrays(GL_POINTS, 0, buffer_lenght);
 }
 
 void graphics::line_batcher::destroy()

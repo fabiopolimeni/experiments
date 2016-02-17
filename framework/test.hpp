@@ -224,7 +224,8 @@ protected:
 	{
 		KEY_PRESS = GLFW_PRESS,
 		KEY_RELEASE = GLFW_RELEASE,
-		KEY_REPEAT = GLFW_REPEAT
+		KEY_REPEAT = GLFW_REPEAT,
+		KEY_NOACTION = -1
 	};
 
 	test(
@@ -270,7 +271,14 @@ protected:
 
 	bool isExtensionSupported(char const * String);
 	glm::uvec2 getWindowSize() const;
+	
 	bool isKeyPressed(int Key) const;
+	bool isKeyReleased(int Key) const;
+	bool isKeyDown(int Key) const;
+
+	virtual void onMouseButtonStateChange(int Key, key_action old_state, key_action new_state) {}
+	virtual void onKeyStateChange(int Key, key_action old_state, key_action new_state) {}
+
 	glm::mat4 view() const;
 	float cameraDistance() const {return this->TranlationCurrent.y;}
 	glm::vec3 cameraPosition() const;
@@ -304,7 +312,7 @@ private:
 	glm::vec2 RotationOrigin;
 	glm::vec2 RotationCurrent;
 	int MouseButtonFlags;
-	std::array<bool, 512> KeyPressed;
+	std::array<key_action, 512> KeyCurAction;
 	bool Error;
 
 private:

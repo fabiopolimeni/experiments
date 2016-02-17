@@ -4,13 +4,21 @@
 #include "logging.hpp"
 #include "ghosts.hpp"
 
-void ghosts::processInput()
+
+void ghosts::onKeyStateChange(int Key, key_action old_state, key_action new_state)
 {
-	// debug visualisations
-	if (isKeyPressed(GLFW_KEY_D))
+	// debug visualizations
+	if (isKeyPressed(GLFW_KEY_LEFT_CONTROL) && Key == GLFW_KEY_D && new_state == test::KEY_PRESS)
 	{
 		for (auto model : m_Models) {
 			model->toggleRenderMode(framework::model::render_mode::DEBUG);
+		}
+	}
+
+	if (isKeyPressed(GLFW_KEY_LEFT_CONTROL) && Key == GLFW_KEY_S && new_state == test::KEY_PRESS)
+	{
+		for (auto model : m_Models) {
+			model->toggleRenderMode(framework::model::render_mode::SHADED);
 		}
 	}
 }
@@ -41,9 +49,6 @@ bool ghosts::end()
 
 bool ghosts::render()
 {
-	// process inputs
-	processInput();
-
 	glm::vec2 window_size(getWindowSize());
 	glm::mat4 projection_matrix = glm::perspectiveFov(glm::pi<float>() * 0.25f, window_size.x, window_size.y, 0.1f, 100.0f);
 

@@ -376,8 +376,9 @@ namespace framework
 	{
 		bool valid_model = true;
 		
-		for (auto mesh : m_Meshes)
+		for (auto mesh : m_Meshes) {
 			valid_model &= mesh->create();
+		}
 
 		for (auto texture_set : m_MaterialTexturesSet) {
 			for (auto texture : texture_set) {
@@ -397,7 +398,22 @@ namespace framework
 		valid_model &= m_LineBatcher->create();
 
 		// add debug lines to the line batcher
+		for (auto mesh : m_Meshes)
+		{
+			const auto& positions = mesh->p_PosRadius;
+			const auto& normals = mesh->p_Normals;
+			const auto n_verts = positions.size();
+			for (auto vi = 0; vi < n_verts; ++vi)
+			{
+				// normals
+				m_LineBatcher->addStrip(glm::vec4(.0f, 1.f, .0f, 1.f),
+					{ positions[vi], positions[vi] + normals[vi] });
 
+				// tangents
+				m_LineBatcher->addStrip(glm::vec4(.0f, 1.f, .0f, 1.f),
+					{ positions[vi], positions[vi] + normals[vi] });
+			}
+		}
 		
 		setRenderMode(render_mode::SHADED, true);
 		return valid_model;
