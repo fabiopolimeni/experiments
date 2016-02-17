@@ -15,6 +15,8 @@ private:
 
 	std::vector<framework::model*> m_Models;
 
+	void provessInput();
+
 public:
 
 	ghosts(int argc, const char* argv[])

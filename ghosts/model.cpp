@@ -5,6 +5,7 @@
 #include "material.hpp"
 #include "util.hpp"
 #include "texture.hpp"
+#include "line_batcher.hpp"
 
 #include "tiny_obj_loader.h"
 
@@ -305,29 +306,58 @@ namespace framework
 	void model::clear()
 	{
 		for (auto mesh : m_Meshes)
+		{
+			mesh->destroy();
 			delete mesh;
+		}
 
 		for (auto material : m_Materials)
+		{
+			material->destroy();
 			delete material;
+		}
 
-		for (auto texture : m_Textures)
-			delete texture;
+		if (m_LineBatcher)
+		{
+			m_LineBatcher->destroy();
+			delete m_LineBatcher;
+			m_LineBatcher = nullptr;
+		}
 
-		m_Materials.clear();
 		m_Meshes.clear();
+		m_Materials.clear();
 		m_MeshMaterialMap.clear();
+		m_MaterialTexturesSet.clear();
+	}
+
+	namespace
+	{
+		// file type to string
+		const char* ft2s(model::file_type in_ft)
+		{
+			switch (in_ft)
+			{
+			case model::file_type::ASCII:
+				return "ASCII";
+
+			case model::file_type::BINARY:
+				return "BINARY";
+
+			default:
+				return "UNKNOWN";
+			}
+		}
 	}
 
 	model* model::load(const std::string & filename, file_type f_type)
 	{
 		switch (f_type)
 		{
-		case ASCII:
+		case file_type::ASCII:
 			return loadObj(filename);
-			break;
 
 		default:
-			LOG(ERROR) << fmt::format("Model format {}, for file {} not supported!", f_type, filename);
+			LOG(ERROR) << fmt::format("Model format {}, for file {} not supported!", ft2s(f_type), filename);
 			return nullptr;
 		}
 	}
@@ -336,15 +366,6 @@ namespace framework
 	{
 		if (in_model)
 		{
-			for (auto mesh : in_model->m_Meshes)
-				mesh->destroy();
-
-			for (auto material : in_model->m_Materials)
-				material->destroy();
-
-			for (auto texture : in_model->m_Textures)
-				texture->destroy();
-
 			in_model->clear();
 		}
 
@@ -372,6 +393,13 @@ namespace framework
 		for (auto material : m_Materials)
 			valid_model &= material->create();
 
+		m_LineBatcher = new graphics::line_batcher();
+		valid_model &= m_LineBatcher->create();
+
+		// add debug lines to the line batcher
+
+		
+		m_RenderModeStates = enum_to_t(render_mode::SHADED);
 		return valid_model;
 	}
 
@@ -396,18 +424,40 @@ namespace framework
 		auto light_intensity = light.w;
 		auto light_view = view_mat * glm::vec4(light.xyz(), 0.f);
 
-		for (size_t m_id = 0; m_id < m_Meshes.size(); ++m_id)
+		// draw shaded
+		if (isRenderModeEnabled(render_mode::SHADED))
 		{
-			// set the material
-			assert(m_id < m_MeshMaterialMap.size());
-			auto material = m_Materials[m_MeshMaterialMap[m_id]];
+			for (size_t m_id = 0; m_id < m_Meshes.size(); ++m_id)
+			{
+				// set the material
+				assert(m_id < m_MeshMaterialMap.size());
+				auto material = m_Materials[m_MeshMaterialMap[m_id]];
 
-			material->associate(m_MaterialTexturesSet[m_id].data());
-			material->update(projection, model_view, glm::vec4(glm::vec3(light_view), light_intensity));
-			material->use();
+				material->associate(m_MaterialTexturesSet[m_id].data());
+				material->update(projection, model_view, glm::vec4(glm::vec3(light_view), light_intensity));
+				material->use();
 
-			// draw the mesh
-			m_Meshes[m_id]->use();
+				// draw the mesh
+				m_Meshes[m_id]->use();
+			}
+		}
+
+		// draw lines
+		if (isRenderModeEnabled(render_mode::DEBUG))
+		{
+			m_LineBatcher->update(projection, model_view);
+			m_LineBatcher->draw();
 		}
 	}
+
+	void model::setRenderMode(render_mode in_rm, bool in_enable)
+	{
+		if (in_enable) {
+			m_RenderModeStates |= enum_to_t(in_rm);
+		}
+		else {
+			m_RenderModeStates &= ~enum_to_t(in_rm);
+		}
+	}
+
 }

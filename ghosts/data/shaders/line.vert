@@ -3,7 +3,6 @@
 
 #define POSITION	0
 #define COLOR		1
-#define TEXCOORDS	2
 
 #define TRANSFORM	0
 
@@ -29,11 +28,6 @@ layout(binding = COLOR) buffer color
 	vec4 value[];
 } Colors;
 
-layout(binding = TEXCOORDS) buffer texcoords
-{
-	vec2 value[];
-} TexCoords;
-
 out gl_PerVertex
 {
 	vec4 gl_Position;
@@ -43,7 +37,6 @@ out block
 {
 	vec3 Color;
 	vec3 Position;
-	vec2 TexCoords;
 } Out;
 
 void main()
@@ -52,10 +45,6 @@ void main()
 	vec4 VertPos = vec4(Positions.value[gl_VertexID].xyz, 1.0f);	
 	Out.Position = vec3(Transforms.MV * VertPos);
 	
-	Out.Color = Colors.value[gl_VertexID].xyz;
-
-	Out.TexCoords = TexCoords.value[gl_VertexID];
-	Out.TexCoords.y = 1.0 - Out.TexCoords.y;
-	
+	Out.Color = Colors.value[gl_VertexID].xyz;	
 	gl_Position = Transforms.MVP * VertPos;
 }

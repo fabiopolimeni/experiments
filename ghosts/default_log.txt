@@ -1500,3 +1500,85 @@
 2016-02-16 09:41:52,016 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
 2016-02-16 09:41:52,021 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
 2016-02-16 09:41:52,026 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-17 14:13:22,917 INFO  [default] Loading file: data/models/kungfu-panda/kungfu.awf
+2016-02-17 14:13:27,103 INFO  [default] # of shapes    : 13
+2016-02-17 14:13:27,113 INFO  [default] # of materials : 13
+2016-02-17 14:13:27,122 INFO  [default] shape[0].name = DrawCall_0000
+2016-02-17 14:13:27,139 INFO  [default] Size of shape[0].indices: 80
+2016-02-17 14:13:27,151 INFO  [default] Size of shape[0].material_ids: 80
+2016-02-17 14:13:27,162 INFO  [default] shape[0].vertices: 54
+2016-02-17 14:13:27,171 INFO  [default] shape[1].name = DrawCall_0001
+2016-02-17 14:13:27,180 INFO  [default] Size of shape[1].indices: 208
+2016-02-17 14:13:27,188 INFO  [default] Size of shape[1].material_ids: 208
+2016-02-17 14:13:27,197 INFO  [default] shape[1].vertices: 125
+2016-02-17 14:13:27,208 INFO  [default] shape[2].name = DrawCall_0002
+2016-02-17 14:13:27,215 INFO  [default] Size of shape[2].indices: 208
+2016-02-17 14:13:27,222 INFO  [default] Size of shape[2].material_ids: 208
+2016-02-17 14:13:27,230 INFO  [default] shape[2].vertices: 125
+2016-02-17 14:13:27,240 INFO  [default] shape[3].name = DrawCall_0014
+2016-02-17 14:13:27,247 INFO  [default] Size of shape[3].indices: 8000
+2016-02-17 14:13:27,255 INFO  [default] Size of shape[3].material_ids: 8000
+2016-02-17 14:13:27,262 INFO  [default] shape[3].vertices: 5309
+2016-02-17 14:13:27,402 INFO  [default] shape[4].name = DrawCall_0043
+2016-02-17 14:13:27,415 INFO  [default] Size of shape[4].indices: 144
+2016-02-17 14:13:27,427 INFO  [default] Size of shape[4].material_ids: 144
+2016-02-17 14:13:27,436 INFO  [default] shape[4].vertices: 93
+2016-02-17 14:13:27,445 INFO  [default] shape[5].name = DrawCall_0044
+2016-02-17 14:13:27,452 INFO  [default] Size of shape[5].indices: 144
+2016-02-17 14:13:27,461 INFO  [default] Size of shape[5].material_ids: 144
+2016-02-17 14:13:27,470 INFO  [default] shape[5].vertices: 93
+2016-02-17 14:13:27,478 INFO  [default] shape[6].name = DrawCall_0046
+2016-02-17 14:13:27,513 INFO  [default] Size of shape[6].indices: 9008
+2016-02-17 14:13:27,519 INFO  [default] Size of shape[6].material_ids: 9008
+2016-02-17 14:13:27,525 INFO  [default] shape[6].vertices: 6581
+2016-02-17 14:13:27,685 INFO  [default] shape[7].name = DrawCall_0000
+2016-02-17 14:13:27,698 INFO  [default] Size of shape[7].indices: 288
+2016-02-17 14:13:27,709 INFO  [default] Size of shape[7].material_ids: 288
+2016-02-17 14:13:27,723 INFO  [default] shape[7].vertices: 169
+2016-02-17 14:13:27,735 INFO  [default] shape[8].name = DrawCall_0001
+2016-02-17 14:13:27,742 INFO  [default] Size of shape[8].indices: 288
+2016-02-17 14:13:27,750 INFO  [default] Size of shape[8].material_ids: 288
+2016-02-17 14:13:27,758 INFO  [default] shape[8].vertices: 169
+2016-02-17 14:13:27,771 INFO  [default] shape[9].name = DrawCall_0009
+2016-02-17 14:13:27,779 INFO  [default] Size of shape[9].indices: 8258
+2016-02-17 14:13:27,786 INFO  [default] Size of shape[9].material_ids: 8258
+2016-02-17 14:13:27,794 INFO  [default] shape[9].vertices: 5772
+2016-02-17 14:13:27,940 INFO  [default] shape[10].name = DrawCall_0035
+2016-02-17 14:13:27,952 INFO  [default] Size of shape[10].indices: 288
+2016-02-17 14:13:27,965 INFO  [default] Size of shape[10].material_ids: 288
+2016-02-17 14:13:27,976 INFO  [default] shape[10].vertices: 164
+2016-02-17 14:13:27,988 INFO  [default] shape[11].name = DrawCall_0036
+2016-02-17 14:13:27,998 INFO  [default] Size of shape[11].indices: 288
+2016-02-17 14:13:28,006 INFO  [default] Size of shape[11].material_ids: 288
+2016-02-17 14:13:28,014 INFO  [default] shape[11].vertices: 164
+2016-02-17 14:13:28,027 INFO  [default] shape[12].name = DrawCall_0056
+2016-02-17 14:13:28,034 INFO  [default] Size of shape[12].indices: 5112
+2016-02-17 14:13:28,041 INFO  [default] Size of shape[12].material_ids: 5112
+2016-02-17 14:13:28,050 INFO  [default] shape[12].vertices: 3596
+2016-02-17 14:13:28,145 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-17 14:13:28,158 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-17 14:13:28,170 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-17 14:13:28,180 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-17 14:13:28,188 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-17 14:13:28,197 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-17 14:13:28,206 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-17 14:13:28,213 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-17 14:13:28,222 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-17 14:13:28,230 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-17 14:13:28,238 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-17 14:13:28,246 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-17 14:13:28,253 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-17 14:17:31,443 INFO  [default] Loading file: data/models/barrel/barrel.awf
+2016-02-17 14:17:31,753 INFO  [default] # of shapes    : 1
+2016-02-17 14:17:31,753 INFO  [default] # of materials : 1
+2016-02-17 14:17:31,753 INFO  [default] shape[0].name = cylinder
+2016-02-17 14:17:31,765 INFO  [default] Size of shape[0].indices: 2236
+2016-02-17 14:17:31,765 INFO  [default] Size of shape[0].material_ids: 2236
+2016-02-17 14:17:31,765 INFO  [default] shape[0].vertices: 1243
+2016-02-17 14:55:05,800 INFO  [default] Loading file: data/models/barrel/barrel.awf
+2016-02-17 14:55:06,092 INFO  [default] # of shapes    : 1
+2016-02-17 14:55:06,100 INFO  [default] # of materials : 1
+2016-02-17 14:55:06,109 INFO  [default] shape[0].name = cylinder
+2016-02-17 14:55:06,118 INFO  [default] Size of shape[0].indices: 2236
+2016-02-17 14:55:06,125 INFO  [default] Size of shape[0].material_ids: 2236
+2016-02-17 14:55:06,132 INFO  [default] shape[0].vertices: 1243

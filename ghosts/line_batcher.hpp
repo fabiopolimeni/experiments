@@ -21,7 +21,6 @@ namespace graphics
 		{
 			POSITION,
 			COLOR,
-			TEXCOORDS,
 			MAX
 		};
 
@@ -47,7 +46,8 @@ namespace graphics
 		handle	m_Pipe;							// pipeline object
 		handle	m_Prog;							// pipeline object
 
-		bool	m_Dirty;						// Whether or not the lines buffer is dirty
+		size_t	m_BufferSize;					// the size of the VBOs
+		bool	m_Dirty;						// whether or not the lines buffer is dirty
 
 		std::vector<strip*>	m_Strips;
 
@@ -68,9 +68,9 @@ namespace graphics
 		void draw();
 		void destroy();
 
-		const strip* addStrip(const glm::vec4& in_color,
-			const std::vector<glm::vec4>& in_points,
-			const glm::vec2& in_width = glm::vec2::XY);
+		const strip* addStrip(const glm::vec4 in_color,
+			const std::vector<glm::vec4> in_points,
+			const glm::vec2 in_width = glm::vec2::XY);
 
 		void removeStrip(const strip* in_strip);
 	};

@@ -31,14 +31,15 @@ namespace
 
 bool graphics::line_batcher::initBuffers()
 {
+	m_BufferSize = 0;
 	glGenBuffers(enum_to_t(buffer::MAX), m_VBO);
 
 	glBindBuffer(GL_ARRAY_BUFFER, m_VBO[enum_to_t(buffer::POSITION)]);
-	glBufferData(GL_ARRAY_BUFFER, 0, nullptr, GL_DYNAMIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, m_BufferSize, nullptr, GL_DYNAMIC_DRAW);
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 
 	glBindBuffer(GL_ARRAY_BUFFER, m_VBO[enum_to_t(buffer::COLOR)]);
-	glBufferData(GL_ARRAY_BUFFER, 0, nullptr, GL_DYNAMIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, m_BufferSize, nullptr, GL_DYNAMIC_DRAW);
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 
 	gl::int32 uniform_buffer_offeset(0);
@@ -46,7 +47,7 @@ bool graphics::line_batcher::initBuffers()
 
 	// create the uniform transform buffer
 	{
-		auto uniform_buffer_size = glm::max(gl::int32((sizeof(glm::mat4) * 3)), uniform_buffer_offeset);
+		const auto uniform_buffer_size = glm::max(gl::int32((sizeof(glm::mat4) * 2)), uniform_buffer_offeset);
 
 		glGenBuffers(1, &m_UBO[enum_to_t(uniform::TRANSFORM)]);
 		glBindBuffer(GL_UNIFORM_BUFFER, m_UBO[enum_to_t(uniform::TRANSFORM)]);
@@ -56,7 +57,7 @@ bool graphics::line_batcher::initBuffers()
 
 	glGenVertexArrays(1, &m_VAO);
 	glBindVertexArray(m_VAO);
-	// NOTE: unused at the moment, it will be when start 
+	// NOTE: not used at the moment, it will be, when start 
 	//		 rendering lines as screen space polygons.
 	glBindVertexArray(0);
 
@@ -83,7 +84,7 @@ bool graphics::line_batcher::initShaders()
 }
 
 graphics::line_batcher::line_batcher()
-	: m_Dirty(false)
+	: m_BufferSize(0), m_Dirty(false)
 {
 }
 
@@ -114,6 +115,39 @@ void graphics::line_batcher::update(glm::mat4 prj_matrix, glm::mat4 mv_matrix)
 	// update shader storage buffer, containing vertex attributes if necessary only
 	if (m_Dirty)
 	{
+		// we need to reallocate the buffer, as we might have added or removed
+		// a line strip from our vector of strip. The way we are going to this
+		// is by orphaning the previous buffer, while the driver will re-allocate
+		// a new chunk of memory for us, to accommodate the new size, if necessary.
+		
+		glBindBuffer(GL_ARRAY_BUFFER, m_VBO[enum_to_t(buffer::POSITION)]);
+		glBufferData(GL_ARRAY_BUFFER, m_BufferSize, nullptr, GL_DYNAMIC_DRAW);
+		glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+		glBindBuffer(GL_ARRAY_BUFFER, m_VBO[enum_to_t(buffer::COLOR)]);
+		glBufferData(GL_ARRAY_BUFFER, m_BufferSize, nullptr, GL_DYNAMIC_DRAW);
+		glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+		// re-fill the vertex arrays and store the new buffer size
+		std::vector<glm::vec4>	positions;
+		std::vector<glm::vec4>	colors;
+		for (auto s : m_Strips)
+		{
+			positions.assign(s->p_Points.begin(), s->p_Points.end());
+			colors.assign(positions.size(), s->p_Color);
+
+			m_BufferSize = positions.size() * sizeof(decltype(positions)::value_type);
+		}
+
+		// copy data into the vertex arrays
+		glBindBuffer(GL_ARRAY_BUFFER, m_VBO[enum_to_t(buffer::POSITION)]);
+		glBufferData(GL_ARRAY_BUFFER, m_BufferSize, positions.data(), GL_DYNAMIC_DRAW);
+		glBindBuffer(GL_ARRAY_BUFFER, 0);
+
+		glBindBuffer(GL_ARRAY_BUFFER, m_VBO[enum_to_t(buffer::COLOR)]);
+		glBufferData(GL_ARRAY_BUFFER, m_BufferSize, colors.data(), GL_DYNAMIC_DRAW);
+		glBindBuffer(GL_ARRAY_BUFFER, 0);
+
 		m_Dirty = false;
 	}
 }
@@ -125,7 +159,10 @@ void graphics::line_batcher::draw()
 	glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 0, m_VBO[enum_to_t(buffer::POSITION)]);
 	glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 0, m_VBO[enum_to_t(buffer::COLOR)]);
 	
-	//glMultiDrawArrays(GL_LINES, 
+	// buffer vertex count
+	assert(m_BufferSize < std::numeric_limits<gl::sizei>::max());
+	const gl::sizei buffer_lenght = gl::sizei(m_BufferSize / sizeof(glm::vec4));
+	glDrawArrays(GL_LINES, 0, buffer_lenght);
 }
 
 void graphics::line_batcher::destroy()
@@ -145,14 +182,15 @@ void graphics::line_batcher::destroy()
 	glDeleteProgram(m_Prog);
 	m_Prog = 0;
 
-	for (auto s : m_Strips)
+	for (auto s : m_Strips) {
 		delete s;
+	}
 
 	m_Strips.clear();
 }
 
 const graphics::line_batcher::strip* graphics::line_batcher::addStrip(
-	const glm::vec4& in_color, const std::vector<glm::vec4>& in_points, const glm::vec2& in_width)
+	const glm::vec4 in_color, const std::vector<glm::vec4> in_points, const glm::vec2 in_width)
 {
 	strip* new_strip = new strip();
 	new_strip->p_Points.assign(in_points.begin(), in_points.end());
