@@ -399,7 +399,7 @@ namespace framework
 		// add debug lines to the line batcher
 
 		
-		m_RenderModeStates = enum_to_t(render_mode::SHADED);
+		setRenderMode(render_mode::SHADED, true);
 		return valid_model;
 	}
 
@@ -453,10 +453,10 @@ namespace framework
 	void model::setRenderMode(render_mode in_rm, bool in_enable)
 	{
 		if (in_enable) {
-			m_RenderModeStates |= enum_to_t(in_rm);
+			m_RenderModeStates |= (1 << enum_to_t(in_rm));
 		}
 		else {
-			m_RenderModeStates &= ~enum_to_t(in_rm);
+			m_RenderModeStates &= ~(1 << enum_to_t(in_rm));
 		}
 	}
 

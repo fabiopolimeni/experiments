@@ -79,11 +79,11 @@ namespace framework
 		void setRenderMode(render_mode in_rm, bool in_enable);
 
 		inline bool isRenderModeEnabled(render_mode in_rm) const {
-			return (m_RenderModeStates & enum_to_t(in_rm)) != 0;
+			return (m_RenderModeStates & (1 << enum_to_t(in_rm))) != 0;
 		}
 
 		inline void toggleRenderMode(render_mode in_rm) {
-			setRenderMode(in_rm, isRenderModeEnabled(in_rm));
+			setRenderMode(in_rm, !isRenderModeEnabled(in_rm));
 		}
 	};
 }

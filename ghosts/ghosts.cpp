@@ -4,7 +4,7 @@
 #include "logging.hpp"
 #include "ghosts.hpp"
 
-void ghosts::provessInput()
+void ghosts::processInput()
 {
 	// debug visualisations
 	if (isKeyPressed(GLFW_KEY_D))
@@ -41,6 +41,9 @@ bool ghosts::end()
 
 bool ghosts::render()
 {
+	// process inputs
+	processInput();
+
 	glm::vec2 window_size(getWindowSize());
 	glm::mat4 projection_matrix = glm::perspectiveFov(glm::pi<float>() * 0.25f, window_size.x, window_size.y, 0.1f, 100.0f);
 

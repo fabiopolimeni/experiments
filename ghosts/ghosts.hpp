@@ -15,7 +15,7 @@ private:
 
 	std::vector<framework::model*> m_Models;
 
-	void provessInput();
+	void processInput();
 
 public:
 
