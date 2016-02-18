@@ -147,12 +147,17 @@ void graphics::line_batcher::update(glm::mat4 prj_matrix, glm::mat4 mv_matrix)
 		LOG(INFO) << "Generating render debug lines ...";
 
 		// re-fill the vertex arrays and store the new buffer size
-		std::vector<glm::vec4>	positions(m_NumOfPoints);
-		std::vector<glm::vec4>	colors(m_NumOfPoints);
+		std::vector<glm::vec4>	positions;
+		std::vector<glm::vec4>	colors;
+
+		// reserve enough memory
+		positions.reserve(m_NumOfPoints);
+		colors.reserve(m_NumOfPoints);
+
 		for (auto s : m_Strips)
 		{
 			positions.insert(positions.end(), s->p_Points.begin(), s->p_Points.end());
-			colors.insert(colors.end(), positions.size(), s->p_Color);
+			colors.insert(colors.end(), s->p_Points.size(), s->p_Color);
 		}
 
 		// we are assuming that all the vertex attribute buffers have the same size
@@ -175,24 +180,27 @@ void graphics::line_batcher::update(glm::mat4 prj_matrix, glm::mat4 mv_matrix)
 
 void graphics::line_batcher::draw()
 {
-	glPolygonOffset(-100.f, -100.f);
-	glBindProgramPipeline(m_Pipe);
+	glDepthMask(GL_FALSE);
+	{
+		// bind shader programs
+		glBindProgramPipeline(m_Pipe);
 
-	// bind uniform buffers
-	glBindBufferBase(GL_UNIFORM_BUFFER, enum_to_t(uniform::TRANSFORM), m_UBO[enum_to_t(uniform::TRANSFORM)]);
+		// bind uniform buffers
+		glBindBufferBase(GL_UNIFORM_BUFFER, enum_to_t(uniform::TRANSFORM), m_UBO[enum_to_t(uniform::TRANSFORM)]);
 
-	// bind shader storage buffers
-	glBindBufferBase(GL_SHADER_STORAGE_BUFFER, enum_to_t(buffer::POSITION), m_VBO[enum_to_t(buffer::POSITION)]);
-	glBindBufferBase(GL_SHADER_STORAGE_BUFFER, enum_to_t(buffer::COLOR), m_VBO[enum_to_t(buffer::COLOR)]);
+		// bind shader storage buffers
+		glBindBufferBase(GL_SHADER_STORAGE_BUFFER, enum_to_t(buffer::POSITION), m_VBO[enum_to_t(buffer::POSITION)]);
+		glBindBufferBase(GL_SHADER_STORAGE_BUFFER, enum_to_t(buffer::COLOR), m_VBO[enum_to_t(buffer::COLOR)]);
 
-	// bind the vertex array buffer, which is required
-	glBindVertexArray(m_VAO);
-	
-	// buffer vertex count
-	assert(m_BufferSize < std::numeric_limits<gl::sizei>::max());
-	const gl::sizei buffer_lenght = gl::sizei(m_BufferSize / sizeof(glm::vec4));
-	glDrawArrays(GL_LINES, 0, buffer_lenght);
-	glPolygonOffset(0.f, 0.f);
+		// bind the vertex array buffer, which is required
+		glBindVertexArray(m_VAO);
+
+		// buffer vertex count
+		assert(m_BufferSize < std::numeric_limits<gl::sizei>::max());
+		const gl::sizei buffer_lenght = gl::sizei(m_BufferSize / sizeof(glm::vec4));
+		glDrawArrays(GL_LINES, 0, buffer_lenght);
+		glDepthMask(GL_TRUE);
+	}
 }
 
 void graphics::line_batcher::destroy()

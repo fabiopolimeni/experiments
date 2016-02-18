@@ -6,6 +6,7 @@
 #include "util.hpp"
 #include "texture.hpp"
 #include "line_batcher.hpp"
+#include "graphics.hpp"
 
 #include "tiny_obj_loader.h"
 
@@ -473,9 +474,17 @@ namespace framework
 		auto light_intensity = light.w;
 		auto light_view = view_mat * glm::vec4(light.xyz(), 0.f);
 
+		bool is_wireframe = isRenderModeEnabled(render_mode::WIREFRAME) || isRenderModeEnabled(render_mode::DEBUG);
+
 		// draw shaded
 		if (isRenderModeEnabled(render_mode::SHADED))
 		{
+			// offset polygons if necessary.
+			// if drawing lines on top of the object, we need to
+			// push polygons back, as unfortunately, pulling lines
+			// doesn't seem to produce any result.
+			auto po = graphics::polygon_offset(is_wireframe, 4.f);
+
 			for (size_t m_id = 0; m_id < m_Meshes.size(); ++m_id)
 			{
 				// set the material
