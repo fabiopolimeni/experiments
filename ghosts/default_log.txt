@@ -2020,3 +2020,98 @@
 2016-02-18 00:48:40,708 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
 2016-02-18 00:48:40,712 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
 2016-02-18 00:48:57,842 INFO  [default] Generating render debug lines ...
+2016-02-18 10:10:30,786 INFO  [default] Loading file: data/models/barrel/barrel.awf
+2016-02-18 10:10:31,110 INFO  [default] # of shapes    : 1
+2016-02-18 10:10:31,113 INFO  [default] # of materials : 1
+2016-02-18 10:10:31,117 INFO  [default] shape[0].name = cylinder
+2016-02-18 10:10:31,121 INFO  [default] Size of shape[0].indices: 2236
+2016-02-18 10:10:31,125 INFO  [default] Size of shape[0].material_ids: 2236
+2016-02-18 10:10:31,129 INFO  [default] shape[0].vertices: 1243
+2016-02-18 10:10:34,362 INFO  [default] Generating render debug lines ...
+2016-02-18 10:10:53,380 INFO  [default] completed!
+2016-02-18 10:13:34,982 INFO  [default] Loading file: data/models/barrel/barrel.awf
+2016-02-18 10:13:35,457 INFO  [default] # of shapes    : 1
+2016-02-18 10:13:35,463 INFO  [default] # of materials : 1
+2016-02-18 10:13:35,470 INFO  [default] shape[0].name = cylinder
+2016-02-18 10:13:35,476 INFO  [default] Size of shape[0].indices: 2236
+2016-02-18 10:13:35,486 INFO  [default] Size of shape[0].material_ids: 2236
+2016-02-18 10:13:35,494 INFO  [default] shape[0].vertices: 1243
+2016-02-18 10:13:39,054 INFO  [default] Generating render debug lines ...
+2016-02-18 10:19:20,143 INFO  [default] Loading file: data/models/barrel/barrel.awf
+2016-02-18 10:19:20,167 INFO  [default] # of shapes    : 1
+2016-02-18 10:19:20,172 INFO  [default] # of materials : 1
+2016-02-18 10:19:20,177 INFO  [default] shape[0].name = cylinder
+2016-02-18 10:19:20,183 INFO  [default] Size of shape[0].indices: 2236
+2016-02-18 10:19:20,189 INFO  [default] Size of shape[0].material_ids: 2236
+2016-02-18 10:19:20,197 INFO  [default] shape[0].vertices: 1243
+2016-02-18 10:19:26,163 INFO  [default] Generating render debug lines ...
+2016-02-18 10:19:26,558 INFO  [default] completed!
+2016-02-18 10:19:36,670 INFO  [default] Generating render debug lines ...
+2016-02-18 10:19:37,747 INFO  [default] completed!
+2016-02-18 10:21:34,159 INFO  [default] Loading file: data/models/barrel/barrel.awf
+2016-02-18 10:21:34,183 INFO  [default] # of shapes    : 1
+2016-02-18 10:21:34,189 INFO  [default] # of materials : 1
+2016-02-18 10:21:34,205 INFO  [default] shape[0].name = cylinder
+2016-02-18 10:21:34,212 INFO  [default] Size of shape[0].indices: 2236
+2016-02-18 10:21:34,220 INFO  [default] Size of shape[0].material_ids: 2236
+2016-02-18 10:21:34,228 INFO  [default] shape[0].vertices: 1243
+2016-02-18 10:21:48,113 INFO  [default] Generating render debug lines ...
+2016-02-18 10:21:49,212 INFO  [default] completed!
+2016-02-18 10:21:57,707 INFO  [default] Generating render debug lines ...
+2016-02-18 10:21:57,827 INFO  [default] completed!
+2016-02-18 10:23:11,677 INFO  [default] Loading file: data/models/barrel/barrel.awf
+2016-02-18 10:23:11,692 INFO  [default] # of shapes    : 1
+2016-02-18 10:23:11,695 INFO  [default] # of materials : 1
+2016-02-18 10:23:11,698 INFO  [default] shape[0].name = cylinder
+2016-02-18 10:23:11,701 INFO  [default] Size of shape[0].indices: 2236
+2016-02-18 10:23:11,705 INFO  [default] Size of shape[0].material_ids: 2236
+2016-02-18 10:23:11,709 INFO  [default] shape[0].vertices: 1243
+2016-02-18 10:23:19,468 INFO  [default] Generating render debug lines ...
+2016-02-18 10:23:19,825 INFO  [default] completed!
+2016-02-18 10:23:32,869 INFO  [default] Generating render debug lines ...
+2016-02-18 10:23:33,822 INFO  [default] completed!
+2016-02-18 10:30:03,356 INFO  [default] Loading file: data/models/barrel/barrel.awf
+2016-02-18 10:30:03,377 INFO  [default] # of shapes    : 1
+2016-02-18 10:30:03,380 INFO  [default] # of materials : 1
+2016-02-18 10:30:03,385 INFO  [default] shape[0].name = cylinder
+2016-02-18 10:30:03,390 INFO  [default] Size of shape[0].indices: 2236
+2016-02-18 10:30:03,394 INFO  [default] Size of shape[0].material_ids: 2236
+2016-02-18 10:30:03,399 INFO  [default] shape[0].vertices: 1243
+2016-02-18 10:30:05,465 INFO  [default] Generating render debug lines ...
+2016-02-18 10:30:05,850 INFO  [default] completed!
+2016-02-18 10:59:04,298 INFO  [default] Loading file: data/models/barrel/barrel.awf
+2016-02-18 10:59:04,320 INFO  [default] # of shapes    : 1
+2016-02-18 10:59:04,324 INFO  [default] # of materials : 1
+2016-02-18 10:59:04,327 INFO  [default] shape[0].name = cylinder
+2016-02-18 10:59:04,330 INFO  [default] Size of shape[0].indices: 2236
+2016-02-18 10:59:04,343 INFO  [default] Size of shape[0].material_ids: 2236
+2016-02-18 10:59:04,348 INFO  [default] shape[0].vertices: 1243
+2016-02-18 10:59:17,223 INFO  [default] Generating render debug lines ...
+2016-02-18 10:59:18,383 INFO  [default] completed!
+2016-02-18 10:59:50,330 INFO  [default] Loading file: data/models/barrel/barrel.awf
+2016-02-18 10:59:50,354 INFO  [default] # of shapes    : 1
+2016-02-18 10:59:50,359 INFO  [default] # of materials : 1
+2016-02-18 10:59:50,365 INFO  [default] shape[0].name = cylinder
+2016-02-18 10:59:50,370 INFO  [default] Size of shape[0].indices: 2236
+2016-02-18 10:59:50,377 INFO  [default] Size of shape[0].material_ids: 2236
+2016-02-18 10:59:50,386 INFO  [default] shape[0].vertices: 1243
+2016-02-18 10:59:52,945 INFO  [default] Generating render debug lines ...
+2016-02-18 10:59:53,959 INFO  [default] completed!
+2016-02-18 11:00:58,046 INFO  [default] Loading file: data/models/barrel/barrel.awf
+2016-02-18 11:00:58,060 INFO  [default] # of shapes    : 1
+2016-02-18 11:00:58,062 INFO  [default] # of materials : 1
+2016-02-18 11:00:58,065 INFO  [default] shape[0].name = cylinder
+2016-02-18 11:00:58,069 INFO  [default] Size of shape[0].indices: 2236
+2016-02-18 11:00:58,072 INFO  [default] Size of shape[0].material_ids: 2236
+2016-02-18 11:00:58,076 INFO  [default] shape[0].vertices: 1243
+2016-02-18 11:00:59,381 INFO  [default] Generating render debug lines ...
+2016-02-18 11:01:00,338 INFO  [default] completed!
+2016-02-18 11:02:03,872 INFO  [default] Loading file: data/models/barrel/barrel.awf
+2016-02-18 11:02:03,886 INFO  [default] # of shapes    : 1
+2016-02-18 11:02:03,889 INFO  [default] # of materials : 1
+2016-02-18 11:02:03,893 INFO  [default] shape[0].name = cylinder
+2016-02-18 11:02:03,896 INFO  [default] Size of shape[0].indices: 2236
+2016-02-18 11:02:03,899 INFO  [default] Size of shape[0].material_ids: 2236
+2016-02-18 11:02:03,904 INFO  [default] shape[0].vertices: 1243
+2016-02-18 11:02:05,527 INFO  [default] Generating render debug lines ...
+2016-02-18 11:02:06,485 INFO  [default] completed!

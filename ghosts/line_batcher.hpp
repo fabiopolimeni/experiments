@@ -47,6 +47,7 @@ namespace graphics
 		handle	m_Prog;							// pipeline object
 
 		size_t	m_BufferSize;					// the size of the VBOs
+		size_t	m_NumOfPoints;					// number of line points
 		bool	m_Dirty;						// whether or not the lines buffer is dirty
 
 		std::vector<strip*>	m_Strips;

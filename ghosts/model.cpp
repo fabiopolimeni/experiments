@@ -421,11 +421,11 @@ namespace framework
 			{
 				// normals
 				m_DebugBatcher->addStrip(glm::vec4(.0f, 1.f, .0f, 1.f),
-					{ positions[vi], positions[vi] + normals[vi] * 0.5f });
+					{ positions[vi], positions[vi] + normals[vi] * 0.2f });
 
 				// tangents
 				m_DebugBatcher->addStrip(glm::vec4(.0f, .0f, 1.f, 1.f),
-					{ positions[vi], positions[vi] + tangents[vi] * 0.5f });
+				{ positions[vi], positions[vi] + tangents[vi] * 0.2f });
 			}
 
 			const auto& triangles = mesh->p_FaceIndices;

@@ -14,12 +14,14 @@ namespace
 		assert(glIsProgram(program_name));
 
 		gl::uint32 vert_shader_name = in_compiler.create(GL_VERTEX_SHADER, vs_source);
-		if (!in_compiler.checkShader(vert_shader_name))
+		if (!in_compiler.checkShader(vert_shader_name)) {
 			return 0;
+		}
 
 		gl::uint32 frag_shader_name = in_compiler.create(GL_FRAGMENT_SHADER, fs_source);
-		if (!in_compiler.checkShader(frag_shader_name))
+		if (!in_compiler.checkShader(frag_shader_name)) {
 			return 0;
+		}
 
 		glProgramParameteri(program_name, GL_PROGRAM_SEPARABLE, GL_TRUE);
 		glAttachShader(program_name, vert_shader_name);
@@ -32,6 +34,7 @@ namespace
 
 bool graphics::line_batcher::initBuffers()
 {
+	m_NumOfPoints = 0;
 	m_BufferSize = 0;
 	glGenBuffers(enum_to_t(buffer::MAX), m_VBO);
 
@@ -97,7 +100,7 @@ bool graphics::line_batcher::initShaders()
 }
 
 graphics::line_batcher::line_batcher()
-	: m_BufferSize(0), m_Dirty(false)
+	: m_BufferSize(0), m_NumOfPoints(0), m_Dirty(false)
 {
 }
 
@@ -144,8 +147,8 @@ void graphics::line_batcher::update(glm::mat4 prj_matrix, glm::mat4 mv_matrix)
 		LOG(INFO) << "Generating render debug lines ...";
 
 		// re-fill the vertex arrays and store the new buffer size
-		std::vector<glm::vec4>	positions;
-		std::vector<glm::vec4>	colors;
+		std::vector<glm::vec4>	positions(m_NumOfPoints);
+		std::vector<glm::vec4>	colors(m_NumOfPoints);
 		for (auto s : m_Strips)
 		{
 			positions.insert(positions.end(), s->p_Points.begin(), s->p_Points.end());
@@ -172,6 +175,7 @@ void graphics::line_batcher::update(glm::mat4 prj_matrix, glm::mat4 mv_matrix)
 
 void graphics::line_batcher::draw()
 {
+	glPolygonOffset(-100.f, -100.f);
 	glBindProgramPipeline(m_Pipe);
 
 	// bind uniform buffers
@@ -188,6 +192,7 @@ void graphics::line_batcher::draw()
 	assert(m_BufferSize < std::numeric_limits<gl::sizei>::max());
 	const gl::sizei buffer_lenght = gl::sizei(m_BufferSize / sizeof(glm::vec4));
 	glDrawArrays(GL_LINES, 0, buffer_lenght);
+	glPolygonOffset(0.f, 0.f);
 }
 
 void graphics::line_batcher::destroy()
@@ -212,6 +217,10 @@ void graphics::line_batcher::destroy()
 	}
 
 	m_Strips.clear();
+
+	m_NumOfPoints = 0;
+	m_BufferSize = 0;
+	m_Dirty = false;
 }
 
 const graphics::line_batcher::strip* graphics::line_batcher::addStrip(
@@ -223,6 +232,7 @@ const graphics::line_batcher::strip* graphics::line_batcher::addStrip(
 	new_strip->p_Width = in_width;
 
 	m_Strips.emplace_back(new_strip);
+	m_NumOfPoints += in_points.size();
 	m_Dirty = true;
 
 	return new_strip;
@@ -233,7 +243,11 @@ void graphics::line_batcher::removeStrip(const graphics::line_batcher::strip * i
 	auto it = std::find(m_Strips.begin(), m_Strips.end(), in_strip);
 	if (it != std::end(m_Strips))
 	{
+		m_NumOfPoints -= (*it)->p_Points.size();
+		
 		delete (*it);
 		m_Strips.erase(it);
+
+		m_Dirty = true;
 	}
 }

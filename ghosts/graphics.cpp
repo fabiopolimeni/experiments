@@ -15,9 +15,11 @@ namespace graphics
 
 		//glEnable(GL_LINE_SMOOTH);
 		glLineWidth(1.f);
+		glEnable(GL_POLYGON_OFFSET_LINE);
 
 		//glEnable(GL_POINT_SMOOTH);
 		glPointSize(2.f);
+		glEnable(GL_POLYGON_OFFSET_POINT);
 
 		return true;
 	}
