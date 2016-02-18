@@ -1,6 +1,7 @@
 #include "line_batcher.hpp"
 #include "ogl.hpp"
 #include "util.hpp"
+#include "logging.hpp"
 #include "compiler.hpp"
 
 #include <algorithm>
@@ -56,10 +57,22 @@ bool graphics::line_batcher::initBuffers()
 	}
 
 	glGenVertexArrays(1, &m_VAO);
-	glBindVertexArray(m_VAO);
-	// NOTE: not used at the moment, it will be, when start 
-	//		 rendering lines as screen space polygons.
-	glBindVertexArray(0);
+	{
+		glBindVertexArray(m_VAO);
+
+		//// bind buffers to vertex attributes
+		//glBindVertexBuffer(0, m_VBO[enum_to_t(buffer::POSITION)], 0, sizeof(glm::vec4));
+		//glVertexAttribFormat(0, 4, GL_FLOAT, GL_FALSE, 0);
+		//glVertexAttribBinding(0, 0);
+		//glEnableVertexAttribArray(0);
+
+		//glBindVertexBuffer(1, m_VBO[enum_to_t(buffer::COLOR)], 0, sizeof(glm::vec4));
+		//glVertexAttribFormat(0, 4, GL_FLOAT, GL_FALSE, 0);
+		//glVertexAttribBinding(1, 0);
+		//glEnableVertexAttribArray(1);
+
+		glBindVertexArray(0);
+	}
 
 	return m_VAO && m_VBO[enum_to_t(buffer::POSITION)] && m_VBO[enum_to_t(buffer::COLOR)] && m_VAO;;
 }
@@ -128,6 +141,8 @@ void graphics::line_batcher::update(glm::mat4 prj_matrix, glm::mat4 mv_matrix)
 		glBufferData(GL_ARRAY_BUFFER, m_BufferSize, nullptr, GL_DYNAMIC_DRAW);
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 
+		LOG(INFO) << "Generating render debug lines ...";
+
 		// re-fill the vertex arrays and store the new buffer size
 		std::vector<glm::vec4>	positions;
 		std::vector<glm::vec4>	colors;
@@ -149,6 +164,8 @@ void graphics::line_batcher::update(glm::mat4 prj_matrix, glm::mat4 mv_matrix)
 		glBufferData(GL_ARRAY_BUFFER, m_BufferSize, colors.data(), GL_DYNAMIC_DRAW);
 		glBindBuffer(GL_ARRAY_BUFFER, 0);
 
+		LOG(INFO) << "completed!";
+
 		m_Dirty = false;
 	}
 }
@@ -161,8 +178,8 @@ void graphics::line_batcher::draw()
 	glBindBufferBase(GL_UNIFORM_BUFFER, enum_to_t(uniform::TRANSFORM), m_UBO[enum_to_t(uniform::TRANSFORM)]);
 
 	// bind shader storage buffers
-	glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 0, m_VBO[enum_to_t(buffer::POSITION)]);
-	glBindBufferBase(GL_SHADER_STORAGE_BUFFER, 0, m_VBO[enum_to_t(buffer::COLOR)]);
+	glBindBufferBase(GL_SHADER_STORAGE_BUFFER, enum_to_t(buffer::POSITION), m_VBO[enum_to_t(buffer::POSITION)]);
+	glBindBufferBase(GL_SHADER_STORAGE_BUFFER, enum_to_t(buffer::COLOR), m_VBO[enum_to_t(buffer::COLOR)]);
 
 	// bind the vertex array buffer, which is required
 	glBindVertexArray(m_VAO);
@@ -170,7 +187,7 @@ void graphics::line_batcher::draw()
 	// buffer vertex count
 	assert(m_BufferSize < std::numeric_limits<gl::sizei>::max());
 	const gl::sizei buffer_lenght = gl::sizei(m_BufferSize / sizeof(glm::vec4));
-	glDrawArrays(GL_POINTS, 0, buffer_lenght);
+	glDrawArrays(GL_LINES, 0, buffer_lenght);
 }
 
 void graphics::line_batcher::destroy()

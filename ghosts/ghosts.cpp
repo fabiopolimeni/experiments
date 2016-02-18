@@ -7,7 +7,7 @@
 
 void ghosts::onKeyStateChange(int Key, key_action old_state, key_action new_state)
 {
-	// debug visualizations
+	// debug CTRL+D
 	if (isKeyPressed(GLFW_KEY_LEFT_CONTROL) && Key == GLFW_KEY_D && new_state == test::KEY_PRESS)
 	{
 		for (auto model : m_Models) {
@@ -15,6 +15,15 @@ void ghosts::onKeyStateChange(int Key, key_action old_state, key_action new_stat
 		}
 	}
 
+	// wireframe CTRL+W
+	if (isKeyPressed(GLFW_KEY_LEFT_CONTROL) && Key == GLFW_KEY_W && new_state == test::KEY_PRESS)
+	{
+		for (auto model : m_Models) {
+			model->toggleRenderMode(framework::model::render_mode::WIREFRAME);
+		}
+	}
+
+	// shaded CTRL+S
 	if (isKeyPressed(GLFW_KEY_LEFT_CONTROL) && Key == GLFW_KEY_S && new_state == test::KEY_PRESS)
 	{
 		for (auto model : m_Models) {
@@ -27,7 +36,7 @@ bool ghosts::begin()
 {
 	if (graphics::renderer::init() && compute::clothing::init())
 	{
-		if (auto m = framework::model::load("data/models/barrel/barrel.awf", framework::model::file_type::ASCII))
+		if (auto m = framework::model::load("data/models/kungfu-panda/kungfu.awf", framework::model::file_type::ASCII))
 		{
 			if (m->initialise()) {
 				m_Models.push_back(m);

@@ -1,4 +1,4 @@
-#include "graphics.hpp"
+﻿#include "graphics.hpp"
 #include "compiler.hpp"
 #include "ogl.hpp"
 
@@ -9,7 +9,16 @@ namespace graphics
 	bool renderer::init()
 	{
 		glEnable(GL_CULL_FACE);
+		glCullFace(GL_BACK);
+
 		glEnable(GL_DEPTH_TEST);
+
+		//glEnable(GL_LINE_SMOOTH);
+		glLineWidth(1.f);
+
+		//glEnable(GL_POINT_SMOOTH);
+		glPointSize(2.f);
+
 		return true;
 	}
 

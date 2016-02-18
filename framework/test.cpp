@@ -723,7 +723,7 @@ void test::keyCallback(GLFWwindow* Window, int Key, int Scancode, int Action, in
 		Test->stop();
 }
 
-//#define DEBUG_DRIVER_VERBOSE
+#define DEBUG_DRIVER_VERBOSE
 void APIENTRY test::debugOutput
 (
 	GLenum source,

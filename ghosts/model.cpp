@@ -317,12 +317,19 @@ namespace framework
 			delete material;
 		}
 
-		if (m_LineBatcher)
+		if (m_DebugBatcher)
 		{
-			m_LineBatcher->destroy();
-			delete m_LineBatcher;
-			m_LineBatcher = nullptr;
+			m_DebugBatcher->destroy();
+			delete m_DebugBatcher;
+			m_DebugBatcher = nullptr;
 		}
+
+		if (m_WireframeBatcher)
+		{
+			m_WireframeBatcher->destroy();
+			delete m_WireframeBatcher;
+			m_WireframeBatcher = nullptr;
+		}		
 
 		m_Meshes.clear();
 		m_Materials.clear();
@@ -394,24 +401,50 @@ namespace framework
 		for (auto material : m_Materials)
 			valid_model &= material->create();
 
-		m_LineBatcher = new graphics::line_batcher();
-		valid_model &= m_LineBatcher->create();
+		// wireframe lines
+		m_WireframeBatcher = new graphics::line_batcher();
+		valid_model &= m_WireframeBatcher->create();
 
-		// add debug lines to the line batcher
+		// debug lines
+		m_DebugBatcher = new graphics::line_batcher();
+		valid_model &= m_DebugBatcher->create();
+
+		// add lines to the line batches
 		for (auto mesh : m_Meshes)
 		{
 			const auto& positions = mesh->p_PosRadius;
 			const auto& normals = mesh->p_Normals;
+			const auto& tangents = mesh->p_Tangents;
+
 			const auto n_verts = positions.size();
 			for (auto vi = 0; vi < n_verts; ++vi)
 			{
 				// normals
-				m_LineBatcher->addStrip(glm::vec4(.0f, 1.f, .0f, 1.f),
-					{ positions[vi], positions[vi] + normals[vi] });
+				m_DebugBatcher->addStrip(glm::vec4(.0f, 1.f, .0f, 1.f),
+					{ positions[vi], positions[vi] + normals[vi] * 0.5f });
 
 				// tangents
-				m_LineBatcher->addStrip(glm::vec4(.0f, 1.f, .0f, 1.f),
-					{ positions[vi], positions[vi] + normals[vi] });
+				m_DebugBatcher->addStrip(glm::vec4(.0f, .0f, 1.f, 1.f),
+					{ positions[vi], positions[vi] + tangents[vi] * 0.5f });
+			}
+
+			const auto& triangles = mesh->p_FaceIndices;
+			const auto n_tris = triangles.size();
+			for (auto ti = 0; ti < n_tris; ti += 3)
+			{
+				const uint32_t i0 = triangles[ti + 0];
+				const uint32_t i1 = triangles[ti + 1];
+				const uint32_t i2 = triangles[ti + 2];
+
+				// shortcuts for vertices
+				const glm::vec4 & v0 = positions[i0];
+				const glm::vec4 & v1 = positions[i1];
+				const glm::vec4 & v2 = positions[i2];
+
+				// triangles
+				m_WireframeBatcher->addStrip(
+					glm::vec4(.0f, 0.f, .0f, 1.f),
+					{ v0,v1, v1,v2, v2,v0 });
 			}
 		}
 		
@@ -458,11 +491,18 @@ namespace framework
 			}
 		}
 
+		// draw wireframe
+		if (isRenderModeEnabled(render_mode::WIREFRAME))
+		{
+			m_WireframeBatcher->update(projection, model_view);
+			m_WireframeBatcher->draw();
+		}
+
 		// draw lines
 		if (isRenderModeEnabled(render_mode::DEBUG))
 		{
-			m_LineBatcher->update(projection, model_view);
-			m_LineBatcher->draw();
+			m_DebugBatcher->update(projection, model_view);
+			m_DebugBatcher->draw();
 		}
 	}
 

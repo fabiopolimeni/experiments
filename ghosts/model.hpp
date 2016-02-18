@@ -40,7 +40,9 @@ namespace framework
 		
 		std::vector<graphics::mesh*> m_Meshes;
 		std::vector<graphics::material*> m_Materials;
-		graphics::line_batcher* m_LineBatcher;
+
+		graphics::line_batcher* m_DebugBatcher;
+		graphics::line_batcher* m_WireframeBatcher;
 
 		// associate each material to a set of textures
 		// the position in the vector refers to the material,
