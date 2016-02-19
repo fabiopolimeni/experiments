@@ -309,8 +309,12 @@ private:
 	glm::vec2 MouseCurrent;
 	glm::vec2 TranlationOrigin;
 	glm::vec2 TranlationCurrent;
+	glm::vec2 PanningOrigin;
+	glm::vec2 PanningCurrent;
 	glm::vec2 RotationOrigin;
 	glm::vec2 RotationCurrent;
+
+	float CameraSpeedInv;
 	int MouseButtonFlags;
 	std::array<key_action, 512> KeyCurAction;
 	bool Error;

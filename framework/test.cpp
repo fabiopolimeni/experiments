@@ -150,9 +150,12 @@ test::test
 	MouseCurrent(WindowSize >> 1u),
 	TranlationOrigin(Position),
 	TranlationCurrent(Position),
+	PanningOrigin(0.f),
+	PanningCurrent(0.f),
 	RotationOrigin(Orientation), 
 	RotationCurrent(Orientation),
 	MouseButtonFlags(0),
+	CameraSpeedInv(50.f),
 	Error(false)
 {
 	assert(WindowSize.x > 0 && WindowSize.y > 0);
@@ -361,15 +364,18 @@ bool test::isKeyDown(int Key) const
 
 glm::mat4 test::view() const
 {
-	glm::mat4 ViewTranslate = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, -this->TranlationCurrent.y));
-	glm::mat4 ViewRotateX = glm::rotate(ViewTranslate, this->RotationCurrent.y, glm::vec3(1.f, 0.f, 0.f));
-	glm::mat4 View = glm::rotate(ViewRotateX, this->RotationCurrent.x, glm::vec3(0.f, 1.f, 0.f));
+	glm::mat4 ViewRotateX = glm::rotate(glm::mat4(1.0f), this->RotationCurrent.y, glm::vec3(1.f, 0.f, 0.f));
+	glm::mat4 ViewRotatation = glm::rotate(ViewRotateX, this->RotationCurrent.x, glm::vec3(0.f, 1.f, 0.f));
+	glm::mat4 ViewTranslate = glm::translate(glm::mat4(1.0f), glm::vec3(this->PanningCurrent.x, -this->PanningCurrent.y, -this->TranlationCurrent.y));
+	glm::mat4 View = ViewTranslate * ViewRotatation;
+
 	return View;
 }
 
 glm::vec3 test::cameraPosition() const
 {
-	return glm::vec3(0.0f, 0.0f, -this->TranlationCurrent.y);
+	//return glm::vec3(0.0f, 0.0f, -this->TranlationCurrent.y);
+	return glm::vec3(this->PanningCurrent.x, this->PanningCurrent.y, -this->TranlationCurrent.y);
 }
 
 namespace
@@ -640,8 +646,9 @@ void test::cursorPositionCallback(GLFWwindow* Window, double x, double y)
 	assert(Test);
 
 	Test->MouseCurrent = glm::ivec2(x, y);
-	Test->TranlationCurrent = Test->MouseButtonFlags & test::MOUSE_BUTTON_LEFT ? Test->TranlationOrigin + (Test->MouseCurrent - Test->MouseOrigin) / 10.f : Test->TranlationOrigin;
+	Test->TranlationCurrent = Test->MouseButtonFlags & test::MOUSE_BUTTON_LEFT ? Test->TranlationOrigin + (Test->MouseCurrent - Test->MouseOrigin) / Test->CameraSpeedInv : Test->TranlationOrigin;
 	Test->RotationCurrent = Test->MouseButtonFlags & test::MOUSE_BUTTON_RIGHT ? Test->RotationOrigin + glm::radians(Test->MouseCurrent - Test->MouseOrigin) : Test->RotationOrigin;
+	Test->PanningCurrent = Test->MouseButtonFlags & test::MOUSE_BUTTON_MIDDLE ? Test->PanningOrigin + (Test->MouseCurrent - Test->MouseOrigin) / Test->CameraSpeedInv : Test->PanningOrigin;
 }
 
 void test::mouseButtonCallback(GLFWwindow* Window, int Button, int Action, int mods)
@@ -665,6 +672,7 @@ void test::mouseButtonCallback(GLFWwindow* Window, int Button, int Action, int m
 				case GLFW_MOUSE_BUTTON_MIDDLE:
 				{
 					Test->MouseButtonFlags |= test::MOUSE_BUTTON_MIDDLE;
+					Test->PanningOrigin = Test->PanningCurrent;
 				}
 				break;
 				case GLFW_MOUSE_BUTTON_RIGHT:
@@ -682,12 +690,13 @@ void test::mouseButtonCallback(GLFWwindow* Window, int Button, int Action, int m
 			{
 				case GLFW_MOUSE_BUTTON_LEFT:
 				{
-					Test->TranlationOrigin += (Test->MouseCurrent - Test->MouseOrigin) / 10.f;
+					Test->TranlationOrigin += (Test->MouseCurrent - Test->MouseOrigin) / Test->CameraSpeedInv;
 					Test->MouseButtonFlags &= ~test::MOUSE_BUTTON_LEFT;
 				}
 				break;
 				case GLFW_MOUSE_BUTTON_MIDDLE:
 				{
+					Test->PanningOrigin += (Test->MouseCurrent - Test->MouseOrigin) / Test->CameraSpeedInv;
 					Test->MouseButtonFlags &= ~test::MOUSE_BUTTON_MIDDLE;
 				}
 				break;

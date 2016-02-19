@@ -417,16 +417,18 @@ namespace framework
 			const auto& normals = mesh->p_Normals;
 			const auto& tangents = mesh->p_Tangents;
 
+			const float gizmo_length = 0.1f;
+
 			const auto n_verts = positions.size();
 			for (auto vi = 0; vi < n_verts; ++vi)
 			{
 				// normals
 				m_DebugBatcher->addStrip(glm::vec4(.0f, 1.f, .0f, 1.f),
-					{ positions[vi], positions[vi] + normals[vi] * 0.2f });
+					{ positions[vi], positions[vi] + normals[vi] * gizmo_length });
 
 				// tangents
 				m_DebugBatcher->addStrip(glm::vec4(.0f, .0f, 1.f, 1.f),
-				{ positions[vi], positions[vi] + tangents[vi] * 0.2f });
+				{ positions[vi], positions[vi] + tangents[vi] * gizmo_length });
 			}
 
 			const auto& triangles = mesh->p_FaceIndices;

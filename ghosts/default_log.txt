@@ -2347,3 +2347,863 @@
 2016-02-18 14:17:00,805 INFO  [default] completed!
 2016-02-18 14:17:08,865 INFO  [default] Generating render debug lines ...
 2016-02-18 14:17:08,870 INFO  [default] completed!
+2016-02-19 08:32:31,716 INFO  [default] Loading file: data/models/kungfu/kungfu-panda.awf
+2016-02-19 08:32:31,728 ERROR [default] Cannot open file [data/models/kungfu/kungfu-panda.awf]
+
+2016-02-19 08:33:20,041 INFO  [default] Loading file: data/models/kungfu-panda/kungfu.awf
+2016-02-19 08:33:20,212 INFO  [default] # of shapes    : 13
+2016-02-19 08:33:20,215 INFO  [default] # of materials : 13
+2016-02-19 08:33:20,218 INFO  [default] shape[0].name = DrawCall_0000
+2016-02-19 08:33:20,223 INFO  [default] Size of shape[0].indices: 80
+2016-02-19 08:33:20,227 INFO  [default] Size of shape[0].material_ids: 80
+2016-02-19 08:33:20,231 INFO  [default] shape[0].vertices: 54
+2016-02-19 08:33:20,234 INFO  [default] shape[1].name = DrawCall_0001
+2016-02-19 08:33:20,238 INFO  [default] Size of shape[1].indices: 208
+2016-02-19 08:33:20,241 INFO  [default] Size of shape[1].material_ids: 208
+2016-02-19 08:33:20,245 INFO  [default] shape[1].vertices: 125
+2016-02-19 08:33:20,248 INFO  [default] shape[2].name = DrawCall_0002
+2016-02-19 08:33:20,252 INFO  [default] Size of shape[2].indices: 208
+2016-02-19 08:33:20,256 INFO  [default] Size of shape[2].material_ids: 208
+2016-02-19 08:33:20,260 INFO  [default] shape[2].vertices: 125
+2016-02-19 08:33:20,264 INFO  [default] shape[3].name = DrawCall_0014
+2016-02-19 08:33:20,267 INFO  [default] Size of shape[3].indices: 8000
+2016-02-19 08:33:20,271 INFO  [default] Size of shape[3].material_ids: 8000
+2016-02-19 08:33:20,276 INFO  [default] shape[3].vertices: 5309
+2016-02-19 08:33:20,280 INFO  [default] shape[4].name = DrawCall_0043
+2016-02-19 08:33:20,283 INFO  [default] Size of shape[4].indices: 144
+2016-02-19 08:33:20,287 INFO  [default] Size of shape[4].material_ids: 144
+2016-02-19 08:33:20,290 INFO  [default] shape[4].vertices: 93
+2016-02-19 08:33:20,293 INFO  [default] shape[5].name = DrawCall_0044
+2016-02-19 08:33:20,297 INFO  [default] Size of shape[5].indices: 144
+2016-02-19 08:33:20,300 INFO  [default] Size of shape[5].material_ids: 144
+2016-02-19 08:33:20,305 INFO  [default] shape[5].vertices: 93
+2016-02-19 08:33:20,312 INFO  [default] shape[6].name = DrawCall_0046
+2016-02-19 08:33:20,315 INFO  [default] Size of shape[6].indices: 9008
+2016-02-19 08:33:20,320 INFO  [default] Size of shape[6].material_ids: 9008
+2016-02-19 08:33:20,325 INFO  [default] shape[6].vertices: 6581
+2016-02-19 08:33:20,329 INFO  [default] shape[7].name = DrawCall_0000
+2016-02-19 08:33:20,333 INFO  [default] Size of shape[7].indices: 288
+2016-02-19 08:33:20,336 INFO  [default] Size of shape[7].material_ids: 288
+2016-02-19 08:33:20,340 INFO  [default] shape[7].vertices: 169
+2016-02-19 08:33:20,344 INFO  [default] shape[8].name = DrawCall_0001
+2016-02-19 08:33:20,349 INFO  [default] Size of shape[8].indices: 288
+2016-02-19 08:33:20,357 INFO  [default] Size of shape[8].material_ids: 288
+2016-02-19 08:33:20,361 INFO  [default] shape[8].vertices: 169
+2016-02-19 08:33:20,364 INFO  [default] shape[9].name = DrawCall_0009
+2016-02-19 08:33:20,368 INFO  [default] Size of shape[9].indices: 8258
+2016-02-19 08:33:20,372 INFO  [default] Size of shape[9].material_ids: 8258
+2016-02-19 08:33:20,377 INFO  [default] shape[9].vertices: 5772
+2016-02-19 08:33:20,382 INFO  [default] shape[10].name = DrawCall_0035
+2016-02-19 08:33:20,386 INFO  [default] Size of shape[10].indices: 288
+2016-02-19 08:33:20,390 INFO  [default] Size of shape[10].material_ids: 288
+2016-02-19 08:33:20,394 INFO  [default] shape[10].vertices: 164
+2016-02-19 08:33:20,397 INFO  [default] shape[11].name = DrawCall_0036
+2016-02-19 08:33:20,402 INFO  [default] Size of shape[11].indices: 288
+2016-02-19 08:33:20,407 INFO  [default] Size of shape[11].material_ids: 288
+2016-02-19 08:33:20,411 INFO  [default] shape[11].vertices: 164
+2016-02-19 08:33:20,414 INFO  [default] shape[12].name = DrawCall_0056
+2016-02-19 08:33:20,418 INFO  [default] Size of shape[12].indices: 5112
+2016-02-19 08:33:20,422 INFO  [default] Size of shape[12].material_ids: 5112
+2016-02-19 08:33:20,426 INFO  [default] shape[12].vertices: 3596
+2016-02-19 08:33:20,430 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:33:20,433 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:33:20,438 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:33:20,443 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:33:20,447 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:33:20,450 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:33:20,455 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:33:20,459 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:33:20,462 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:33:20,466 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:33:20,470 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:33:20,474 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:33:20,478 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:33:25,649 INFO  [default] Generating render debug lines ...
+2016-02-19 08:33:25,659 INFO  [default] completed!
+2016-02-19 08:33:33,897 INFO  [default] Generating render debug lines ...
+2016-02-19 08:33:33,906 INFO  [default] completed!
+2016-02-19 08:42:41,272 INFO  [default] Loading file: data/models/kungfu-panda/kungfu.awf
+2016-02-19 08:42:41,411 INFO  [default] # of shapes    : 13
+2016-02-19 08:42:41,414 INFO  [default] # of materials : 13
+2016-02-19 08:42:41,417 INFO  [default] shape[0].name = DrawCall_0000
+2016-02-19 08:42:41,422 INFO  [default] Size of shape[0].indices: 80
+2016-02-19 08:42:41,426 INFO  [default] Size of shape[0].material_ids: 80
+2016-02-19 08:42:41,430 INFO  [default] shape[0].vertices: 54
+2016-02-19 08:42:41,433 INFO  [default] shape[1].name = DrawCall_0001
+2016-02-19 08:42:41,436 INFO  [default] Size of shape[1].indices: 208
+2016-02-19 08:42:41,441 INFO  [default] Size of shape[1].material_ids: 208
+2016-02-19 08:42:41,445 INFO  [default] shape[1].vertices: 125
+2016-02-19 08:42:41,448 INFO  [default] shape[2].name = DrawCall_0002
+2016-02-19 08:42:41,452 INFO  [default] Size of shape[2].indices: 208
+2016-02-19 08:42:41,457 INFO  [default] Size of shape[2].material_ids: 208
+2016-02-19 08:42:41,460 INFO  [default] shape[2].vertices: 125
+2016-02-19 08:42:41,463 INFO  [default] shape[3].name = DrawCall_0014
+2016-02-19 08:42:41,466 INFO  [default] Size of shape[3].indices: 8000
+2016-02-19 08:42:41,470 INFO  [default] Size of shape[3].material_ids: 8000
+2016-02-19 08:42:41,474 INFO  [default] shape[3].vertices: 5309
+2016-02-19 08:42:41,478 INFO  [default] shape[4].name = DrawCall_0043
+2016-02-19 08:42:41,481 INFO  [default] Size of shape[4].indices: 144
+2016-02-19 08:42:41,484 INFO  [default] Size of shape[4].material_ids: 144
+2016-02-19 08:42:41,487 INFO  [default] shape[4].vertices: 93
+2016-02-19 08:42:41,490 INFO  [default] shape[5].name = DrawCall_0044
+2016-02-19 08:42:41,494 INFO  [default] Size of shape[5].indices: 144
+2016-02-19 08:42:41,497 INFO  [default] Size of shape[5].material_ids: 144
+2016-02-19 08:42:41,501 INFO  [default] shape[5].vertices: 93
+2016-02-19 08:42:41,504 INFO  [default] shape[6].name = DrawCall_0046
+2016-02-19 08:42:41,509 INFO  [default] Size of shape[6].indices: 9008
+2016-02-19 08:42:41,514 INFO  [default] Size of shape[6].material_ids: 9008
+2016-02-19 08:42:41,519 INFO  [default] shape[6].vertices: 6581
+2016-02-19 08:42:41,524 INFO  [default] shape[7].name = DrawCall_0000
+2016-02-19 08:42:41,527 INFO  [default] Size of shape[7].indices: 288
+2016-02-19 08:42:41,530 INFO  [default] Size of shape[7].material_ids: 288
+2016-02-19 08:42:41,534 INFO  [default] shape[7].vertices: 169
+2016-02-19 08:42:41,537 INFO  [default] shape[8].name = DrawCall_0001
+2016-02-19 08:42:41,541 INFO  [default] Size of shape[8].indices: 288
+2016-02-19 08:42:41,544 INFO  [default] Size of shape[8].material_ids: 288
+2016-02-19 08:42:41,548 INFO  [default] shape[8].vertices: 169
+2016-02-19 08:42:41,550 INFO  [default] shape[9].name = DrawCall_0009
+2016-02-19 08:42:41,555 INFO  [default] Size of shape[9].indices: 8258
+2016-02-19 08:42:41,558 INFO  [default] Size of shape[9].material_ids: 8258
+2016-02-19 08:42:41,563 INFO  [default] shape[9].vertices: 5772
+2016-02-19 08:42:41,567 INFO  [default] shape[10].name = DrawCall_0035
+2016-02-19 08:42:41,570 INFO  [default] Size of shape[10].indices: 288
+2016-02-19 08:42:41,574 INFO  [default] Size of shape[10].material_ids: 288
+2016-02-19 08:42:41,577 INFO  [default] shape[10].vertices: 164
+2016-02-19 08:42:41,580 INFO  [default] shape[11].name = DrawCall_0036
+2016-02-19 08:42:41,584 INFO  [default] Size of shape[11].indices: 288
+2016-02-19 08:42:41,587 INFO  [default] Size of shape[11].material_ids: 288
+2016-02-19 08:42:41,592 INFO  [default] shape[11].vertices: 164
+2016-02-19 08:42:41,595 INFO  [default] shape[12].name = DrawCall_0056
+2016-02-19 08:42:41,598 INFO  [default] Size of shape[12].indices: 5112
+2016-02-19 08:42:41,602 INFO  [default] Size of shape[12].material_ids: 5112
+2016-02-19 08:42:41,606 INFO  [default] shape[12].vertices: 3596
+2016-02-19 08:42:41,609 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:42:41,612 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:42:41,617 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:42:41,622 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:42:41,628 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:42:41,632 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:42:41,636 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:42:41,640 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:42:41,643 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:42:41,647 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:42:41,650 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:42:41,654 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:42:41,658 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:42:44,601 INFO  [default] Generating render debug lines ...
+2016-02-19 08:42:44,613 INFO  [default] completed!
+2016-02-19 08:42:45,890 INFO  [default] Generating render debug lines ...
+2016-02-19 08:42:45,899 INFO  [default] completed!
+2016-02-19 08:43:44,932 INFO  [default] Loading file: data/models/kungfu-panda/kungfu.awf
+2016-02-19 08:43:49,154 INFO  [default] # of shapes    : 13
+2016-02-19 08:43:49,157 INFO  [default] # of materials : 13
+2016-02-19 08:43:49,161 INFO  [default] shape[0].name = DrawCall_0000
+2016-02-19 08:43:49,165 INFO  [default] Size of shape[0].indices: 80
+2016-02-19 08:43:49,169 INFO  [default] Size of shape[0].material_ids: 80
+2016-02-19 08:43:49,173 INFO  [default] shape[0].vertices: 54
+2016-02-19 08:43:49,178 INFO  [default] shape[1].name = DrawCall_0001
+2016-02-19 08:43:49,182 INFO  [default] Size of shape[1].indices: 208
+2016-02-19 08:43:49,186 INFO  [default] Size of shape[1].material_ids: 208
+2016-02-19 08:43:49,190 INFO  [default] shape[1].vertices: 125
+2016-02-19 08:43:49,197 INFO  [default] shape[2].name = DrawCall_0002
+2016-02-19 08:43:49,201 INFO  [default] Size of shape[2].indices: 208
+2016-02-19 08:43:49,205 INFO  [default] Size of shape[2].material_ids: 208
+2016-02-19 08:43:49,209 INFO  [default] shape[2].vertices: 125
+2016-02-19 08:43:49,215 INFO  [default] shape[3].name = DrawCall_0014
+2016-02-19 08:43:49,219 INFO  [default] Size of shape[3].indices: 8000
+2016-02-19 08:43:49,222 INFO  [default] Size of shape[3].material_ids: 8000
+2016-02-19 08:43:49,226 INFO  [default] shape[3].vertices: 5309
+2016-02-19 08:43:49,371 INFO  [default] shape[4].name = DrawCall_0043
+2016-02-19 08:43:49,376 INFO  [default] Size of shape[4].indices: 144
+2016-02-19 08:43:49,380 INFO  [default] Size of shape[4].material_ids: 144
+2016-02-19 08:43:49,384 INFO  [default] shape[4].vertices: 93
+2016-02-19 08:43:49,389 INFO  [default] shape[5].name = DrawCall_0044
+2016-02-19 08:43:49,394 INFO  [default] Size of shape[5].indices: 144
+2016-02-19 08:43:49,397 INFO  [default] Size of shape[5].material_ids: 144
+2016-02-19 08:43:49,401 INFO  [default] shape[5].vertices: 93
+2016-02-19 08:43:49,407 INFO  [default] shape[6].name = DrawCall_0046
+2016-02-19 08:43:49,411 INFO  [default] Size of shape[6].indices: 9008
+2016-02-19 08:43:49,415 INFO  [default] Size of shape[6].material_ids: 9008
+2016-02-19 08:43:49,419 INFO  [default] shape[6].vertices: 6581
+2016-02-19 08:43:49,591 INFO  [default] shape[7].name = DrawCall_0000
+2016-02-19 08:43:49,595 INFO  [default] Size of shape[7].indices: 288
+2016-02-19 08:43:49,599 INFO  [default] Size of shape[7].material_ids: 288
+2016-02-19 08:43:49,603 INFO  [default] shape[7].vertices: 169
+2016-02-19 08:43:49,611 INFO  [default] shape[8].name = DrawCall_0001
+2016-02-19 08:43:49,615 INFO  [default] Size of shape[8].indices: 288
+2016-02-19 08:43:49,618 INFO  [default] Size of shape[8].material_ids: 288
+2016-02-19 08:43:49,622 INFO  [default] shape[8].vertices: 169
+2016-02-19 08:43:49,630 INFO  [default] shape[9].name = DrawCall_0009
+2016-02-19 08:43:49,634 INFO  [default] Size of shape[9].indices: 8258
+2016-02-19 08:43:49,637 INFO  [default] Size of shape[9].material_ids: 8258
+2016-02-19 08:43:49,641 INFO  [default] shape[9].vertices: 5772
+2016-02-19 08:43:49,796 INFO  [default] shape[10].name = DrawCall_0035
+2016-02-19 08:43:49,800 INFO  [default] Size of shape[10].indices: 288
+2016-02-19 08:43:49,804 INFO  [default] Size of shape[10].material_ids: 288
+2016-02-19 08:43:49,808 INFO  [default] shape[10].vertices: 164
+2016-02-19 08:43:49,816 INFO  [default] shape[11].name = DrawCall_0036
+2016-02-19 08:43:49,820 INFO  [default] Size of shape[11].indices: 288
+2016-02-19 08:43:49,823 INFO  [default] Size of shape[11].material_ids: 288
+2016-02-19 08:43:49,827 INFO  [default] shape[11].vertices: 164
+2016-02-19 08:43:49,836 INFO  [default] shape[12].name = DrawCall_0056
+2016-02-19 08:43:49,839 INFO  [default] Size of shape[12].indices: 5112
+2016-02-19 08:43:49,843 INFO  [default] Size of shape[12].material_ids: 5112
+2016-02-19 08:43:49,847 INFO  [default] shape[12].vertices: 3596
+2016-02-19 08:43:49,944 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:43:49,949 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:43:49,953 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:43:49,957 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:43:49,961 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:43:49,965 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:43:49,970 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:43:49,974 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:43:49,978 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:43:49,982 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:43:49,986 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:43:49,990 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:43:49,994 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:43:54,103 INFO  [default] Generating render debug lines ...
+2016-02-19 08:43:54,757 INFO  [default] completed!
+2016-02-19 08:43:55,480 INFO  [default] Generating render debug lines ...
+2016-02-19 08:43:56,313 INFO  [default] completed!
+2016-02-19 08:44:30,375 INFO  [default] Loading file: data/models/kungfu-panda/kungfu.awf
+2016-02-19 08:44:34,474 INFO  [default] # of shapes    : 13
+2016-02-19 08:44:34,479 INFO  [default] # of materials : 13
+2016-02-19 08:44:34,483 INFO  [default] shape[0].name = DrawCall_0000
+2016-02-19 08:44:34,486 INFO  [default] Size of shape[0].indices: 80
+2016-02-19 08:44:34,490 INFO  [default] Size of shape[0].material_ids: 80
+2016-02-19 08:44:34,494 INFO  [default] shape[0].vertices: 54
+2016-02-19 08:44:34,499 INFO  [default] shape[1].name = DrawCall_0001
+2016-02-19 08:44:34,502 INFO  [default] Size of shape[1].indices: 208
+2016-02-19 08:44:34,506 INFO  [default] Size of shape[1].material_ids: 208
+2016-02-19 08:44:34,511 INFO  [default] shape[1].vertices: 125
+2016-02-19 08:44:34,518 INFO  [default] shape[2].name = DrawCall_0002
+2016-02-19 08:44:34,522 INFO  [default] Size of shape[2].indices: 208
+2016-02-19 08:44:34,526 INFO  [default] Size of shape[2].material_ids: 208
+2016-02-19 08:44:34,530 INFO  [default] shape[2].vertices: 125
+2016-02-19 08:44:34,537 INFO  [default] shape[3].name = DrawCall_0014
+2016-02-19 08:44:34,540 INFO  [default] Size of shape[3].indices: 8000
+2016-02-19 08:44:34,544 INFO  [default] Size of shape[3].material_ids: 8000
+2016-02-19 08:44:34,548 INFO  [default] shape[3].vertices: 5309
+2016-02-19 08:44:34,688 INFO  [default] shape[4].name = DrawCall_0043
+2016-02-19 08:44:34,693 INFO  [default] Size of shape[4].indices: 144
+2016-02-19 08:44:34,698 INFO  [default] Size of shape[4].material_ids: 144
+2016-02-19 08:44:34,702 INFO  [default] shape[4].vertices: 93
+2016-02-19 08:44:34,708 INFO  [default] shape[5].name = DrawCall_0044
+2016-02-19 08:44:34,713 INFO  [default] Size of shape[5].indices: 144
+2016-02-19 08:44:34,716 INFO  [default] Size of shape[5].material_ids: 144
+2016-02-19 08:44:34,720 INFO  [default] shape[5].vertices: 93
+2016-02-19 08:44:34,726 INFO  [default] shape[6].name = DrawCall_0046
+2016-02-19 08:44:34,730 INFO  [default] Size of shape[6].indices: 9008
+2016-02-19 08:44:34,733 INFO  [default] Size of shape[6].material_ids: 9008
+2016-02-19 08:44:34,738 INFO  [default] shape[6].vertices: 6581
+2016-02-19 08:44:34,903 INFO  [default] shape[7].name = DrawCall_0000
+2016-02-19 08:44:34,907 INFO  [default] Size of shape[7].indices: 288
+2016-02-19 08:44:34,911 INFO  [default] Size of shape[7].material_ids: 288
+2016-02-19 08:44:34,916 INFO  [default] shape[7].vertices: 169
+2016-02-19 08:44:34,925 INFO  [default] shape[8].name = DrawCall_0001
+2016-02-19 08:44:34,929 INFO  [default] Size of shape[8].indices: 288
+2016-02-19 08:44:34,933 INFO  [default] Size of shape[8].material_ids: 288
+2016-02-19 08:44:34,937 INFO  [default] shape[8].vertices: 169
+2016-02-19 08:44:34,945 INFO  [default] shape[9].name = DrawCall_0009
+2016-02-19 08:44:34,949 INFO  [default] Size of shape[9].indices: 8258
+2016-02-19 08:44:34,953 INFO  [default] Size of shape[9].material_ids: 8258
+2016-02-19 08:44:34,957 INFO  [default] shape[9].vertices: 5772
+2016-02-19 08:44:35,106 INFO  [default] shape[10].name = DrawCall_0035
+2016-02-19 08:44:35,111 INFO  [default] Size of shape[10].indices: 288
+2016-02-19 08:44:35,115 INFO  [default] Size of shape[10].material_ids: 288
+2016-02-19 08:44:35,119 INFO  [default] shape[10].vertices: 164
+2016-02-19 08:44:35,127 INFO  [default] shape[11].name = DrawCall_0036
+2016-02-19 08:44:35,131 INFO  [default] Size of shape[11].indices: 288
+2016-02-19 08:44:35,135 INFO  [default] Size of shape[11].material_ids: 288
+2016-02-19 08:44:35,139 INFO  [default] shape[11].vertices: 164
+2016-02-19 08:44:35,147 INFO  [default] shape[12].name = DrawCall_0056
+2016-02-19 08:44:35,151 INFO  [default] Size of shape[12].indices: 5112
+2016-02-19 08:44:35,155 INFO  [default] Size of shape[12].material_ids: 5112
+2016-02-19 08:44:35,159 INFO  [default] shape[12].vertices: 3596
+2016-02-19 08:44:35,257 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:44:35,263 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:44:35,268 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:44:35,273 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:44:35,277 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:44:35,282 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:44:35,286 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:44:35,291 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:44:35,296 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:44:35,300 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:44:35,305 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:44:35,309 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:44:35,314 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:52:47,655 INFO  [default] Loading file: data/models/kungfu-panda/kungfu.awf
+2016-02-19 08:52:51,833 INFO  [default] # of shapes    : 13
+2016-02-19 08:52:51,837 INFO  [default] # of materials : 13
+2016-02-19 08:52:51,840 INFO  [default] shape[0].name = DrawCall_0000
+2016-02-19 08:52:51,844 INFO  [default] Size of shape[0].indices: 80
+2016-02-19 08:52:51,847 INFO  [default] Size of shape[0].material_ids: 80
+2016-02-19 08:52:51,851 INFO  [default] shape[0].vertices: 54
+2016-02-19 08:52:51,856 INFO  [default] shape[1].name = DrawCall_0001
+2016-02-19 08:52:51,860 INFO  [default] Size of shape[1].indices: 208
+2016-02-19 08:52:51,864 INFO  [default] Size of shape[1].material_ids: 208
+2016-02-19 08:52:51,868 INFO  [default] shape[1].vertices: 125
+2016-02-19 08:52:51,875 INFO  [default] shape[2].name = DrawCall_0002
+2016-02-19 08:52:51,879 INFO  [default] Size of shape[2].indices: 208
+2016-02-19 08:52:51,883 INFO  [default] Size of shape[2].material_ids: 208
+2016-02-19 08:52:51,886 INFO  [default] shape[2].vertices: 125
+2016-02-19 08:52:51,893 INFO  [default] shape[3].name = DrawCall_0014
+2016-02-19 08:52:51,897 INFO  [default] Size of shape[3].indices: 8000
+2016-02-19 08:52:51,901 INFO  [default] Size of shape[3].material_ids: 8000
+2016-02-19 08:52:51,905 INFO  [default] shape[3].vertices: 5309
+2016-02-19 08:52:52,050 INFO  [default] shape[4].name = DrawCall_0043
+2016-02-19 08:52:52,055 INFO  [default] Size of shape[4].indices: 144
+2016-02-19 08:52:52,072 INFO  [default] Size of shape[4].material_ids: 144
+2016-02-19 08:52:52,077 INFO  [default] shape[4].vertices: 93
+2016-02-19 08:52:52,083 INFO  [default] shape[5].name = DrawCall_0044
+2016-02-19 08:52:52,087 INFO  [default] Size of shape[5].indices: 144
+2016-02-19 08:52:52,091 INFO  [default] Size of shape[5].material_ids: 144
+2016-02-19 08:52:52,095 INFO  [default] shape[5].vertices: 93
+2016-02-19 08:52:52,101 INFO  [default] shape[6].name = DrawCall_0046
+2016-02-19 08:52:52,105 INFO  [default] Size of shape[6].indices: 9008
+2016-02-19 08:52:52,109 INFO  [default] Size of shape[6].material_ids: 9008
+2016-02-19 08:52:52,113 INFO  [default] shape[6].vertices: 6581
+2016-02-19 08:52:52,284 INFO  [default] shape[7].name = DrawCall_0000
+2016-02-19 08:52:52,289 INFO  [default] Size of shape[7].indices: 288
+2016-02-19 08:52:52,292 INFO  [default] Size of shape[7].material_ids: 288
+2016-02-19 08:52:52,296 INFO  [default] shape[7].vertices: 169
+2016-02-19 08:52:52,304 INFO  [default] shape[8].name = DrawCall_0001
+2016-02-19 08:52:52,307 INFO  [default] Size of shape[8].indices: 288
+2016-02-19 08:52:52,310 INFO  [default] Size of shape[8].material_ids: 288
+2016-02-19 08:52:52,314 INFO  [default] shape[8].vertices: 169
+2016-02-19 08:52:52,322 INFO  [default] shape[9].name = DrawCall_0009
+2016-02-19 08:52:52,326 INFO  [default] Size of shape[9].indices: 8258
+2016-02-19 08:52:52,330 INFO  [default] Size of shape[9].material_ids: 8258
+2016-02-19 08:52:52,334 INFO  [default] shape[9].vertices: 5772
+2016-02-19 08:52:52,487 INFO  [default] shape[10].name = DrawCall_0035
+2016-02-19 08:52:52,491 INFO  [default] Size of shape[10].indices: 288
+2016-02-19 08:52:52,496 INFO  [default] Size of shape[10].material_ids: 288
+2016-02-19 08:52:52,500 INFO  [default] shape[10].vertices: 164
+2016-02-19 08:52:52,509 INFO  [default] shape[11].name = DrawCall_0036
+2016-02-19 08:52:52,512 INFO  [default] Size of shape[11].indices: 288
+2016-02-19 08:52:52,516 INFO  [default] Size of shape[11].material_ids: 288
+2016-02-19 08:52:52,520 INFO  [default] shape[11].vertices: 164
+2016-02-19 08:52:52,528 INFO  [default] shape[12].name = DrawCall_0056
+2016-02-19 08:52:52,532 INFO  [default] Size of shape[12].indices: 5112
+2016-02-19 08:52:52,536 INFO  [default] Size of shape[12].material_ids: 5112
+2016-02-19 08:52:52,540 INFO  [default] shape[12].vertices: 3596
+2016-02-19 08:52:52,637 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:52:52,641 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:52:52,645 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:52:52,649 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:52:52,654 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:52:52,658 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:52:52,662 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:52:52,667 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:52:52,671 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:52:52,675 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:52:52,679 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:52:52,684 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:52:52,688 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:59:22,229 INFO  [default] Loading file: data/models/kungfu-panda/kungfu.awf
+2016-02-19 08:59:22,378 INFO  [default] # of shapes    : 13
+2016-02-19 08:59:22,381 INFO  [default] # of materials : 13
+2016-02-19 08:59:22,384 INFO  [default] shape[0].name = DrawCall_0000
+2016-02-19 08:59:22,389 INFO  [default] Size of shape[0].indices: 80
+2016-02-19 08:59:22,393 INFO  [default] Size of shape[0].material_ids: 80
+2016-02-19 08:59:22,398 INFO  [default] shape[0].vertices: 54
+2016-02-19 08:59:22,402 INFO  [default] shape[1].name = DrawCall_0001
+2016-02-19 08:59:22,406 INFO  [default] Size of shape[1].indices: 208
+2016-02-19 08:59:22,410 INFO  [default] Size of shape[1].material_ids: 208
+2016-02-19 08:59:22,416 INFO  [default] shape[1].vertices: 125
+2016-02-19 08:59:22,420 INFO  [default] shape[2].name = DrawCall_0002
+2016-02-19 08:59:22,423 INFO  [default] Size of shape[2].indices: 208
+2016-02-19 08:59:22,427 INFO  [default] Size of shape[2].material_ids: 208
+2016-02-19 08:59:22,431 INFO  [default] shape[2].vertices: 125
+2016-02-19 08:59:22,434 INFO  [default] shape[3].name = DrawCall_0014
+2016-02-19 08:59:22,438 INFO  [default] Size of shape[3].indices: 8000
+2016-02-19 08:59:22,443 INFO  [default] Size of shape[3].material_ids: 8000
+2016-02-19 08:59:22,448 INFO  [default] shape[3].vertices: 5309
+2016-02-19 08:59:22,452 INFO  [default] shape[4].name = DrawCall_0043
+2016-02-19 08:59:22,456 INFO  [default] Size of shape[4].indices: 144
+2016-02-19 08:59:22,466 INFO  [default] Size of shape[4].material_ids: 144
+2016-02-19 08:59:22,471 INFO  [default] shape[4].vertices: 93
+2016-02-19 08:59:22,475 INFO  [default] shape[5].name = DrawCall_0044
+2016-02-19 08:59:22,485 INFO  [default] Size of shape[5].indices: 144
+2016-02-19 08:59:22,489 INFO  [default] Size of shape[5].material_ids: 144
+2016-02-19 08:59:22,496 INFO  [default] shape[5].vertices: 93
+2016-02-19 08:59:22,499 INFO  [default] shape[6].name = DrawCall_0046
+2016-02-19 08:59:22,503 INFO  [default] Size of shape[6].indices: 9008
+2016-02-19 08:59:22,507 INFO  [default] Size of shape[6].material_ids: 9008
+2016-02-19 08:59:22,512 INFO  [default] shape[6].vertices: 6581
+2016-02-19 08:59:22,517 INFO  [default] shape[7].name = DrawCall_0000
+2016-02-19 08:59:22,520 INFO  [default] Size of shape[7].indices: 288
+2016-02-19 08:59:22,525 INFO  [default] Size of shape[7].material_ids: 288
+2016-02-19 08:59:22,530 INFO  [default] shape[7].vertices: 169
+2016-02-19 08:59:22,533 INFO  [default] shape[8].name = DrawCall_0001
+2016-02-19 08:59:22,537 INFO  [default] Size of shape[8].indices: 288
+2016-02-19 08:59:22,543 INFO  [default] Size of shape[8].material_ids: 288
+2016-02-19 08:59:22,550 INFO  [default] shape[8].vertices: 169
+2016-02-19 08:59:22,553 INFO  [default] shape[9].name = DrawCall_0009
+2016-02-19 08:59:22,557 INFO  [default] Size of shape[9].indices: 8258
+2016-02-19 08:59:22,561 INFO  [default] Size of shape[9].material_ids: 8258
+2016-02-19 08:59:22,566 INFO  [default] shape[9].vertices: 5772
+2016-02-19 08:59:22,570 INFO  [default] shape[10].name = DrawCall_0035
+2016-02-19 08:59:22,574 INFO  [default] Size of shape[10].indices: 288
+2016-02-19 08:59:22,579 INFO  [default] Size of shape[10].material_ids: 288
+2016-02-19 08:59:22,583 INFO  [default] shape[10].vertices: 164
+2016-02-19 08:59:22,587 INFO  [default] shape[11].name = DrawCall_0036
+2016-02-19 08:59:22,591 INFO  [default] Size of shape[11].indices: 288
+2016-02-19 08:59:22,595 INFO  [default] Size of shape[11].material_ids: 288
+2016-02-19 08:59:22,600 INFO  [default] shape[11].vertices: 164
+2016-02-19 08:59:22,604 INFO  [default] shape[12].name = DrawCall_0056
+2016-02-19 08:59:22,608 INFO  [default] Size of shape[12].indices: 5112
+2016-02-19 08:59:22,612 INFO  [default] Size of shape[12].material_ids: 5112
+2016-02-19 08:59:22,617 INFO  [default] shape[12].vertices: 3596
+2016-02-19 08:59:22,621 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:59:22,624 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:59:22,629 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:59:22,633 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:59:22,637 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:59:22,642 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:59:22,646 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:59:22,651 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:59:22,655 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:59:22,659 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:59:22,664 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:59:22,668 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:59:22,672 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:59:50,065 INFO  [default] Loading file: data/models/kungfu-panda/kungfu.awf
+2016-02-19 08:59:50,202 INFO  [default] # of shapes    : 13
+2016-02-19 08:59:50,205 INFO  [default] # of materials : 13
+2016-02-19 08:59:50,208 INFO  [default] shape[0].name = DrawCall_0000
+2016-02-19 08:59:50,211 INFO  [default] Size of shape[0].indices: 80
+2016-02-19 08:59:50,215 INFO  [default] Size of shape[0].material_ids: 80
+2016-02-19 08:59:50,219 INFO  [default] shape[0].vertices: 54
+2016-02-19 08:59:50,222 INFO  [default] shape[1].name = DrawCall_0001
+2016-02-19 08:59:50,226 INFO  [default] Size of shape[1].indices: 208
+2016-02-19 08:59:50,230 INFO  [default] Size of shape[1].material_ids: 208
+2016-02-19 08:59:50,235 INFO  [default] shape[1].vertices: 125
+2016-02-19 08:59:50,239 INFO  [default] shape[2].name = DrawCall_0002
+2016-02-19 08:59:50,243 INFO  [default] Size of shape[2].indices: 208
+2016-02-19 08:59:50,248 INFO  [default] Size of shape[2].material_ids: 208
+2016-02-19 08:59:50,252 INFO  [default] shape[2].vertices: 125
+2016-02-19 08:59:50,256 INFO  [default] shape[3].name = DrawCall_0014
+2016-02-19 08:59:50,260 INFO  [default] Size of shape[3].indices: 8000
+2016-02-19 08:59:50,266 INFO  [default] Size of shape[3].material_ids: 8000
+2016-02-19 08:59:50,271 INFO  [default] shape[3].vertices: 5309
+2016-02-19 08:59:50,275 INFO  [default] shape[4].name = DrawCall_0043
+2016-02-19 08:59:50,279 INFO  [default] Size of shape[4].indices: 144
+2016-02-19 08:59:50,283 INFO  [default] Size of shape[4].material_ids: 144
+2016-02-19 08:59:50,288 INFO  [default] shape[4].vertices: 93
+2016-02-19 08:59:50,293 INFO  [default] shape[5].name = DrawCall_0044
+2016-02-19 08:59:50,297 INFO  [default] Size of shape[5].indices: 144
+2016-02-19 08:59:50,301 INFO  [default] Size of shape[5].material_ids: 144
+2016-02-19 08:59:50,304 INFO  [default] shape[5].vertices: 93
+2016-02-19 08:59:50,308 INFO  [default] shape[6].name = DrawCall_0046
+2016-02-19 08:59:50,312 INFO  [default] Size of shape[6].indices: 9008
+2016-02-19 08:59:50,315 INFO  [default] Size of shape[6].material_ids: 9008
+2016-02-19 08:59:50,321 INFO  [default] shape[6].vertices: 6581
+2016-02-19 08:59:50,325 INFO  [default] shape[7].name = DrawCall_0000
+2016-02-19 08:59:50,329 INFO  [default] Size of shape[7].indices: 288
+2016-02-19 08:59:50,332 INFO  [default] Size of shape[7].material_ids: 288
+2016-02-19 08:59:50,337 INFO  [default] shape[7].vertices: 169
+2016-02-19 08:59:50,342 INFO  [default] shape[8].name = DrawCall_0001
+2016-02-19 08:59:50,346 INFO  [default] Size of shape[8].indices: 288
+2016-02-19 08:59:50,351 INFO  [default] Size of shape[8].material_ids: 288
+2016-02-19 08:59:50,355 INFO  [default] shape[8].vertices: 169
+2016-02-19 08:59:50,358 INFO  [default] shape[9].name = DrawCall_0009
+2016-02-19 08:59:50,362 INFO  [default] Size of shape[9].indices: 8258
+2016-02-19 08:59:50,366 INFO  [default] Size of shape[9].material_ids: 8258
+2016-02-19 08:59:50,370 INFO  [default] shape[9].vertices: 5772
+2016-02-19 08:59:50,376 INFO  [default] shape[10].name = DrawCall_0035
+2016-02-19 08:59:50,379 INFO  [default] Size of shape[10].indices: 288
+2016-02-19 08:59:50,383 INFO  [default] Size of shape[10].material_ids: 288
+2016-02-19 08:59:50,389 INFO  [default] shape[10].vertices: 164
+2016-02-19 08:59:50,392 INFO  [default] shape[11].name = DrawCall_0036
+2016-02-19 08:59:50,396 INFO  [default] Size of shape[11].indices: 288
+2016-02-19 08:59:50,401 INFO  [default] Size of shape[11].material_ids: 288
+2016-02-19 08:59:50,405 INFO  [default] shape[11].vertices: 164
+2016-02-19 08:59:50,409 INFO  [default] shape[12].name = DrawCall_0056
+2016-02-19 08:59:50,413 INFO  [default] Size of shape[12].indices: 5112
+2016-02-19 08:59:50,417 INFO  [default] Size of shape[12].material_ids: 5112
+2016-02-19 08:59:50,421 INFO  [default] shape[12].vertices: 3596
+2016-02-19 08:59:50,425 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:59:50,429 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:59:50,434 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:59:50,438 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:59:50,442 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:59:50,446 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:59:50,450 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:59:50,455 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:59:50,458 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:59:50,462 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:59:50,467 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:59:50,471 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 08:59:50,475 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:00:13,097 INFO  [default] Loading file: data/models/kungfu-panda/kungfu.awf
+2016-02-19 09:00:13,238 INFO  [default] # of shapes    : 13
+2016-02-19 09:00:13,241 INFO  [default] # of materials : 13
+2016-02-19 09:00:13,246 INFO  [default] shape[0].name = DrawCall_0000
+2016-02-19 09:00:13,250 INFO  [default] Size of shape[0].indices: 80
+2016-02-19 09:00:13,254 INFO  [default] Size of shape[0].material_ids: 80
+2016-02-19 09:00:13,258 INFO  [default] shape[0].vertices: 54
+2016-02-19 09:00:13,261 INFO  [default] shape[1].name = DrawCall_0001
+2016-02-19 09:00:13,265 INFO  [default] Size of shape[1].indices: 208
+2016-02-19 09:00:13,269 INFO  [default] Size of shape[1].material_ids: 208
+2016-02-19 09:00:13,273 INFO  [default] shape[1].vertices: 125
+2016-02-19 09:00:13,277 INFO  [default] shape[2].name = DrawCall_0002
+2016-02-19 09:00:13,281 INFO  [default] Size of shape[2].indices: 208
+2016-02-19 09:00:13,287 INFO  [default] Size of shape[2].material_ids: 208
+2016-02-19 09:00:13,291 INFO  [default] shape[2].vertices: 125
+2016-02-19 09:00:13,294 INFO  [default] shape[3].name = DrawCall_0014
+2016-02-19 09:00:13,300 INFO  [default] Size of shape[3].indices: 8000
+2016-02-19 09:00:13,303 INFO  [default] Size of shape[3].material_ids: 8000
+2016-02-19 09:00:13,308 INFO  [default] shape[3].vertices: 5309
+2016-02-19 09:00:13,312 INFO  [default] shape[4].name = DrawCall_0043
+2016-02-19 09:00:13,316 INFO  [default] Size of shape[4].indices: 144
+2016-02-19 09:00:13,319 INFO  [default] Size of shape[4].material_ids: 144
+2016-02-19 09:00:13,324 INFO  [default] shape[4].vertices: 93
+2016-02-19 09:00:13,328 INFO  [default] shape[5].name = DrawCall_0044
+2016-02-19 09:00:13,332 INFO  [default] Size of shape[5].indices: 144
+2016-02-19 09:00:13,337 INFO  [default] Size of shape[5].material_ids: 144
+2016-02-19 09:00:13,342 INFO  [default] shape[5].vertices: 93
+2016-02-19 09:00:13,345 INFO  [default] shape[6].name = DrawCall_0046
+2016-02-19 09:00:13,350 INFO  [default] Size of shape[6].indices: 9008
+2016-02-19 09:00:13,354 INFO  [default] Size of shape[6].material_ids: 9008
+2016-02-19 09:00:13,359 INFO  [default] shape[6].vertices: 6581
+2016-02-19 09:00:13,364 INFO  [default] shape[7].name = DrawCall_0000
+2016-02-19 09:00:13,368 INFO  [default] Size of shape[7].indices: 288
+2016-02-19 09:00:13,372 INFO  [default] Size of shape[7].material_ids: 288
+2016-02-19 09:00:13,376 INFO  [default] shape[7].vertices: 169
+2016-02-19 09:00:13,380 INFO  [default] shape[8].name = DrawCall_0001
+2016-02-19 09:00:13,384 INFO  [default] Size of shape[8].indices: 288
+2016-02-19 09:00:13,388 INFO  [default] Size of shape[8].material_ids: 288
+2016-02-19 09:00:13,392 INFO  [default] shape[8].vertices: 169
+2016-02-19 09:00:13,396 INFO  [default] shape[9].name = DrawCall_0009
+2016-02-19 09:00:13,403 INFO  [default] Size of shape[9].indices: 8258
+2016-02-19 09:00:13,408 INFO  [default] Size of shape[9].material_ids: 8258
+2016-02-19 09:00:13,418 INFO  [default] shape[9].vertices: 5772
+2016-02-19 09:00:13,424 INFO  [default] shape[10].name = DrawCall_0035
+2016-02-19 09:00:13,428 INFO  [default] Size of shape[10].indices: 288
+2016-02-19 09:00:13,433 INFO  [default] Size of shape[10].material_ids: 288
+2016-02-19 09:00:13,437 INFO  [default] shape[10].vertices: 164
+2016-02-19 09:00:13,441 INFO  [default] shape[11].name = DrawCall_0036
+2016-02-19 09:00:13,445 INFO  [default] Size of shape[11].indices: 288
+2016-02-19 09:00:13,451 INFO  [default] Size of shape[11].material_ids: 288
+2016-02-19 09:00:13,456 INFO  [default] shape[11].vertices: 164
+2016-02-19 09:00:13,460 INFO  [default] shape[12].name = DrawCall_0056
+2016-02-19 09:00:13,464 INFO  [default] Size of shape[12].indices: 5112
+2016-02-19 09:00:13,468 INFO  [default] Size of shape[12].material_ids: 5112
+2016-02-19 09:00:13,474 INFO  [default] shape[12].vertices: 3596
+2016-02-19 09:00:13,479 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:00:13,484 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:00:13,488 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:00:13,493 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:00:13,498 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:00:13,502 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:00:13,506 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:00:13,511 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:00:13,515 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:00:13,521 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:00:13,525 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:00:13,529 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:00:13,534 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:00:41,146 INFO  [default] Generating render debug lines ...
+2016-02-19 09:00:41,156 INFO  [default] completed!
+2016-02-19 09:00:41,562 INFO  [default] Generating render debug lines ...
+2016-02-19 09:00:41,570 INFO  [default] completed!
+2016-02-19 09:03:13,680 INFO  [default] Loading file: data/models/kungfu-panda/kungfu.awf
+2016-02-19 09:03:13,836 INFO  [default] # of shapes    : 13
+2016-02-19 09:03:13,839 INFO  [default] # of materials : 13
+2016-02-19 09:03:13,842 INFO  [default] shape[0].name = DrawCall_0000
+2016-02-19 09:03:13,846 INFO  [default] Size of shape[0].indices: 80
+2016-02-19 09:03:13,849 INFO  [default] Size of shape[0].material_ids: 80
+2016-02-19 09:03:13,853 INFO  [default] shape[0].vertices: 54
+2016-02-19 09:03:13,857 INFO  [default] shape[1].name = DrawCall_0001
+2016-02-19 09:03:13,861 INFO  [default] Size of shape[1].indices: 208
+2016-02-19 09:03:13,865 INFO  [default] Size of shape[1].material_ids: 208
+2016-02-19 09:03:13,869 INFO  [default] shape[1].vertices: 125
+2016-02-19 09:03:13,872 INFO  [default] shape[2].name = DrawCall_0002
+2016-02-19 09:03:13,876 INFO  [default] Size of shape[2].indices: 208
+2016-02-19 09:03:13,880 INFO  [default] Size of shape[2].material_ids: 208
+2016-02-19 09:03:13,883 INFO  [default] shape[2].vertices: 125
+2016-02-19 09:03:13,887 INFO  [default] shape[3].name = DrawCall_0014
+2016-02-19 09:03:13,890 INFO  [default] Size of shape[3].indices: 8000
+2016-02-19 09:03:13,895 INFO  [default] Size of shape[3].material_ids: 8000
+2016-02-19 09:03:13,901 INFO  [default] shape[3].vertices: 5309
+2016-02-19 09:03:13,905 INFO  [default] shape[4].name = DrawCall_0043
+2016-02-19 09:03:13,909 INFO  [default] Size of shape[4].indices: 144
+2016-02-19 09:03:13,912 INFO  [default] Size of shape[4].material_ids: 144
+2016-02-19 09:03:13,916 INFO  [default] shape[4].vertices: 93
+2016-02-19 09:03:13,919 INFO  [default] shape[5].name = DrawCall_0044
+2016-02-19 09:03:13,923 INFO  [default] Size of shape[5].indices: 144
+2016-02-19 09:03:13,928 INFO  [default] Size of shape[5].material_ids: 144
+2016-02-19 09:03:13,932 INFO  [default] shape[5].vertices: 93
+2016-02-19 09:03:13,935 INFO  [default] shape[6].name = DrawCall_0046
+2016-02-19 09:03:13,940 INFO  [default] Size of shape[6].indices: 9008
+2016-02-19 09:03:13,946 INFO  [default] Size of shape[6].material_ids: 9008
+2016-02-19 09:03:13,951 INFO  [default] shape[6].vertices: 6581
+2016-02-19 09:03:13,956 INFO  [default] shape[7].name = DrawCall_0000
+2016-02-19 09:03:13,960 INFO  [default] Size of shape[7].indices: 288
+2016-02-19 09:03:13,964 INFO  [default] Size of shape[7].material_ids: 288
+2016-02-19 09:03:13,968 INFO  [default] shape[7].vertices: 169
+2016-02-19 09:03:13,972 INFO  [default] shape[8].name = DrawCall_0001
+2016-02-19 09:03:13,977 INFO  [default] Size of shape[8].indices: 288
+2016-02-19 09:03:13,996 INFO  [default] Size of shape[8].material_ids: 288
+2016-02-19 09:03:14,003 INFO  [default] shape[8].vertices: 169
+2016-02-19 09:03:14,009 INFO  [default] shape[9].name = DrawCall_0009
+2016-02-19 09:03:14,013 INFO  [default] Size of shape[9].indices: 8258
+2016-02-19 09:03:14,018 INFO  [default] Size of shape[9].material_ids: 8258
+2016-02-19 09:03:14,023 INFO  [default] shape[9].vertices: 5772
+2016-02-19 09:03:14,029 INFO  [default] shape[10].name = DrawCall_0035
+2016-02-19 09:03:14,033 INFO  [default] Size of shape[10].indices: 288
+2016-02-19 09:03:14,037 INFO  [default] Size of shape[10].material_ids: 288
+2016-02-19 09:03:14,042 INFO  [default] shape[10].vertices: 164
+2016-02-19 09:03:14,045 INFO  [default] shape[11].name = DrawCall_0036
+2016-02-19 09:03:14,050 INFO  [default] Size of shape[11].indices: 288
+2016-02-19 09:03:14,053 INFO  [default] Size of shape[11].material_ids: 288
+2016-02-19 09:03:14,057 INFO  [default] shape[11].vertices: 164
+2016-02-19 09:03:14,061 INFO  [default] shape[12].name = DrawCall_0056
+2016-02-19 09:03:14,065 INFO  [default] Size of shape[12].indices: 5112
+2016-02-19 09:03:14,068 INFO  [default] Size of shape[12].material_ids: 5112
+2016-02-19 09:03:14,072 INFO  [default] shape[12].vertices: 3596
+2016-02-19 09:03:14,076 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:03:14,079 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:03:14,083 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:03:14,088 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:03:14,093 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:03:14,097 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:03:14,101 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:03:14,105 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:03:14,109 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:03:14,113 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:03:14,117 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:03:14,121 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:03:14,124 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:03:42,834 INFO  [default] Loading file: data/models/kungfu-panda/kungfu.awf
+2016-02-19 09:03:42,983 INFO  [default] # of shapes    : 13
+2016-02-19 09:03:42,986 INFO  [default] # of materials : 13
+2016-02-19 09:03:42,989 INFO  [default] shape[0].name = DrawCall_0000
+2016-02-19 09:03:42,993 INFO  [default] Size of shape[0].indices: 80
+2016-02-19 09:03:42,997 INFO  [default] Size of shape[0].material_ids: 80
+2016-02-19 09:03:43,002 INFO  [default] shape[0].vertices: 54
+2016-02-19 09:03:43,005 INFO  [default] shape[1].name = DrawCall_0001
+2016-02-19 09:03:43,009 INFO  [default] Size of shape[1].indices: 208
+2016-02-19 09:03:43,012 INFO  [default] Size of shape[1].material_ids: 208
+2016-02-19 09:03:43,017 INFO  [default] shape[1].vertices: 125
+2016-02-19 09:03:43,021 INFO  [default] shape[2].name = DrawCall_0002
+2016-02-19 09:03:43,025 INFO  [default] Size of shape[2].indices: 208
+2016-02-19 09:03:43,028 INFO  [default] Size of shape[2].material_ids: 208
+2016-02-19 09:03:43,033 INFO  [default] shape[2].vertices: 125
+2016-02-19 09:03:43,037 INFO  [default] shape[3].name = DrawCall_0014
+2016-02-19 09:03:43,040 INFO  [default] Size of shape[3].indices: 8000
+2016-02-19 09:03:43,044 INFO  [default] Size of shape[3].material_ids: 8000
+2016-02-19 09:03:43,048 INFO  [default] shape[3].vertices: 5309
+2016-02-19 09:03:43,053 INFO  [default] shape[4].name = DrawCall_0043
+2016-02-19 09:03:43,057 INFO  [default] Size of shape[4].indices: 144
+2016-02-19 09:03:43,061 INFO  [default] Size of shape[4].material_ids: 144
+2016-02-19 09:03:43,065 INFO  [default] shape[4].vertices: 93
+2016-02-19 09:03:43,069 INFO  [default] shape[5].name = DrawCall_0044
+2016-02-19 09:03:43,073 INFO  [default] Size of shape[5].indices: 144
+2016-02-19 09:03:43,077 INFO  [default] Size of shape[5].material_ids: 144
+2016-02-19 09:03:43,082 INFO  [default] shape[5].vertices: 93
+2016-02-19 09:03:43,087 INFO  [default] shape[6].name = DrawCall_0046
+2016-02-19 09:03:43,091 INFO  [default] Size of shape[6].indices: 9008
+2016-02-19 09:03:43,095 INFO  [default] Size of shape[6].material_ids: 9008
+2016-02-19 09:03:43,101 INFO  [default] shape[6].vertices: 6581
+2016-02-19 09:03:43,106 INFO  [default] shape[7].name = DrawCall_0000
+2016-02-19 09:03:43,110 INFO  [default] Size of shape[7].indices: 288
+2016-02-19 09:03:43,114 INFO  [default] Size of shape[7].material_ids: 288
+2016-02-19 09:03:43,119 INFO  [default] shape[7].vertices: 169
+2016-02-19 09:03:43,123 INFO  [default] shape[8].name = DrawCall_0001
+2016-02-19 09:03:43,128 INFO  [default] Size of shape[8].indices: 288
+2016-02-19 09:03:43,135 INFO  [default] Size of shape[8].material_ids: 288
+2016-02-19 09:03:43,139 INFO  [default] shape[8].vertices: 169
+2016-02-19 09:03:43,143 INFO  [default] shape[9].name = DrawCall_0009
+2016-02-19 09:03:43,148 INFO  [default] Size of shape[9].indices: 8258
+2016-02-19 09:03:43,152 INFO  [default] Size of shape[9].material_ids: 8258
+2016-02-19 09:03:43,157 INFO  [default] shape[9].vertices: 5772
+2016-02-19 09:03:43,163 INFO  [default] shape[10].name = DrawCall_0035
+2016-02-19 09:03:43,167 INFO  [default] Size of shape[10].indices: 288
+2016-02-19 09:03:43,171 INFO  [default] Size of shape[10].material_ids: 288
+2016-02-19 09:03:43,176 INFO  [default] shape[10].vertices: 164
+2016-02-19 09:03:43,182 INFO  [default] shape[11].name = DrawCall_0036
+2016-02-19 09:03:43,186 INFO  [default] Size of shape[11].indices: 288
+2016-02-19 09:03:43,190 INFO  [default] Size of shape[11].material_ids: 288
+2016-02-19 09:03:43,194 INFO  [default] shape[11].vertices: 164
+2016-02-19 09:03:43,199 INFO  [default] shape[12].name = DrawCall_0056
+2016-02-19 09:03:43,202 INFO  [default] Size of shape[12].indices: 5112
+2016-02-19 09:03:43,207 INFO  [default] Size of shape[12].material_ids: 5112
+2016-02-19 09:03:43,212 INFO  [default] shape[12].vertices: 3596
+2016-02-19 09:03:43,217 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:03:43,222 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:03:43,226 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:03:43,231 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:03:43,236 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:03:43,241 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:03:43,245 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:03:43,250 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:03:43,255 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:03:43,260 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:03:43,264 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:03:43,268 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:03:43,273 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:04:31,520 INFO  [default] Loading file: data/models/kungfu-panda/kungfu.awf
+2016-02-19 09:04:31,680 INFO  [default] # of shapes    : 13
+2016-02-19 09:04:31,683 INFO  [default] # of materials : 13
+2016-02-19 09:04:31,687 INFO  [default] shape[0].name = DrawCall_0000
+2016-02-19 09:04:31,691 INFO  [default] Size of shape[0].indices: 80
+2016-02-19 09:04:31,695 INFO  [default] Size of shape[0].material_ids: 80
+2016-02-19 09:04:31,699 INFO  [default] shape[0].vertices: 54
+2016-02-19 09:04:31,703 INFO  [default] shape[1].name = DrawCall_0001
+2016-02-19 09:04:31,706 INFO  [default] Size of shape[1].indices: 208
+2016-02-19 09:04:31,710 INFO  [default] Size of shape[1].material_ids: 208
+2016-02-19 09:04:31,716 INFO  [default] shape[1].vertices: 125
+2016-02-19 09:04:31,719 INFO  [default] shape[2].name = DrawCall_0002
+2016-02-19 09:04:31,723 INFO  [default] Size of shape[2].indices: 208
+2016-02-19 09:04:31,727 INFO  [default] Size of shape[2].material_ids: 208
+2016-02-19 09:04:31,731 INFO  [default] shape[2].vertices: 125
+2016-02-19 09:04:31,734 INFO  [default] shape[3].name = DrawCall_0014
+2016-02-19 09:04:31,738 INFO  [default] Size of shape[3].indices: 8000
+2016-02-19 09:04:31,743 INFO  [default] Size of shape[3].material_ids: 8000
+2016-02-19 09:04:31,747 INFO  [default] shape[3].vertices: 5309
+2016-02-19 09:04:31,752 INFO  [default] shape[4].name = DrawCall_0043
+2016-02-19 09:04:31,756 INFO  [default] Size of shape[4].indices: 144
+2016-02-19 09:04:31,760 INFO  [default] Size of shape[4].material_ids: 144
+2016-02-19 09:04:31,764 INFO  [default] shape[4].vertices: 93
+2016-02-19 09:04:31,768 INFO  [default] shape[5].name = DrawCall_0044
+2016-02-19 09:04:31,776 INFO  [default] Size of shape[5].indices: 144
+2016-02-19 09:04:31,780 INFO  [default] Size of shape[5].material_ids: 144
+2016-02-19 09:04:31,784 INFO  [default] shape[5].vertices: 93
+2016-02-19 09:04:31,788 INFO  [default] shape[6].name = DrawCall_0046
+2016-02-19 09:04:31,792 INFO  [default] Size of shape[6].indices: 9008
+2016-02-19 09:04:31,796 INFO  [default] Size of shape[6].material_ids: 9008
+2016-02-19 09:04:31,800 INFO  [default] shape[6].vertices: 6581
+2016-02-19 09:04:31,806 INFO  [default] shape[7].name = DrawCall_0000
+2016-02-19 09:04:31,810 INFO  [default] Size of shape[7].indices: 288
+2016-02-19 09:04:31,813 INFO  [default] Size of shape[7].material_ids: 288
+2016-02-19 09:04:31,817 INFO  [default] shape[7].vertices: 169
+2016-02-19 09:04:31,822 INFO  [default] shape[8].name = DrawCall_0001
+2016-02-19 09:04:31,825 INFO  [default] Size of shape[8].indices: 288
+2016-02-19 09:04:31,829 INFO  [default] Size of shape[8].material_ids: 288
+2016-02-19 09:04:31,834 INFO  [default] shape[8].vertices: 169
+2016-02-19 09:04:31,837 INFO  [default] shape[9].name = DrawCall_0009
+2016-02-19 09:04:31,840 INFO  [default] Size of shape[9].indices: 8258
+2016-02-19 09:04:31,844 INFO  [default] Size of shape[9].material_ids: 8258
+2016-02-19 09:04:31,850 INFO  [default] shape[9].vertices: 5772
+2016-02-19 09:04:31,854 INFO  [default] shape[10].name = DrawCall_0035
+2016-02-19 09:04:31,858 INFO  [default] Size of shape[10].indices: 288
+2016-02-19 09:04:31,862 INFO  [default] Size of shape[10].material_ids: 288
+2016-02-19 09:04:31,866 INFO  [default] shape[10].vertices: 164
+2016-02-19 09:04:31,871 INFO  [default] shape[11].name = DrawCall_0036
+2016-02-19 09:04:31,876 INFO  [default] Size of shape[11].indices: 288
+2016-02-19 09:04:31,880 INFO  [default] Size of shape[11].material_ids: 288
+2016-02-19 09:04:31,884 INFO  [default] shape[11].vertices: 164
+2016-02-19 09:04:31,889 INFO  [default] shape[12].name = DrawCall_0056
+2016-02-19 09:04:31,893 INFO  [default] Size of shape[12].indices: 5112
+2016-02-19 09:04:31,897 INFO  [default] Size of shape[12].material_ids: 5112
+2016-02-19 09:04:31,902 INFO  [default] shape[12].vertices: 3596
+2016-02-19 09:04:31,906 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:04:31,910 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:04:31,914 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:04:31,918 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:04:31,923 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:04:31,927 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:04:31,932 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:04:31,936 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:04:31,941 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:04:31,945 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:04:31,949 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:04:31,954 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:04:31,958 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:10:14,585 INFO  [default] Loading file: data/models/kungfu-panda/kungfu.awf
+2016-02-19 09:10:14,725 INFO  [default] # of shapes    : 13
+2016-02-19 09:10:14,728 INFO  [default] # of materials : 13
+2016-02-19 09:10:14,731 INFO  [default] shape[0].name = DrawCall_0000
+2016-02-19 09:10:14,735 INFO  [default] Size of shape[0].indices: 80
+2016-02-19 09:10:14,739 INFO  [default] Size of shape[0].material_ids: 80
+2016-02-19 09:10:14,743 INFO  [default] shape[0].vertices: 54
+2016-02-19 09:10:14,746 INFO  [default] shape[1].name = DrawCall_0001
+2016-02-19 09:10:14,750 INFO  [default] Size of shape[1].indices: 208
+2016-02-19 09:10:14,754 INFO  [default] Size of shape[1].material_ids: 208
+2016-02-19 09:10:14,758 INFO  [default] shape[1].vertices: 125
+2016-02-19 09:10:14,761 INFO  [default] shape[2].name = DrawCall_0002
+2016-02-19 09:10:14,764 INFO  [default] Size of shape[2].indices: 208
+2016-02-19 09:10:14,768 INFO  [default] Size of shape[2].material_ids: 208
+2016-02-19 09:10:14,771 INFO  [default] shape[2].vertices: 125
+2016-02-19 09:10:14,774 INFO  [default] shape[3].name = DrawCall_0014
+2016-02-19 09:10:14,777 INFO  [default] Size of shape[3].indices: 8000
+2016-02-19 09:10:14,781 INFO  [default] Size of shape[3].material_ids: 8000
+2016-02-19 09:10:14,785 INFO  [default] shape[3].vertices: 5309
+2016-02-19 09:10:14,789 INFO  [default] shape[4].name = DrawCall_0043
+2016-02-19 09:10:14,794 INFO  [default] Size of shape[4].indices: 144
+2016-02-19 09:10:14,797 INFO  [default] Size of shape[4].material_ids: 144
+2016-02-19 09:10:14,800 INFO  [default] shape[4].vertices: 93
+2016-02-19 09:10:14,803 INFO  [default] shape[5].name = DrawCall_0044
+2016-02-19 09:10:14,807 INFO  [default] Size of shape[5].indices: 144
+2016-02-19 09:10:14,810 INFO  [default] Size of shape[5].material_ids: 144
+2016-02-19 09:10:14,814 INFO  [default] shape[5].vertices: 93
+2016-02-19 09:10:14,818 INFO  [default] shape[6].name = DrawCall_0046
+2016-02-19 09:10:14,821 INFO  [default] Size of shape[6].indices: 9008
+2016-02-19 09:10:14,824 INFO  [default] Size of shape[6].material_ids: 9008
+2016-02-19 09:10:14,829 INFO  [default] shape[6].vertices: 6581
+2016-02-19 09:10:14,834 INFO  [default] shape[7].name = DrawCall_0000
+2016-02-19 09:10:14,838 INFO  [default] Size of shape[7].indices: 288
+2016-02-19 09:10:14,842 INFO  [default] Size of shape[7].material_ids: 288
+2016-02-19 09:10:14,846 INFO  [default] shape[7].vertices: 169
+2016-02-19 09:10:14,850 INFO  [default] shape[8].name = DrawCall_0001
+2016-02-19 09:10:14,854 INFO  [default] Size of shape[8].indices: 288
+2016-02-19 09:10:14,858 INFO  [default] Size of shape[8].material_ids: 288
+2016-02-19 09:10:14,861 INFO  [default] shape[8].vertices: 169
+2016-02-19 09:10:14,864 INFO  [default] shape[9].name = DrawCall_0009
+2016-02-19 09:10:14,868 INFO  [default] Size of shape[9].indices: 8258
+2016-02-19 09:10:14,872 INFO  [default] Size of shape[9].material_ids: 8258
+2016-02-19 09:10:14,875 INFO  [default] shape[9].vertices: 5772
+2016-02-19 09:10:14,879 INFO  [default] shape[10].name = DrawCall_0035
+2016-02-19 09:10:14,883 INFO  [default] Size of shape[10].indices: 288
+2016-02-19 09:10:14,887 INFO  [default] Size of shape[10].material_ids: 288
+2016-02-19 09:10:14,891 INFO  [default] shape[10].vertices: 164
+2016-02-19 09:10:14,894 INFO  [default] shape[11].name = DrawCall_0036
+2016-02-19 09:10:14,899 INFO  [default] Size of shape[11].indices: 288
+2016-02-19 09:10:14,902 INFO  [default] Size of shape[11].material_ids: 288
+2016-02-19 09:10:14,906 INFO  [default] shape[11].vertices: 164
+2016-02-19 09:10:14,910 INFO  [default] shape[12].name = DrawCall_0056
+2016-02-19 09:10:14,914 INFO  [default] Size of shape[12].indices: 5112
+2016-02-19 09:10:14,918 INFO  [default] Size of shape[12].material_ids: 5112
+2016-02-19 09:10:14,922 INFO  [default] shape[12].vertices: 3596
+2016-02-19 09:10:14,926 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:10:14,930 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:10:14,936 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:10:14,939 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:10:14,943 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:10:14,946 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:10:14,949 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:10:14,953 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:10:14,956 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:10:14,960 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:10:14,965 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:10:14,969 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:10:14,972 INFO  [default]   material.Tf = 1.0000 1.0000 1.0000 
+2016-02-19 09:12:10,999 INFO  [default] Loading file: data/models/barrel/barrel.awf
+2016-02-19 09:12:11,017 INFO  [default] # of shapes    : 1
+2016-02-19 09:12:11,020 INFO  [default] # of materials : 1
+2016-02-19 09:12:11,023 INFO  [default] shape[0].name = cylinder
+2016-02-19 09:12:11,026 INFO  [default] Size of shape[0].indices: 2236
+2016-02-19 09:12:11,029 INFO  [default] Size of shape[0].material_ids: 2236
+2016-02-19 09:12:11,033 INFO  [default] shape[0].vertices: 1243
+2016-02-19 09:16:24,243 INFO  [default] Loading file: data/models/barrel/barrel.awf
+2016-02-19 09:16:24,258 INFO  [default] # of shapes    : 1
+2016-02-19 09:16:24,261 INFO  [default] # of materials : 1
+2016-02-19 09:16:24,264 INFO  [default] shape[0].name = cylinder
+2016-02-19 09:16:24,268 INFO  [default] Size of shape[0].indices: 2236
+2016-02-19 09:16:24,272 INFO  [default] Size of shape[0].material_ids: 2236
+2016-02-19 09:16:24,276 INFO  [default] shape[0].vertices: 1243
+2016-02-19 09:16:44,078 INFO  [default] Loading file: data/models/barrel/barrel.awf
+2016-02-19 09:16:44,094 INFO  [default] # of shapes    : 1
+2016-02-19 09:16:44,099 INFO  [default] # of materials : 1
+2016-02-19 09:16:44,103 INFO  [default] shape[0].name = cylinder
+2016-02-19 09:16:44,106 INFO  [default] Size of shape[0].indices: 2236
+2016-02-19 09:16:44,111 INFO  [default] Size of shape[0].material_ids: 2236
+2016-02-19 09:16:44,116 INFO  [default] shape[0].vertices: 1243
+2016-02-19 09:17:16,904 INFO  [default] Generating render debug lines ...
+2016-02-19 09:17:16,910 INFO  [default] completed!
+2016-02-19 09:17:18,343 INFO  [default] Generating render debug lines ...
+2016-02-19 09:17:18,349 INFO  [default] completed!
