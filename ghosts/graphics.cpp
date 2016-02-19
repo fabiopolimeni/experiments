@@ -19,6 +19,9 @@ namespace graphics
 		//glEnable(GL_POINT_SMOOTH);
 		glPointSize(2.f);
 
+		// sRGB framebuffer
+		glEnable(GL_FRAMEBUFFER_SRGB);
+
 		return true;
 	}
 

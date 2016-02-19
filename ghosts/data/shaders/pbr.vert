@@ -85,8 +85,7 @@ void main()
 	Out.ViewDir = tbn * normalize(-position);
 	
 	// light direction already comes in view space
-	//Out.LightDir = tbn * normalize(-Light.direction.xyz);
-	Out.LightDir = -Light.direction.xyz;
+	Out.LightDir = tbn * normalize(-Light.direction.xyz);
 
 	Out.TexCoords = TexCoords.value[gl_VertexID];
 	Out.TexCoords.y = 1.0 - Out.TexCoords.y;

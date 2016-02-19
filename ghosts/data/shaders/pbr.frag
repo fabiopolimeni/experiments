@@ -38,7 +38,7 @@ vec3 ads(vec3 Normal, vec3 LightDir, vec3 ViewDir)
 	vec3 v = normalize( ViewDir );
 	vec3 r = reflect( -l, n );
 
-	vec3 albedo = texture2D(DiffuseMap, In.TexCoords).xyz;
+	vec3 albedo = vec3(0.9f);//texture2D(DiffuseMap, In.TexCoords).xyz;
 	vec3 diffuse = albedo * max( dot(l, n), 0.0 );
 	vec3 shininess = vec3(0.8);
 	vec3 specular = shininess * pow( max( dot(r, v), 0.0 ), 64 );
@@ -48,6 +48,14 @@ vec3 ads(vec3 Normal, vec3 LightDir, vec3 ViewDir)
 
 void main()
 {
-	//vec4 normal = 2.0 * texture( NormalMap, In.TexCoords ) - 1.0;
-	Color = vec4(ads(In.Normal.xyz, In.LightDir, -In.Position), 1.0);
+	vec4 normal = 2.0 * texture( NormalMap, In.TexCoords ) - 1.0;
+	
+	// draw tangent-space normals
+	//Color = vec4(vec3(normal), 1.0);
+	
+	// tangent space
+	Color = vec4(ads(normal.xyz, In.LightDir, In.ViewDir), 1.0);
+	
+	// view space
+	//Color = vec4(ads(In.Normal.xyz, normalize(vec3(1.0,2.0,0.0)), -In.Position), 1.0);
 }

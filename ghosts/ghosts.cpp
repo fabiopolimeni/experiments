@@ -37,6 +37,7 @@ bool ghosts::begin()
 	if (graphics::renderer::init() && compute::clothing::init())
 	{
 		if (auto m = framework::model::load("data/models/barrel/barrel.awf", framework::model::file_type::ASCII))
+	//	if (auto m = framework::model::load("data/models/kungfu-panda/kungfu.awf", framework::model::file_type::ASCII))
 		{
 			if (m->initialise()) {
 				m_Models.push_back(m);
@@ -64,7 +65,8 @@ bool ghosts::render()
 	graphics::renderer::clear(window_size, glm::vec4(.95f));
 
 	// light: direction light.xyz, intensity light.w
-	glm::vec4 light_vec(-1.f, -2.f, 0.f, 100.f);
+	//glm::vec4 light_vec(-1.f, -2.f, 0.f, 100.f);
+	glm::vec4 light_vec(-1.f, -1.f, 0.f, 100.f);
 
 	// simulate
 	for (auto model : m_Models) {
